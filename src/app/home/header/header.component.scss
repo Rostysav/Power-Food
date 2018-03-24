@@ -1,6 +1,53 @@
 header {
-	background: #010101;
+  background: rgba(0,0,0, .8);
 	padding: 30px 0;
-	height: 20vh;
-	position: relative;
+	height: 100px;
+	position: absolute;
+  width: 100%;
+  z-index: 99;
+
+	.logo {
+		width: 100%;
+	}
+
+	li {
+		a {
+	    font-size: 25px;
+	    color: rgba(255,255,255, .8);
+	    transition: .3s;
+
+	    &:hover {
+				color: rgba(255,255,255, 1);
+		    transition: .3s;
+			}
+		}
+	}
+
+	.nav-left {
+		display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .nav {
+    	li {
+				&:first-child {
+	    		margin-right: 50px;
+	    	}
+    	}
+    }
+	}
+	.nav-right {
+		display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+	
+		.nav {
+
+			li {
+				&:last-child {
+	    		margin-left: 50px;
+	    	}
+    	}
+		}
+	}
 }

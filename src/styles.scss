@@ -32,6 +32,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
 
 		/*Main styles*/
 
@@ -49,7 +54,7 @@ h3 {
   border: 2px solid #fff;
   padding: 15px 25px;
 }
-p {
+p, a {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
 	font-size: 16px;
