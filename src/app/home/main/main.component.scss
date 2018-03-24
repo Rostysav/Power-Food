@@ -1,0 +1,56 @@
+		/*Main section with sleder start*/
+
+.main {
+	height: 80vh;
+	width: 100%;
+	position: relative;
+
+	.mat-tab-header {
+		position: absolute;
+		bottom: 20px;
+		z-index: 9;
+		width: 100%;
+		border-bottom: none;
+
+		.mat-tab-labels {
+			justify-content: center;
+		}
+	}
+
+	.mat-tab-body-wrapper {
+		height: 80vh;
+	}
+
+	.mat-tab-body-content {
+		overflow: hidden;
+	}
+
+	.mat-ink-bar {
+		display: none;
+	}
+
+	.mat-tab-label {
+		height: 5px;
+		background: #fff;
+		color: #fff;
+    padding: 0;
+    margin: 0 5px;
+    min-width: 80px;
+    max-width: 80px;
+	}
+
+	.mat-tab-label-active {
+		opacity: 1;
+	}
+
+	.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
+		background: #fff;
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+		/*Main section with sleder start*/
