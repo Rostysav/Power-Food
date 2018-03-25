@@ -1,6 +1,6 @@
 header {
   background: rgba(0,0,0, .8);
-	padding: 30px 0;
+	padding: 15px 0;
 	height: 100px;
 	position: absolute;
   width: 100%;
@@ -8,6 +8,7 @@ header {
 
 	.logo {
 		width: 100%;
+		height: 55px;
 	}
 
 	li {
@@ -24,9 +25,45 @@ header {
 	}
 
 	.nav-left {
-		display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .soc-icons {
+    	margin-bottom: 25px;
+	   	
+	   	p {
+	   		color: #969696;
+	   		font-size: 15px;
+	   		display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+	   		.fa {
+					border-radius: 90%;
+			    width: 30px;
+			    height: 30px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+	   		}
+
+	   		.fa-facebook-f {
+	   			color: #fff;
+	   			background: #4267b2;
+	   			margin-left: 15px;
+	   		}
+
+	   		.fa-instagram {
+	   			color: #fff;
+	   			background: #d6249f;
+				  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+				  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+				  margin-left: 15px;
+	   		}
+	   	}
+    }
 
     .nav {
     	li {
@@ -38,16 +75,98 @@ header {
 	}
 	.nav-right {
 		display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
-    justify-content: flex-end;
+
+    .address {
+    	margin-bottom: 25px;
+	    
+	    p {
+	    	color: #969696;
+	    	font-size: 15px;
+	    	display: flex;
+		    align-items: center;
+		    justify-content: center;
+	    }
+
+	    span {
+	    	color: #fff;
+	    	margin-left: 5px;
+	    }
+    }
 	
 		.nav {
-
 			li {
 				&:last-child {
 	    		margin-left: 50px;
 	    	}
     	}
+		}
+	}
+	.nav-btn {
+		display: none;
+		color: #fff;
+    font-size: 35px;
+	}
+}
+
+@media(max-width: 991px) {
+	header {
+
+		.logo-wrap {
+			padding: 0;
+		}
+
+		.nav-right {
+			.address {
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	header {
+		height: 85px;
+
+		.row {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+		}
+
+		.logo {
+			width: 150px;
+			height: auto;
+		}
+		
+		.nav-left {
+			display: none;
+		}
+
+		.nav-right {
+			display: none;
+		}
+
+		.nav-btn {
+			display: block;
+		}
+	}
+}
+
+@media(max-width: 575px) {
+	header {
+
+		.row {
+			padding: 0 15px;
+		}
+
+		.logo-wrap {
+			float: left;
+			width: auto;
 		}
 	}
 }
