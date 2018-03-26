@@ -1,5 +1,5 @@
 header {
-  background: rgba(0,0,0, .8);
+  background: rgba(0,0,0, .6);
 	padding: 15px 0;
 	height: 100px;
 	position: fixed;
@@ -75,6 +75,11 @@ header {
 	    span {
 	    	color: #fff;
 	    	margin-left: 5px;
+	    }
+
+	    .phone {
+  	    display: flex;
+		    align-items: center;
 	    }
     }
 	
