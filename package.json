@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@fortawesome/fontawesome": "^1.1.4",
+    "@nicky-lenaers/ngx-scroll-to": "^0.6.0",
     "angular-bootstrap-md": "^5.2.3",
     "angular-font-awesome": "^3.1.2",
     "angular-ui-carousel": "^0.1.10",

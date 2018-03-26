@@ -150,6 +150,15 @@
 		margin-bottom: 50px;
 	}
 
+	.col-md-6 {
+		display: flex;
+    align-items: center;
+	}
+	
+	.menu-item {
+		width: 100%;
+	}
+
 	.menu-title {
 		text-align: center;
 		margin-bottom: 15px;
@@ -199,4 +208,29 @@
     max-height: 400px;
 	}
 
+}
+
+@media(max-width: 767px) {
+	.menu {
+
+		.menu-item {
+			margin-bottom: 30px;
+		}
+
+		.bruschetta-wrap, .spinning-roles-wrap, .main-dishes-wrap {
+			display: flex;
+
+			.bruschetta-img, .spinning-roles-img, .main-dishes-img {
+				order: 2;
+			}
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.menu {
+		.menu-list {
+			margin-left: 15px;
+		}
+	}
 }

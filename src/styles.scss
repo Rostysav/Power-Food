@@ -56,3 +56,9 @@ p, a {
 	color: #fff;
 	font-size: 16px;
 }
+a {
+	&:hover, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}

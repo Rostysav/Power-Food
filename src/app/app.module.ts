@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 
 
@@ -27,7 +28,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
