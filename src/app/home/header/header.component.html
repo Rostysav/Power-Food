@@ -1,8 +1,8 @@
-<header>
+<header id="header">
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-5 nav-left" [ngClass]="{'mobile-menu':mobileNav}" >
+			<div class="col-md-5 nav-left">
 				<div class="soc-icons">
 					<p>
 						Ми в: 
@@ -32,7 +32,7 @@
 					<img class="logo" src="../assets/img/logo-black.jpg">
 				</a>
 			</div>
-			<div class="col-md-5 nav-right" [ngClass]="{'mobile-menu':mobileNav}" >
+			<div class="col-md-5 nav-right">
 				<div class="address">
 					<p>
 						м. Львів, вул. Порохова 20Д, <span class="phone">тел. <span>+38-096-801-14-90</span></span>
@@ -54,6 +54,42 @@
 
 			<div class="nav-btn" (click)='mobileNav=!mobileNav'>
 				<i class="fa fa-bars"></i>
+			</div>
+
+			<div class="mobile-menu-open"  [ngClass]="{'mobile-menu':mobileNav}">
+				<ul class="nav">
+					<li>
+						<a href="#" (click)='mobileNav=!mobileNav'>
+							Головна
+						</a>
+					</li>
+					<li>
+						<a href="#" (click)='mobileNav=!mobileNav'>
+							Переваги
+						</a>
+					</li>
+					<li>
+						<a href="#" (click)='mobileNav=!mobileNav'>
+							Меню
+						</a>
+					</li>
+					<li>
+						<a href="#" (click)='mobileNav=!mobileNav'>
+							Контакти
+						</a>
+					</li>
+				</ul>
+				<div class="soc-icons">
+					<p>
+						Ми в: 
+					</p>
+					<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+					<a href="https://www.instagram.com/powerfoodlviv/" target="_blank">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</div>
 			</div>
 			
 		</div>

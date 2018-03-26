@@ -2,9 +2,14 @@ header {
   background: rgba(0,0,0, .8);
 	padding: 15px 0;
 	height: 100px;
-	position: absolute;
+	position: fixed;
   width: 100%;
   z-index: 99;
+  transition: .3s;
+
+  .container {
+    position: static;
+  }
 
 	.logo {
 		width: 100%;
@@ -39,29 +44,6 @@ header {
 	   		display: flex;
 		    align-items: center;
 		    justify-content: center;
-
-	   		.fa {
-					border-radius: 90%;
-			    width: 30px;
-			    height: 30px;
-			    display: flex;
-			    align-items: center;
-			    justify-content: center;
-	   		}
-
-	   		.fa-facebook-f {
-	   			color: #fff;
-	   			background: #4267b2;
-	   			margin-left: 15px;
-	   		}
-
-	   		.fa-instagram {
-	   			color: #fff;
-	   			background: #d6249f;
-				  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-				  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
-				  margin-left: 15px;
-	   		}
 	   	}
     }
 
@@ -104,11 +86,43 @@ header {
     	}
 		}
 	}
+	.fa {
+		border-radius: 90%;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.fa-facebook-f {
+		color: #fff;
+		background: #4267b2;
+		margin-left: 15px;
+	}
+
+	.fa-instagram {
+		color: #fff;
+		background: #d6249f;
+		background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+		box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+		margin-left: 15px;
+	}
 	.nav-btn {
 		display: none;
 		color: #fff;
     font-size: 35px;
 	}
+
+	.mobile-menu-open {
+		display: none;
+		transition: .3s;
+	}
+}
+
+header.black-bg {
+	background: #000;
+	transition: .3s;
 }
 
 @media(max-width: 991px) {
@@ -142,6 +156,10 @@ header {
 			width: 150px;
 			height: auto;
 		}
+
+		.logo-wrap {
+			z-index: 10;
+		}
 		
 		.nav-left {
 			display: none;
@@ -153,13 +171,70 @@ header {
 
 		.nav-btn {
 			display: block;
+			z-index: 10;
 		}
+
+		.mobile-menu {
+			// display: block;
+			transition: .3s;
+	    background: #000;
+	    width: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    height: 100vh;
+	    z-index: 9;
+      display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: column;
+
+	    ul {
+	    	flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+        margin-top: -150px;
+
+		    li {
+		    	margin: 15px 0;
+
+		    	a {
+		    		font-size: 40px;
+		    	}
+		    }
+	    }
+
+	    .soc-icons {
+  	    position: absolute;
+		    bottom: 15px;
+		    text-align: center;
+
+		    p {
+    	    font-size: 35px;
+	        margin-bottom: 15px;
+		    }
+
+		    a {
+		    	display: inline-block;
+    	    font-size: 40px;
+
+		    	.fa {
+		    		width: 60px;
+		    		height: 60px;
+		    	}
+
+		    	.fa-facebook-f {
+		    		margin-left: 0;
+		    	}
+		    }
+	    }
+		}
+
 	}
 }
 
 @media(max-width: 575px) {
 	header {
-
 		.row {
 			padding: 0 15px;
 		}
