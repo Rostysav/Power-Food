@@ -130,24 +130,24 @@ header.black-bg {
 	transition: .3s;
 }
 
+// @media(max-width: 991px) {
+// 	header {
+
+// 		.logo-wrap {
+// 			padding: 0;
+// 		}
+
+// 		.nav-right {
+// 			.address {
+// 				span {
+// 					display: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
 @media(max-width: 991px) {
-	header {
-
-		.logo-wrap {
-			padding: 0;
-		}
-
-		.nav-right {
-			.address {
-				span {
-					display: none;
-				}
-			}
-		}
-	}
-}
-
-@media(max-width: 767px) {
 	header {
 		height: 85px;
 
@@ -248,5 +248,41 @@ header.black-bg {
 			float: left;
 			width: auto;
 		}
+	}
+}
+
+@media(max-height: 500px) {
+	header {
+    height: 75px;
+
+    .logo {
+    	width: 100px;
+    }
+
+    .mobile-menu {
+    	ul{
+		    margin-top: -70px;
+    		li {
+			    margin: 10px 0;
+    			a {
+    				font-size: 20px;
+    			}
+    		}
+    	}
+
+    	.soc-icons {
+    		p {
+    			font-size: 20px;
+    		}
+    		a {
+					font-size: 20px;
+
+					.fa {
+						width: 40px;
+				    height: 40px;
+					}
+    		}
+    	}
+    }
 	}
 }

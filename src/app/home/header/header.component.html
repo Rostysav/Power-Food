@@ -20,7 +20,7 @@
 							Головна
 						</a>
 					</li>
-					<li>
+					<li [ngx-scroll-to]="'features'">
 						<a href="#">
 							Переваги
 						</a>
@@ -58,22 +58,22 @@
 
 			<div class="mobile-menu-open"  [ngClass]="{'mobile-menu':mobileNav}">
 				<ul class="nav">
-					<li>
+					<li [ngx-scroll-to]="'main'">
 						<a href="#" (click)='mobileNav=!mobileNav'>
 							Головна
 						</a>
 					</li>
-					<li>
+					<li [ngx-scroll-to]="'features'">
 						<a href="#" (click)='mobileNav=!mobileNav'>
 							Переваги
 						</a>
 					</li>
-					<li>
+					<li [ngx-scroll-to]="'menu'">
 						<a href="#" (click)='mobileNav=!mobileNav'>
 							Меню
 						</a>
 					</li>
-					<li>
+					<li [ngx-scroll-to]="'contact'">
 						<a href="#" (click)='mobileNav=!mobileNav'>
 							Контакти
 						</a>
