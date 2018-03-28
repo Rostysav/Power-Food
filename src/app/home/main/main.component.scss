@@ -131,6 +131,7 @@
 			}
 			h2 {
 				font-size: 30px;
+				margin-bottom: 100px;
 			}
 		}
 	}
@@ -215,6 +216,20 @@
 		.features-descr {
 	    font-size: 18px;
 	    line-height: 20px;
+		}
+	}
+}
+
+@media(max-height: 400px) {
+	.features {
+		.features-icon {
+			img {
+				width: 30%;
+		    height: 30%;
+			}
+		}
+		.features-title {
+			font-size: 25px;
 		}
 	}
 }
