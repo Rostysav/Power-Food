@@ -1,8 +1,8 @@
 header {
-  background: rgba(0,0,0, .6);
+  background: #0A0807;
 	padding: 15px 0;
-	height: 100px;
-	position: fixed;
+	height: auto;
+	position: relative;
   width: 100%;
   z-index: 99;
   transition: .3s;
@@ -11,14 +11,24 @@ header {
     position: static;
   }
 
+	.logo-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: calc(100% - 30px);
+	}
+
 	.logo {
-		width: 100%;
-		height: 55px;
+		width: 150px;
+		height: auto;
 	}
 
 	li {
 		a {
-	    font-size: 25px;
+	    font-size: 20px;
 	    color: rgba(255,255,255, .8);
 	    transition: .3s;
 
@@ -32,11 +42,20 @@ header {
 	.nav-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+		align-items: flex-start;
+		padding-right: 150px;
+		z-index: 2;
+		
+		.nav-left-top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
 
     .soc-icons {
-    	margin-bottom: 25px;
+    	display: flex;
 	   	
 	   	p {
 	   		color: #969696;
@@ -47,10 +66,24 @@ header {
 	   	}
     }
 
+		button {
+			background: transparent;
+			padding: 10px 25px;
+			color: #fff;
+			border: 1px solid #fff;
+			border-radius: 20px;
+			cursor: pointer;
+			transition: 3s;
+			&:hover {
+				background: rgba(255, 255, 255, 0.2);
+				transition: .3s;
+			}
+		}
+
     .nav {
     	li {
-				&:first-child {
-	    		margin-right: 50px;
+				&+li {
+	    		margin-left: 50px;
 	    	}
     	}
     }
@@ -59,9 +92,14 @@ header {
 		display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+		align-items: flex-end;
+		padding-left: 150px;
+		z-index: 2;
 
     .address {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
     	margin-bottom: 25px;
 	    
 	    p {
@@ -80,8 +118,36 @@ header {
 	    .phone {
   	    display: flex;
 		    align-items: center;
-	    }
-    }
+			}
+
+			.fa-phone {
+				width: auto;
+			}
+		}
+
+		.nav-rigth-top {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			.my-cabinet {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 25px;
+				opacity: .7;
+				transition: .3;
+				&:hover {
+					opacity: 1;
+					transition: .3s;
+				}
+
+				p {
+					font-size: 18px;
+					cursor: pointer;
+				}
+			}
+		}
 	
 		.nav {
 			li {
@@ -91,6 +157,7 @@ header {
     	}
 		}
 	}
+
 	.fa {
 		border-radius: 90%;
 		width: 30px;
@@ -99,6 +166,7 @@ header {
 		align-items: center;
 		justify-content: center;
 	}
+
 
 	.nav-btn {
 		display: none;
@@ -110,11 +178,85 @@ header {
 		display: none;
 		transition: .3s;
 	}
+
 }
 
 header.black-bg {
 	background: #000;
 	transition: .3s;
+}
+
+.feedback-popup {
+	display: none;
+	transition: .3s;
+}
+.popup-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: rgba(0,0,0, .6);
+	transition: .3s;
+
+	.popup-wrap {
+		background: #fff;
+		padding: 100px 50px;
+		position: relative;
+
+		.close-popup {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 2;
+
+			.fa {
+				cursor: pointer;
+				font-size: 25px;
+			}
+		}
+
+		h3 {
+			color: #000;
+			font-size: 30px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+
+			span {
+				margin-bottom: 15px;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 18px;
+			}
+
+			input {
+				margin-bottom: 30px;
+			}
+
+			button {
+				background: transparent;
+				border: 1px solid #000;
+				padding: 10px 25px;
+				border-radius: 25px;
+				font-size: 20px;
+				margin: 0 auto;
+				transition: .3s;
+				cursor: pointer;
+				&:hover {
+					transition: .3s;
+					background: rgba(0,0,0, 0.1);
+				}
+			}
+		}
+	}
 }
 
 // @media(max-width: 991px) {
@@ -136,7 +278,7 @@ header.black-bg {
 
 @media(max-width: 991px) {
 	header {
-		height: 85px;
+		height: auto;
 
 		.row {
 	    display: flex;
@@ -219,7 +361,23 @@ header.black-bg {
 		    		margin-left: 0;
 		    	}
 		    }
-	    }
+			}
+			
+			button {
+				background: transparent;
+				padding: 10px 25px;
+				color: #fff;
+				border: 1px solid #fff;
+				margin-top: 30px;
+				font-size: 18px;
+				border-radius: 20px;
+				cursor: pointer;
+				transition: 3s;
+				&:hover {
+					background: rgba(255, 255, 255, 0.2);
+					transition: .3s;
+				}
+			}
 		}
 
 	}
@@ -236,14 +394,19 @@ header.black-bg {
 			width: auto;
 		}
 	}
+	.popup-menu {
+		.popup-wrap {
+			margin: 0 15px;
+		}
+	}
 }
 
 @media(max-height: 400px) {
 	header {
-    height: 75px;
+    height: auto;
 
     .logo {
-    	width: 100px;
+    	width: 150px;
     }
 
     .mobile-menu {
@@ -271,5 +434,10 @@ header.black-bg {
     		}
     	}
     }
+	}
+	.popup-menu {
+		.popup-wrap {
+			padding: 15px;
+		}
 	}
 }

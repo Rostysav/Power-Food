@@ -22,12 +22,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12 center-wrap">
-				<div class="footer-logo" [ngx-scroll-to]="'main'">
-						<img class="logo" src="../assets/img/logo-black.jpg">
-				</div>
-			</div>
-			<div class="col-md-4 col-xs-12 right-wrap">
-				<div class="right-side">
+				<div class="center">
 					<div class="footer-soc">
 						<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
 							<i class="fa fa-facebook-f"></i>
@@ -43,6 +38,42 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-md-4 col-xs-12 right-wrap">
+				<div class="feedback">
+					<button (click)='popupMenu=!popupMenu'>
+						Замовити зворотній звінок
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>
+
+
+<div class="feedback-popup" [ngClass]="{'popup-menu':popupMenu}">
+	<div class="container">
+		<div class="row">
+			<div class="popup-wrap col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-12">
+				<div class="close-popup">
+					<i class="fa fa-times-circle" (click)='popupMenu=!popupMenu'></i>
+				</div>
+				<h3>
+					Зворотній дзвінок
+				</h3>
+				<form id="needs-validation">
+					<span>
+						Ваше ім'я
+					</span>
+					<input type="text" class="form-control">
+					<span>
+						Телефон
+					</span>
+					<input type="number" class="form-control">
+					<button type="submit">
+						Відправити
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

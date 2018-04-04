@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'pf-header',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   
-  private togmobileNavgle : boolean = false;
+  public mobileNav : boolean = false;
+  public popupMenu : boolean = false;
 
   constructor() { }
 
@@ -26,5 +28,6 @@ export class HeaderComponent implements OnInit {
     });
 
   }
+  
 
 }
