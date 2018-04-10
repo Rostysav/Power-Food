@@ -1,0 +1,106 @@
+.restaurant {
+  	background: url("../../assets/img/dark-bg.png") no-repeat;
+  	background-size: cover;
+  
+  	.container {
+  		margin-bottom: 50px;
+  
+  		&:last-child {
+  			margin-bottom: 0;
+  		}
+  
+  		.row {
+  	    display: flex;
+  	    align-items: center;
+  		}
+  	}
+  
+  	.col-md-6 {
+  		display: flex;
+      align-items: center;
+  	}
+    
+  	.menu-item {
+  		width: 100%;
+  	}
+  
+  	.menu-title {
+  		text-align: left;
+  		margin-bottom: 15px;
+  
+  		 span {
+  			font-family: 'Montserrat', sans-serif;
+  		  font-size: 30px;
+  		  text-transform: uppercase;
+  		  color: #fff;
+  		  border: 2px solid #fff;
+  		  padding: 10px 20px;
+  		  display: inline-block;
+  		  // margin-bottom: 15px;
+  		}	
+  
+  		p {
+  			font-size: 25px;
+  			margin: 30px 0;
+  		}
+  	}
+  
+  	.menu-list {
+  
+  		ul {
+  			margin-left: 15px;
+  		}
+  		li {
+  	    color: #fff;
+  	    font-size: 20px;
+  	    margin-bottom: 10px;
+  	    margin-left: 10px;
+  			position: relative;
+  			line-height: 25px;
+  
+  	    &:before {
+    	    content: "";
+  				width: 5px;
+  				height: 5px;
+  				background: #fff;
+  				position: absolute;
+  				border-radius: 90%;
+  				left: -25px;
+  				top: 10px;
+  	    }
+  		}
+  	}
+  
+  	img {
+  		width: 100%;
+  		display: flex;
+      height: 100%;
+      max-height: 400px;
+  	}
+  
+  }
+  
+  @media(max-width: 991px) {
+  	.menu {
+  
+  		.menu-item {
+  			margin-bottom: 30px;
+  		}
+  
+  		.bruschetta-wrap, .spinning-roles-wrap, .main-dishes-wrap {
+  			display: flex;
+  
+  			.bruschetta-img, .spinning-roles-img, .main-dishes-img {
+  				order: 2;
+  			}
+  		}
+  	}
+  }
+  
+  @media(max-width: 576px) {
+  	.menu {
+  		.menu-list {
+  			margin-left: 15px;
+  		}
+  	}
+  }
