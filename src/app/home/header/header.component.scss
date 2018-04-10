@@ -15,15 +15,17 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		position: absolute;
-		left: 0;
-		right: 0;
+		// position: absolute;
+		// left: 0;
+		// right: 0;
 		height: calc(100% - 30px);
+		z-index: 3;
 	}
 
 	.logo {
 		width: 150px;
 		height: auto;
+		cursor: pointer;
 	}
 
 	li {
@@ -44,7 +46,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
 		align-items: flex-start;
-		padding-right: 150px;
 		z-index: 2;
 		
 		.nav-left-top {
@@ -74,8 +75,9 @@ header {
 			border-radius: 20px;
 			cursor: pointer;
 			transition: 3s;
+			opacity: .8;
 			&:hover {
-				background: rgba(255, 255, 255, 0.2);
+				opacity: 1;
 				transition: .3s;
 			}
 		}
@@ -93,7 +95,6 @@ header {
     flex-direction: column;
     justify-content: center;
 		align-items: flex-end;
-		padding-left: 150px;
 		z-index: 2;
 
     .address {
@@ -127,7 +128,7 @@ header {
 
 		.nav-rigth-top {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 			width: 100%;
 
 			.my-cabinet {

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-6 nav-left">
+			<div class="col-md-5 nav-left">
 
 				<div class="nav-left-top">
 					<div class="feedback">
@@ -21,34 +21,34 @@
 				</div>
 				<ul class="nav">
 					<li>
-						<a href="#">
+						<a [routerLink]='["about"]'>
 							Про компанію
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a [routerLink]='["catalog"]'>
 							Каталог
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a [routerLink]='["price"]'>
 							Ціни
 						</a>
 					</li>
 				</ul>
 
 			</div>
-			<div class="logo-wrap">
+			<div class="col-md-2 logo-wrap">
 
-				<a href="#"  [ngx-scroll-to]="'main'">
+				<a routerLink="">
 					<img class="logo" src="../assets/img/logo-black.jpg">
 				</a>
 
 			</div>
-			<div class="col-md-6 nav-right">
+			<div class="col-md-5 nav-right">
 
 				<div class="nav-rigth-top">
-					<div class="address">
+					<!-- <div class="address">
 						<p>
 							м. Львів, вул. Порохова 20Д
 						</p>
@@ -58,7 +58,7 @@
 						<p class="from-to">
 							з 10:00 по 22:00
 						</p>
-					</div>
+					</div> -->
 					<div class="my-cabinet">
 						<p>
 							<i class="fa fa-user"></i>
@@ -71,13 +71,13 @@
 
 				<ul class="nav">
 					<li>
-						<a href="#">
-							Доставка
+						<a [routerLink]='["restaurant"]'>
+							Наш Ресторан
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							Контакти
+						<a [routerLink]='["deliveri"]'>
+							Доставка
 						</a>
 					</li>
 				</ul>
@@ -92,24 +92,24 @@
 
 			<div class="mobile-menu-open"  [ngClass]="{'mobile-menu':mobileNav}">
 				<ul class="nav">
-					<li [ngx-scroll-to]="'main'">
+					<li>
 						<a href="#" (click)='mobileNav=!mobileNav'>
-							Головна
+							Про компанію
 						</a>
 					</li>
-					<li [ngx-scroll-to]="'features'">
+					<li>
 						<a href="#" (click)='mobileNav=!mobileNav'>
-							Переваги
+							Каталог
 						</a>
 					</li>
-					<li [ngx-scroll-to]="'menu'">
+					<li>
 						<a href="#" (click)='mobileNav=!mobileNav'>
-							Меню
+							Наш Ресторан
 						</a>
 					</li>
-					<li [ngx-scroll-to]="'contact'">
+					<li>
 						<a href="#" (click)='mobileNav=!mobileNav'>
-							Контакти
+							Доставка
 						</a>
 					</li>
 				</ul>
@@ -162,3 +162,4 @@
 		</div>
 	</div>
 </div>
+

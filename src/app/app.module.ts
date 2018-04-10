@@ -14,6 +14,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { PriceComponent } from './price/price.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 
 
@@ -23,7 +28,12 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    DeliveryComponent,
+    AboutCompanyComponent,
+    CatalogComponent,
+    PriceComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
