@@ -93,22 +93,27 @@
 			<div class="mobile-menu-open"  [ngClass]="{'mobile-menu':mobileNav}">
 				<ul class="nav">
 					<li>
-						<a href="#" (click)='mobileNav=!mobileNav'>
+						<a [routerLink]='["about"]' (click)='mobileNav=!mobileNav'>
 							Про компанію
 						</a>
 					</li>
 					<li>
-						<a href="#" (click)='mobileNav=!mobileNav'>
+						<a [routerLink]='["catalog"]' (click)='mobileNav=!mobileNav'>
 							Каталог
 						</a>
 					</li>
 					<li>
-						<a href="#" (click)='mobileNav=!mobileNav'>
-							Наш Ресторан
+						<a [routerLink]='["price"]' (click)='mobileNav=!mobileNav'>
+							Ціни
 						</a>
 					</li>
 					<li>
-						<a href="#" (click)='mobileNav=!mobileNav'>
+						<a [routerLink]='["restaurant"]' (click)='mobileNav=!mobileNav'>
+							Наш ресторан
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["deliveri"]' (click)='mobileNav=!mobileNav'>
 							Доставка
 						</a>
 					</li>

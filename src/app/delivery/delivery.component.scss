@@ -1,0 +1,62 @@
+.delivery {
+  
+  h3 {
+    color: #000;
+  }
+
+  .fa {
+    color: #F0544F;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  .deliv-title {
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  
+
+  table {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: calc(100% - 1px);
+
+    th {
+      padding: 15px 30px;
+      font-weight: bold;
+      width: 20%;
+      font-size: 16px;
+    }
+
+    td {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-right: 1px solid #ededed;
+      width: 20%;
+    }
+
+    tbody {
+      border: 1px solid #ededed;
+    }
+
+    tr {
+      &+tr {
+        border-top: 1px solid #ededed;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    li {
+      color: #000;
+
+      &+li {
+        margin-top: 10px;
+      }
+    }
+  }
+}

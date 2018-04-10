@@ -86,7 +86,11 @@ header {
     	li {
 				&+li {
 	    		margin-left: 50px;
-	    	}
+				}
+				
+				a {
+					text-transform: uppercase;
+				}
     	}
     }
 	}
@@ -154,7 +158,11 @@ header {
 			li {
 				&:last-child {
 	    		margin-left: 50px;
-	    	}
+				}
+				
+				a {
+					text-transform: uppercase;
+				}
     	}
 		}
 	}

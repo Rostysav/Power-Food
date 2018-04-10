@@ -1,0 +1,105 @@
+.price {
+  background: url(../../assets/img/price-bg.jpg);
+  background-size: cover;
+
+  .table-wrap {
+    margin-bottom: 30px;
+  }
+
+  table {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: calc(100% - 1px);
+    color: #fff;
+
+    tr {
+      &:nth-child(odd) {
+        background: rgba(255,255,255, .3);
+      }
+    }
+
+    thead {
+      tr {
+        background: transparent;
+      }
+    }
+
+    th {
+      padding: 24px 10px 27px 10px;
+      font-weight: bold;
+      min-width: 100px;
+      font-size: 16px;
+      text-align: center;
+      vertical-align: middle;
+
+
+      &:first-child {
+        text-align: left;
+        vertical-align: middle;
+        min-width: 150px;
+      }
+    }
+    td {
+      padding: 24px 10px 27px 10px;
+      font-size: 18px;
+      // border-right: 1px solid #ededed;
+      min-width: 100px;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+
+      &:first-child {
+        text-align: left;
+        vertical-align: middle;
+        min-width: 150px;
+      }
+
+    }
+
+
+    a {
+      font-weight: bold;
+      font-size: 18px;
+      transition: .3s;
+
+      &:hover {
+        text-decoration: underline;
+        transition: .3s;
+        color: #fff;
+      }
+    }
+  }
+
+  .kal-price {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .fa {
+      font-size: 30px;
+      margin-bottom: 5px;
+      color: #F0544F;
+    }
+  }
+
+  .freez {
+    li {
+      font-size: 18px;
+
+      &+li {
+        margin-top: 15px;
+      }
+      &::first-child {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+}
