@@ -1,0 +1,153 @@
+.lower-1000 {
+  display: flex;
+  margin-bottom: 50px;
+  
+  .program-img {
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .program-descr {
+    padding: 40px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0, .2);
+
+    .program-title {
+      color: #0A0807;
+      font-size: 30px;
+      margin-bottom: 15px;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      color: #0A0807;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .buy-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-bottom: 50px;
+
+      .price {
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .buy-link {
+        a {
+          background: #F0544F;
+          font-size: 21px;
+          padding: 10px 25px;
+          border-radius: 90px;
+          color: #fff;
+          transition: .3s;
+
+          &:hover {
+            transition: 3s;
+            background: red;
+            border-bottom: none;
+          }
+
+          .fa {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .days {
+        display: flex;
+        align-items: center;
+        position: relative;
+        select {
+          padding: 5px 45px 5px 15px;
+          border-radius: 5px;
+          color: #0A0807;
+          position: relative;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          &:focus {
+            outline: none;
+          }
+
+        }
+        .fa {
+          position: absolute;
+          color: #F0544F;
+          right: 15px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .price-by-day {
+        position: absolute;
+        bottom: -25px;
+        color: rgba(0,0,0, .6);
+      }
+
+    }
+
+    .program-anons {
+      color: #0A0807;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+
+    .calories {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    // .cal-item-wrap {
+    // 	display: flex;
+    // }
+
+    .cal-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      color: #F0544F;
+      margin-left: 15px;
+      width: 60px;
+      height: 85px;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #0A0807;;
+        border-radius: 90%;
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+      }
+      .first {
+        width: 70px;
+        height: 70px;
+        border-color: #F0544F;
+        margin-top: 0;
+      }
+    }
+  }
+
+}

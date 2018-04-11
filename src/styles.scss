@@ -73,6 +73,7 @@ p, a, li {
 	font-size: 16px;
 }
 a {
+	cursor: pointer;
 	&:hover, &:focus {
 		text-decoration: none;
 		outline: none;
@@ -130,4 +131,39 @@ button {
 	.section {
 		padding: 50px 0;
 	}
+}
+
+.mat-tab-header {
+	border-bottom: none;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.mat-tab-label-active {
+	opacity: 1;
+	background: #F0544F;
+}
+
+.mat-tab-label-content {
+	font-size: 20px;
+	font-weight: bold;
+	// color: #D7D7D7;
+}
+
+.mat-tab-body-content {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&>div {
+		display: flex;
+		&+div {
+			margin-top: 50px;
+		}
+	}
+}
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
+	background: #F0544F;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+	background: red;
 }

@@ -19,6 +19,8 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PriceComponent } from './price/price.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { Lover1000Component } from './lower/lover-1000/lover-1000.component';
+
 
 
 
@@ -33,7 +35,8 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     AboutCompanyComponent,
     CatalogComponent,
     PriceComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    Lover1000Component
   ],
   imports: [
     BrowserModule,
