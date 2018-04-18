@@ -7,6 +7,8 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PriceComponent } from './price/price.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { Balance2000DescrComponent } from './products/balance/balance-2000-descr/balance-2000-descr.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: 'about', component: AboutCompanyComponent},
   {path: 'catalog', component: CatalogComponent},
   {path: 'price', component: PriceComponent},
-  {path: 'restaurant', component: RestaurantComponent}
+  {path: 'restaurant', component: RestaurantComponent},
+  {path: 'catalog/balance2000descr', component: Balance2000DescrComponent},
 ];
 
 @NgModule({

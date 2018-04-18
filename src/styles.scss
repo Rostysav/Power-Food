@@ -23,7 +23,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -144,6 +145,10 @@ button {
 	background: #F0544F;
 }
 
+.mat-tab-label {
+  opacity: 1 !important;
+}
+
 .mat-tab-label-content {
 	font-size: 20px;
 	font-weight: bold;
@@ -151,7 +156,7 @@ button {
 }
 
 .mat-tab-body-content {
-	overflow: hidden;
+	overflow: hidden !important;
 	display: flex;
 	flex-direction: column;
 	&>div {
@@ -161,9 +166,366 @@ button {
 		}
 	}
 }
+
 .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
 	background: #F0544F;
 }
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
 	background: red;
+}
+
+.product {
+  display: flex;
+  margin-bottom: 50px;
+  
+  .program-img {
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+.program-descr {
+  padding: 40px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0, .2);
+
+  .program-title {
+    color: #0A0807;
+    font-size: 30px;
+    margin-bottom: 15px;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    color: #0A0807;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .buy-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+
+    .price {
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .buy-link {
+      a {
+        background: #F0544F;
+        font-size: 21px;
+        padding: 10px 25px;
+        border-radius: 90px;
+        color: #fff;
+        transition: .3s;
+
+        &:hover {
+          transition: 3s;
+          background: red;
+          border-bottom: none;
+        }
+
+        .fa {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .days {
+      display: flex;
+      align-items: center;
+      position: relative;
+      select {
+        padding: 5px 45px 5px 15px;
+        border-radius: 5px;
+        color: #0A0807;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+      .fa {
+        position: absolute;
+        color: #F0544F;
+        right: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    .price-by-day {
+      position: absolute;
+      bottom: -25px;
+      color: rgba(0,0,0, .6);
+    }
+
+  }
+
+  .program-anons {
+    color: #0A0807;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .calories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  // .cal-item-wrap {
+  // 	display: flex;
+  // }
+
+  .cal-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #F0544F;
+    margin-left: 15px;
+    width: 60px;
+    height: 85px;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #0A0807;;
+      border-radius: 90%;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+    }
+    .first {
+      width: 70px;
+      height: 70px;
+      border-color: #F0544F;
+      margin-top: 0;
+    }
+  }
+}
+
+.calories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+// .cal-item-wrap {
+// 	display: flex;
+// }
+
+.kal-price {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .fa {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #F0544F;
+  }
+}
+
+.cal-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #F0544F;
+  margin-left: 15px;
+  width: 60px;
+  height: 85px;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0A0807;;
+    border-radius: 90%;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+  .first {
+    width: 70px;
+    height: 70px;
+    border-color: #F0544F;
+    margin-top: 0;
+  }
+}
+
+.product-descr {
+  position: relative;
+
+  .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .col-md-6 {
+    padding: 0;
+  }
+
+  h1 {
+    color: #000;
+  }
+
+  p {
+    color: #000;
+  }
+
+  .cal-wrap {
+    position: relative;
+    display: flex;
+    padding-right: 10px;
+  }
+
+  .program-descr {
+    border: none;
+    margin: 100px 0;
+    padding: 0;
+    padding-right: 10px;
+  }
+
+  .product-descr-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .buy-link {
+    margin-left: 15px;
+  }
+
+  .feature {
+    display: flex;
+    padding-right: 10px;
+
+    p {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .col-md-6 {
+      padding: 15px;
+    }
+
+    li {
+      color: #000;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      &+li {
+        margin-top: 15px;
+      }
+
+      .fa {
+        color: #F0544F;
+        font-size: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.week-menu {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  .row {
+    align-items: flex-start;
+  }
+
+  .col-md-3 {
+    height: 100%;
+    &+.col-md-3 {
+      border-left: 1px solid #ccc;
+    }
+  }
+
+  .number {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .food {
+   line-height: 20px;
+   font-size: 18px;
+   cursor: pointer;
+   position: relative;
+   margin-bottom: 30px;
+   &:hover {
+     transition: .3s;
+     &::after {
+       position: absolute;
+       content: '';
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       background: url('http://www.latimes.com/resizer/X_W2tK26MuzdctcIxzWARtWFKaQ=/1400x0/beta.latimes.com/resizer/LBWH8wCzCGIWCKb3hrfc_6AoKLE=/1400x0/www.trbimg.com/img-590ce311/turbine/la-fo-belcampo-20170505/');
+       background-size: cover;
+     }
+   }
+    img {
+      vertical-align: middle;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .kkal {
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: #8c8b8b;
+    }
+  }
+}
+
+.others-program {
+  .row {
+    margin: 0;
+  }
+  .col-md-6 {
+    padding: 15px;
+  }
+  .program-descr {
+    margin: 25px 0;
+  }
 }

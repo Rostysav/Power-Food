@@ -156,7 +156,7 @@ header {
 	
 		.nav {
 			li {
-				&:last-child {
+				&+li {
 	    		margin-left: 50px;
 				}
 				

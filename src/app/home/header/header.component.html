@@ -21,6 +21,11 @@
 				</div>
 				<ul class="nav">
 					<li>
+						<a [routerLink]='[""]'>
+							Головна
+						</a>
+					</li>
+					<li>
 						<a [routerLink]='["about"]'>
 							Про компанію
 						</a>
@@ -28,11 +33,6 @@
 					<li>
 						<a [routerLink]='["catalog"]'>
 							Каталог
-						</a>
-					</li>
-					<li>
-						<a [routerLink]='["price"]'>
-							Ціни
 						</a>
 					</li>
 				</ul>
@@ -48,17 +48,6 @@
 			<div class="col-md-5 nav-right">
 
 				<div class="nav-rigth-top">
-					<!-- <div class="address">
-						<p>
-							м. Львів, вул. Порохова 20Д
-						</p>
-						<p class="phone">
-							<i class="fa fa-phone"></i> <span>+38-096-801-14-90</span>
-						</p>
-						<p class="from-to">
-							з 10:00 по 22:00
-						</p>
-					</div> -->
 					<div class="my-cabinet">
 						<p>
 							<i class="fa fa-user"></i>
@@ -70,6 +59,11 @@
 				</div>
 
 				<ul class="nav">
+					<li>
+						<a [routerLink]='["price"]'>
+							Ціни
+						</a>
+					</li>
 					<li>
 						<a [routerLink]='["restaurant"]'>
 							Наш Ресторан

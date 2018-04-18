@@ -40,7 +40,8 @@
     max-width: 20px;
     max-height: 20px;
     min-width: 20px;
-    min-height: 20px;
+		min-height: 20px;
+		opacity: 1;
 	}
 
 	.mat-tab-label-active {
@@ -363,47 +364,7 @@
 			margin-bottom: 30px;
 		}
 
-		.calories {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-
-			p {
-				font-size: 18px;
-				font-weight: bold;
-			}
-		}
-
-		// .cal-item-wrap {
-		// 	display: flex;
-		// }
-
-		.cal-item {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-			color: #F0544F;
-			margin-left: 15px;
-			width: 60px;
-			height: 85px;
-			span {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border: 1px solid #0A0807;;
-				border-radius: 90%;
-				width: 50px;
-				height: 50px;
-				margin-top: 10px;
-			}
-			.first {
-				width: 70px;
-				height: 70px;
-				border-color: #F0544F;
-				margin-top: 0;
-			}
-		}
+	
 	}
 
 	.mat-tab-label-content {

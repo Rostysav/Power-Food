@@ -19,7 +19,12 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PriceComponent } from './price/price.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
-import { Lover1000Component } from './lower/lover-1000/lover-1000.component';
+import { Lower1000Component } from './products/lower/lower-1000/lower-1000.component';
+import { Lower1500Component } from './products/lower/lower-1500/lower-1500.component';
+import { Balance2000Component } from './products/balance/balance-2000/balance-2000.component';
+import { Set2500Component } from './products/set/set-2500/set-2500.component';
+import { Set3500Component } from './products/set/set-3500/set-3500.component';
+import { Balance2000DescrComponent } from './products/balance/balance-2000-descr/balance-2000-descr.component';
 
 
 
@@ -36,7 +41,12 @@ import { Lover1000Component } from './lower/lover-1000/lover-1000.component';
     CatalogComponent,
     PriceComponent,
     RestaurantComponent,
-    Lover1000Component
+    Lower1000Component,
+    Lower1500Component,
+    Balance2000Component,
+    Set2500Component,
+    Set3500Component,
+    Balance2000DescrComponent
   ],
   imports: [
     BrowserModule,
