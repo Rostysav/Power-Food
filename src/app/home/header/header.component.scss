@@ -391,11 +391,23 @@ header.black-bg {
 
 	}
 }
-
+@media(min-width:992px) and (max-width: 1200px) {
+	header {
+		li {
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+}
 @media(max-width: 575px) {
 	header {
 		.row {
 			padding: 0 15px;
+		}
+
+		.logo {
+			width: 100px;
 		}
 
 		.logo-wrap {

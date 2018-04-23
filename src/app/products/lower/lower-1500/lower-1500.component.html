@@ -3,14 +3,16 @@
       <div class="row">
 
 
-      <div class="col-md-6 program-img">
-        <img src="https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg">
+      <div class="col-lg-6 col-md-12 program-img">
+        <a [routerLink]='["lower1500descr"]'>
+          <img src="https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg">
+        </a>
       </div>
 
-      <div class="col-md-6 program-descr">
+      <div class="col-lg-6 col-md-12 program-descr">
 
-        <a class="program-title" href="#">
-          Зниження - 1000ккал
+        <a class="program-title" [routerLink]='["lower1500descr"]'>
+          Зниження - 1500ккал
         </a>
         <p>
           Кількість днів
@@ -36,10 +38,10 @@
             <i class="fa fa-angle-down"></i>
             
           </div>
-          <div class="buy-link">
+          <div class="buy-link hidden-md-down">
             <a href="#">
-                <i class="fa fa-shopping-bag"></i>
-                Замовити
+              <i class="fa fa-shopping-bag"></i>
+              Замовити
             </a>
           </div>
         </div>
@@ -49,7 +51,7 @@
         </div>
 
         <div class="calories">
-          <p>
+          <p class="hidden-md-down">
             В середньому на день
           </p>
 
@@ -78,6 +80,13 @@
             вуглеводів
           </div>
 
+        </div>
+
+        <div class="buy-link hidden-lg-up">
+          <a href="#">
+            <i class="fa fa-shopping-bag"></i>
+            Замовити
+          </a>
         </div>
 
       </div>

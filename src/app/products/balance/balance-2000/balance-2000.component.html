@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-6 program-img">
+      <div class="col-lg-6 col-md-12 program-img">
         <a [routerLink]='["balance2000descr"]'>
           <img src="https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg">
         </a>
       </div>
 
-      <div class="col-md-6 program-descr">
+      <div class="col-lg-6 col-md-12 program-descr">
 
         <a class="program-title" [routerLink]='["balance2000descr"]'>
           Баланс - 1000ккал
@@ -18,6 +18,8 @@
         </p>
 
         <div class="buy-block">
+          
+
           <div class="price">
             1200 грн
           </div>
@@ -37,20 +39,23 @@
             <i class="fa fa-angle-down"></i>
             
           </div>
-          <div class="buy-link">
+
+
+          <div class="buy-link hidden-md-down">
             <a href="#">
-                <i class="fa fa-shopping-bag"></i>
-                Замовити
+              <i class="fa fa-shopping-bag"></i>
+              Замовити
             </a>
           </div>
+
         </div>
 
         <div class="program-anons">
-            Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів допоможе позбутися від зайвих кілограмів без втрати м'язової маси. Раціон - 1000 ккал.
+          Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів допоможе позбутися від зайвих кілограмів без втрати м'язової маси. Раціон - 1000 ккал.
         </div>
 
         <div class="calories">
-          <p>
+          <p class="hidden-md-down">
             В середньому на день
           </p>
 
@@ -79,6 +84,13 @@
             вуглеводів
           </div>
 
+        </div>
+
+        <div class="buy-link hidden-lg-up">
+          <a href="#">
+            <i class="fa fa-shopping-bag"></i>
+            Замовити
+          </a>
         </div>
 
       </div>

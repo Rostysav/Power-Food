@@ -450,6 +450,40 @@
 	}
 }
 
+@media(max-width: 992px) {
+	.information {
+		h1, h2, h3 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+		}
+		.inf-text {
+			font-size: 16px;
+
+			p {
+				font-size: 16px;
+			}
+			
+			a {
+				font-size: 18px;
+			}
+		}
+		.inf-title {
+			font-size: 18px;
+		}
+
+		.features  {
+			flex-direction: column;
+			span {
+				width: 40px;
+				height: 40px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
 			/*Information end*/
 
 
@@ -495,8 +529,12 @@
 @media(max-width: 767px) {
 	.contact {
 
+		h3 {
+			font-size: 20px;
+		}
+
 		p {
-			font-size: 25px;
+			font-size: 20px;
 		}
 	}
 }
@@ -505,7 +543,11 @@
 	.contact {
 
 		p {
-			font-size: 20px;
+			font-size: 15px;
+		}
+
+		.fa {
+			margin-right: 5px;
 		}
 	}
 }

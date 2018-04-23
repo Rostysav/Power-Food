@@ -85,3 +85,17 @@
   }
 
 }
+
+@media(max-width: 992px) {
+  .catalog {
+    .catalod-desc {
+      flex-direction: column;
+    }
+    .text {
+      order: 2
+    }
+    .img {
+      order: 1;
+    }
+  }
+}

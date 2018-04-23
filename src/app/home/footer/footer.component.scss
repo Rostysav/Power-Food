@@ -149,6 +149,14 @@ footer {
 	}
 }
 
+@media(max-width: 992px) {
+	footer {
+		p {
+			font-size: 15px;
+		}
+	}
+}
+
 @media(max-width: 767px) {
 	footer {
 
@@ -162,7 +170,7 @@ footer {
 			order: 2;
 			display: flex;
 			justify-content: center;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 			align-items: center;
 		}
 
@@ -172,9 +180,17 @@ footer {
 			justify-content: center;
 		}
 
-		.right-side {
+		// .left-side {
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	justify-content: center;
+		// 	align-items: center;
+		// }
+
+		.right-wrap {
 			justify-content: center;
 			align-items: center;
+			margin-bottom: 30px;
 
 			.footer-soc {
 				margin-right: 0;
