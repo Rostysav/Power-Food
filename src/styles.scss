@@ -190,6 +190,28 @@ button {
 
 }
 
+.buy-link {
+  a {
+    background: #F0544F;
+    font-size: 21px;
+    padding: 10px 25px;
+    border-radius: 90px;
+    color: #fff;
+    transition: .3s;
+
+    &:hover {
+      transition: 3s;
+      background: red;
+      border-bottom: none;
+      text-decoration: none;
+    }
+
+    .fa {
+      margin-right: 10px;
+    }
+  }
+}
+
 .program-descr {
   padding: 40px;
   background: #fff;
@@ -206,26 +228,6 @@ button {
     }
   }
 
-  .buy-link {
-    a {
-      background: #F0544F;
-      font-size: 21px;
-      padding: 10px 25px;
-      border-radius: 90px;
-      color: #fff;
-      transition: .3s;
-
-      &:hover {
-        transition: 3s;
-        background: red;
-        border-bottom: none;
-      }
-
-      .fa {
-        margin-right: 10px;
-      }
-    }
-  }
 
   p {
     color: #0A0807;
@@ -532,6 +534,14 @@ button {
   }
 }
 
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-checkbox-layout {
+  white-space: inherit !important;
+}
+
 @media (max-width: 992px) {
   h1, h2, h3 {
     font-size: 20px;
@@ -553,6 +563,18 @@ button {
       }
     }
   }
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #F0544F;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background: #F0544F;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background: #F0544F;
 }
 
 @media (max-width: 768px) {

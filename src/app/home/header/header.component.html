@@ -84,8 +84,13 @@
 
 			<!--mobile menu start-->
 
-			<div class="mobile-menu-open"  [ngClass]="{'mobile-menu':mobileNav}">
+			<div class="mobile-menu-open" [ngClass]="{'mobile-menu':mobileNav}">
 				<ul class="nav">
+					<li>
+						<a [routerLink]='[""]' (click)='mobileNav=!mobileNav'>
+							Головна
+						</a>
+					</li>
 					<li>
 						<a [routerLink]='["about"]' (click)='mobileNav=!mobileNav'>
 							Про компанію
@@ -103,7 +108,7 @@
 					</li>
 					<li>
 						<a [routerLink]='["restaurant"]' (click)='mobileNav=!mobileNav'>
-							Наш ресторан
+							Наш Ресторан
 						</a>
 					</li>
 					<li>
@@ -119,7 +124,7 @@
 				</div>
 				<div class="soc-icons">
 					<p>
-						Ми в: 
+						Ми в:
 					</p>
 					<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
 						<i class="fa fa-facebook-f"></i>
@@ -129,7 +134,7 @@
 					</a>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 </header>
@@ -161,4 +166,3 @@
 		</div>
 	</div>
 </div>
-

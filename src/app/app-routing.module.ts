@@ -13,6 +13,8 @@ import { Lower1500DescrComponent } from './products/lower/lower-1500-descr/lower
 import { Set2500DescrComponent } from './products/set/set-2500-descr/set-2500-descr.component';
 import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-descr.component';
 
+import { OrderComponent } from './order/order.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -26,7 +28,9 @@ const routes: Routes = [
   {path: 'catalog/lower1000descr', component: Lower1000DescrComponent},
   {path: 'catalog/lower1500descr', component: Lower1500DescrComponent},
   {path: 'catalog/set2500descr', component: Set2500DescrComponent},
-  {path: 'catalog/set3500descr', component: Set3500DescrComponent}
+  {path: 'catalog/set3500descr', component: Set3500DescrComponent},
+
+  {path: 'order', component: OrderComponent},
 ];
 
 @NgModule({

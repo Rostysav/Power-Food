@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,7 +11,13 @@ import { MainComponent } from './home/main/main.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { DeliveryComponent } from './delivery/delivery.component';
@@ -29,6 +35,7 @@ import { Lower1000DescrComponent } from './products/lower/lower-1000-descr/lower
 import { Lower1500DescrComponent } from './products/lower/lower-1500-descr/lower-1500-descr.component';
 import { Set2500DescrComponent } from './products/set/set-2500-descr/set-2500-descr.component';
 import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-descr.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -54,15 +61,23 @@ import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-de
     Lower1000DescrComponent,
     Lower1500DescrComponent,
     Set2500DescrComponent,
-    Set3500DescrComponent
+    Set3500DescrComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    MatRadioModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
     AngularFontAwesomeModule,
+    MatIconModule,
+    MatSelectModule,
     ScrollToModule.forRoot()
   ],
   providers: [],
