@@ -1,0 +1,68 @@
+.authorization {
+  background: #fff;
+
+  h3 {
+    color: #000;
+    width: 100%;
+  }
+
+  .authorization-from {
+    margin-bottom: 50px;
+  }
+
+  .email-form {
+    margin-bottom: 30px;
+  }
+
+  .password {
+    margin-bottom: 30px;
+  }
+
+  .mat-checkbox {
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .mat-button {
+    background: #F0544F;
+    font-size: 18px;
+    padding: 5px 25px;
+    border-radius: 90px;
+    color: #fff;
+    transition: .3s;
+    margin-left: 15px;
+
+    &:hover {
+      transition: .3s;
+      background: red;
+    }
+  }
+
+  .forgot-pass, .first-in-site {
+    padding: 50px 0;
+    border-top: 1px solid rgba(0,0,0, .1);
+
+    a {
+      font-size: 14px;
+      color: #F0544F;
+      transition: .3s;
+
+      &:hover {
+        transition: .3s;
+        color: red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .first-in-site {
+    border-top: none;
+    padding-top: 0; 
+
+    p {
+      color: #000;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+}

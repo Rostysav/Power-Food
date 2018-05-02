@@ -10,14 +10,8 @@ import { FooterComponent } from './home/footer/footer.component';
 import { MainComponent } from './home/main/main.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { DeliveryComponent } from './delivery/delivery.component';
@@ -36,7 +30,21 @@ import { Lower1500DescrComponent } from './products/lower/lower-1500-descr/lower
 import { Set2500DescrComponent } from './products/set/set-2500-descr/set-2500-descr.component';
 import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-descr.component';
 import { OrderComponent } from './order/order.component';
+import { AuthorizationComponent } from './authorization/authorization.component';
 
+
+import { 
+  MatTabsModule,
+  MatRadioModule,
+  MatInputModule,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatCheckboxModule,
+  MatButtonModule
+} from '@angular/material';
+import { RegistrationComponent } from './registration/registration.component';
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 
 
 
@@ -62,7 +70,10 @@ import { OrderComponent } from './order/order.component';
     Lower1500DescrComponent,
     Set2500DescrComponent,
     Set3500DescrComponent,
-    OrderComponent
+    OrderComponent,
+    AuthorizationComponent,
+    RegistrationComponent,
+    ForgotPassComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +89,7 @@ import { OrderComponent } from './order/order.component';
     AngularFontAwesomeModule,
     MatIconModule,
     MatSelectModule,
+    MatButtonModule,
     ScrollToModule.forRoot()
   ],
   providers: [],

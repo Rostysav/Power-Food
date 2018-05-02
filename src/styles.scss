@@ -25,6 +25,7 @@ time, mark, audio, video {
 body {
   line-height: 1;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -72,7 +73,8 @@ h1, h2, h3 {
 p, a, li {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
-	font-size: 16px;
+  font-size: 16px;
+  line-height: normal;
 }
 a {
 	cursor: pointer;

@@ -116,6 +116,7 @@
 @media(max-width: 1024px) {
 	.main {
 		.main-title {
+			margin-top: 0;
 			h1 {
 				font-size: 50px;
 			}
@@ -479,6 +480,9 @@
 				width: 40px;
 				height: 40px;
 				font-size: 20px;
+				text-align: center;
+				margin: 0 auto;
+				margin-bottom: 10px;
 			}
 		}
 	}

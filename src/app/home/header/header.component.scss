@@ -402,6 +402,28 @@ header.black-bg {
 }
 @media(max-width: 575px) {
 	header {
+
+		.mobile-menu {
+
+			button {
+				font-size: 25px;
+			}
+
+			.soc-icons {
+				p {
+					font-size: 25px;
+				}
+			}
+
+			ul {
+				li {
+					a {
+						font-size: 30px;
+					}
+				}
+			}
+		}
+
 		.row {
 			padding: 0 15px;
 		}

@@ -1,0 +1,81 @@
+.about {
+  background: #000;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .shef-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .about-descr {
+    margin-bottom: 50px;
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .why-wee-item {
+    margin-bottom: 50px;
+    display: flex;
+
+    .why-wee-icon {
+      margin-right: 50px;
+
+      img {
+        margin-top: 10px;
+      }
+    }
+
+    .title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .buy-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    a {
+      background: #F0544F;
+      font-size: 21px;
+      padding: 10px 25px;
+      border-radius: 90px;
+      color: #fff;
+      transition: .3s;
+
+      &:hover {
+        background: red;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .about {
+    .shef-img {
+      margin-bottom: 50px;
+    }
+  }
+}

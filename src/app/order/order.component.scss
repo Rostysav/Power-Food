@@ -1,9 +1,6 @@
 .oder {
   background: #fff;
 
-  .row {
-    align-items: center;
-  }
 
   
   h3 {
@@ -128,12 +125,17 @@
       justify-content: flex-end;
       width: 100%;
       p {
-        background: #ccc;
         padding: 10px;
         border-radius: 5px;
         font-size: 12px;
         width: auto;
       }
+    }
+
+    .sex {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
 
   }

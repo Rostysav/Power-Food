@@ -3,13 +3,13 @@
     <div class="row">
 
       <div class="col-md-12">
-        <div class="order-title">
+        <div class="title">
           <h3>
             оформлення замовлення
           </h3>
           <p>
             Якщо ви вже купували -
-            <a href="#">авторизуйтесь</a>
+            <a [routerLink]='["authorization"]'>авторизуйтесь</a>
           </p>
         </div>
       </div>
@@ -69,8 +69,8 @@
                 </mat-form-field>
               </div>
 
-              <div class="col-md-4 col-sm-12">
-                <div class="input">
+              <div class="col-md-4 col-sm-12 sex">
+                <div class="input pull-right">
                   <mat-radio-group>
                     <mat-radio-button value="1" checked="true">Чоловік</mat-radio-button>
                     <mat-radio-button value="2">Жінка</mat-radio-button>
@@ -159,7 +159,9 @@
                 <p>
                   Вибір оплати
                 </p>
-  
+              </div>
+
+              <div class="col-md-12">
                 <mat-radio-group>
                   <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
                   <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
@@ -191,17 +193,18 @@
             <div class="row">
 
               <div class="col-md-6 col-sm-12">
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <mat-checkbox>
                     Я згоден з умовами даного договору
                   </mat-checkbox>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <mat-checkbox>
                     Я хочу отримувати свіжі новини і дізнаватися про акції
                   </mat-checkbox>
                 </div>
               </div>
+
               <div class="col-md-6 col-sm-12">
                 <div class="buy-link">
                   <a href="#">
