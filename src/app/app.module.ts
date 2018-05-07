@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -11,9 +13,6 @@ import { MainComponent } from './home/main/main.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { AboutCompanyComponent } from './about-company/about-company.component';
 import { CatalogComponent } from './catalog/catalog.component';
@@ -32,7 +31,6 @@ import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-de
 import { OrderComponent } from './order/order.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 
-
 import { 
   MatTabsModule,
   MatRadioModule,
@@ -45,9 +43,6 @@ import {
 } from '@angular/material';
 import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -86,11 +81,10 @@ import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
     MatInputModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    AngularFontAwesomeModule,
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
-    ScrollToModule.forRoot()
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

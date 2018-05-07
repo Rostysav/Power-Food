@@ -20,7 +20,32 @@ export class OrderComponent implements OnInit {
 
   emailFormControl = new FormControl('', [
     Validators.required,
-    Validators.email,
+    Validators.email
+  ]);
+
+  surnameFormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(2)
+  ]);
+
+  nameFormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(2)
+  ]);
+
+  midnameFormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(5)
+  ]);
+
+  mobileFormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(10)
+  ]);
+
+  addressFormControl = new FormControl('', [
+    Validators.required,
+    Validators.pattern("[^\w\d]*(([0-9]+.*[A-Za-z]+.*)|[A-Za-z]+.*([0-9]+.*))")
   ]);
 
   matcher = new MyErrorStateMatcher();
