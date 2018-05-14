@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "power-food"
+    "default": "food-85fff",
+    "food-85fff": "food-85fff"
   }
 }

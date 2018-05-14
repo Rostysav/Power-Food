@@ -20,7 +20,7 @@
       "prefix": "pf",
       "styles": [
         "styles.scss",
-        "../node_modules/font-awesome/css/font-awesome.scss"
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -55,6 +55,9 @@
     }
   },
   "defaults": {
+    "serve": {
+      "port": 8080
+    },
     "styleExt": "scss",
     "component": {}
   }

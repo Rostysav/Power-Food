@@ -1,49 +1,36 @@
 <div class="oder section">
   <div class="container">
     <div class="row">
-
       <div class="col-md-12">
         <div class="title">
-          <h3>
-            оформлення замовлення
-          </h3>
-          <p>
-            Якщо ви вже купували -
-            <a [routerLink]='["authorization"]'>авторизуйтесь</a>
-          </p>
+          <h3>оформлення замовлення</h3>
+          <p>Якщо ви вже купували -<a [routerLink]='["authorization"]'>авторизуйтесь</a></p>
         </div>
       </div>
-
       <div class="order-item">
-
-        <div class="order-title">
+        <div class="order-title" *ngFor="let p of product">
           <div class="col-md-4 col-sm-12">
-
             <div class="item-name">
-              <img src="https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg">
-              <p>Зниження - 1000ккал</p>
+              <img [src]="p.imageUrl">
+              <p>{{ p.name }}</p>
             </div>
-
           </div>
           <div class="col-md-4 col-sm-12">
-
             <div class="days">
-              <p>
-                Тривалість
+              <p>Тривалість
                 <span>12</span> днів
               </p>
             </div>
-
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="price">
               <span>Ціна:</span>
-              <p>1000 грн</p>
+              <p>{{ p.price }}</p>
             </div>
           </div>
         </div>
 
-        <form class="order-form">
+        <form class="order-form" *ngFor="let p of product">
 
           <div class="container">
             <div class="row">
@@ -56,8 +43,7 @@
                     Please enter a valid email address
                   </mat-error>
                   <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Email is
-                    <strong>required</strong>
+                    Email is <strong>required</strong>
                   </mat-error>
                 </mat-form-field>
               </div>
@@ -65,7 +51,14 @@
               <div class="col-md-4 col-sm-12">
                 <mat-form-field class="example-full-width">
                   <span matPrefix>+38 &nbsp;</span>
-                  <input type="tel" matInput placeholder="Телефон">
+                  <input type="tel" matInput placeholder="Телефон" [formControl]="mobileFormControl" [errorStateMatcher]="matcher">
+
+                  <mat-error *ngIf="mobileFormControl.hasError('mobile') && !mobileFormControl.hasError('required')">
+                    Please enter a valid mobile
+                  </mat-error>
+                  <mat-error *ngIf="mobileFormControl.hasError('required')">
+                    Mobile is <strong>required</strong>
+                  </mat-error>
                 </mat-form-field>
               </div>
 
@@ -84,19 +77,37 @@
             <div class="row">
               <div class="col-md-4 col-sm-12">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Прізвище">
+                  <input matInput placeholder="Прізвище" [formControl]="surnameFormControl" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="surnameFormControl.hasError('surname') && !surnameFormControl.hasError('required')">
+                    Please enter a valid surname
+                  </mat-error>
+                  <mat-error *ngIf="surnameFormControl.hasError('required')">
+                    Surname is <strong>required</strong>
+                  </mat-error>
                 </mat-form-field>
               </div>
 
               <div class="col-md-4 col-sm-12">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Ім'я">
+                  <input matInput placeholder="Ім'я" [formControl]="nameFormControl" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="nameFormControl.hasError('name') && !nameFormControl.hasError('required')">
+                    Please enter a valid name
+                  </mat-error>
+                  <mat-error *ngIf="nameFormControl.hasError('required')">
+                    Name is <strong>required</strong>
+                  </mat-error>
                 </mat-form-field>
               </div>
 
               <div class="col-md-4 col-sm-12">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="По батькові">
+                  <input matInput placeholder="По батькові" [formControl]="midnameFormControl" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="midnameFormControl.hasError('midname') && !midnameFormControl.hasError('required')">
+                    Please enter a valid middle name
+                  </mat-error>
+                  <mat-error *ngIf="midnameFormControl.hasError('required')">
+                    Middle name is <strong>required</strong>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </div>
@@ -107,7 +118,13 @@
               <div class="col-md-4 col-sm-12">
 
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Адреса">
+                  <input matInput placeholder="Адреса" [formControl]="addressFormControl" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="addressFormControl.hasError('address') && !addressFormControl.hasError('required')">
+                    Please enter a valid address
+                  </mat-error>
+                  <mat-error *ngIf="addressFormControl.hasError('required')">
+                    Address is <strong>required</strong>
+                  </mat-error>
                 </mat-form-field>
 
               </div>
@@ -142,38 +159,28 @@
                     </mat-form-field>
                   </div>
                   <div class="time">
-                    <p>
-                      Мінімальний інтервал доставки 2 години
-                    </p>
+                    <p>Мінімальний інтервал доставки 2 години</p>
                   </div>
                 </div>
               </div>
 
             </div>
           </div>
-
           <div class="container">
             <div class="row pay-type">
-
               <div class="col-md-12">
-                <p>
-                  Вибір оплати
-                </p>
+                <p>Вибір оплати</p>
               </div>
-
               <div class="col-md-12">
                 <mat-radio-group>
                   <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
                   <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
                 </mat-radio-group>
               </div>
-
             </div>
           </div>
-
           <div class="container">
             <div class="row">
-
               <div class="col-md-6 col-sm-12">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Промокод">
@@ -182,16 +189,13 @@
               <div class="col-md-6 col-sm-12">
                 <div class="price">
                   <span>Ціна:</span>
-                  <p>1000 грн</p>
+                  <p>{{ p.price }}</p>
                 </div>
               </div>
-
             </div>
           </div>
-
           <div class="container">
             <div class="row">
-
               <div class="col-md-6 col-sm-12">
                 <div class="col-md-12">
                   <mat-checkbox>
@@ -208,8 +212,7 @@
               <div class="col-md-6 col-sm-12">
                 <div class="buy-link">
                   <a href="#">
-                    <i class="fa fa-shopping-bag"></i>
-                    Замовити
+                    <i class="fa fa-shopping-bag"></i>Оплатити <!-- todo send letter to email -->
                   </a>
                 </div>
               </div>

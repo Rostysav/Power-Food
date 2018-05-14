@@ -14,7 +14,19 @@
 <body>
   <pf-root></pf-root>
 
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyCW9r2FiKuyjbtaSfU4xTICcaITwo_pYtQ",
+          authDomain: "food-85fff.firebaseapp.com",
+          databaseURL: "https://food-85fff.firebaseio.com",
+          projectId: "food-85fff",
+          storageBucket: "food-85fff.appspot.com",
+          messagingSenderId: "160037253545"
+      };
+      firebase.initializeApp(config);
+  </script>
 
 </body>
 </html>
