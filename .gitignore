@@ -38,6 +38,8 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
+.vscode
+/package-lock.json
 
 # System Files
 .DS_Store

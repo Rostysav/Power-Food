@@ -9,7 +9,12 @@ header {
 
   .container {
     position: static;
-  }
+	}
+	
+	.row {
+		display: flex;
+		align-items: center;
+	}
 
 	.logo-wrap {
 		display: flex;
@@ -53,19 +58,8 @@ header {
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
+			margin-bottom: 15px;
 		}
-
-    .soc-icons {
-    	display: flex;
-	   	
-	   	p {
-	   		color: #969696;
-	   		font-size: 15px;
-	   		display: flex;
-		    align-items: center;
-		    justify-content: center;
-	   	}
-    }
 
 		button {
 			background: transparent;
@@ -94,12 +88,25 @@ header {
     	}
     }
 	}
+
 	.nav-right {
 		display: flex;
     flex-direction: column;
     justify-content: center;
 		align-items: flex-end;
 		z-index: 2;
+
+		.soc-icons {
+    	display: flex;
+	   	
+	   	p {
+	   		color: #969696;
+	   		font-size: 15px;
+	   		display: flex;
+		    align-items: center;
+		    justify-content: center;
+	   	}
+    }
 
     .address {
 			display: flex;
@@ -134,6 +141,7 @@ header {
 			display: flex;
 			justify-content: flex-end;
 			width: 100%;
+			margin-bottom: 15px;
 
 			.my-cabinet {
 				display: flex;
@@ -302,6 +310,7 @@ header.black-bg {
 
 		.logo-wrap {
 			z-index: 10;
+			width: auto;
 		}
 		
 		.nav-left {
@@ -456,9 +465,9 @@ header.black-bg {
     	ul{
 		    margin-top: -70px;
     		li {
-			    margin: 10px 0;
+			    margin: 5px 0;
     			a {
-    				font-size: 20px;
+    				font-size: 18px;
     			}
     		}
     	}
@@ -475,7 +484,11 @@ header.black-bg {
 				    height: 40px;
 					}
     		}
-    	}
+			}
+			
+			button {
+				margin-top: 10px;
+			}
     }
 	}
 	.popup-menu {

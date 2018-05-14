@@ -1,5 +1,6 @@
 <div class="main">
-   <mat-tab-group>
+
+  <mat-tab-group>
     <mat-tab label="">
       <img src="../assets/img/slider-1.jpeg">
       <div class="bg"></div>
@@ -13,16 +14,22 @@
       <div class="bg"></div>
     </mat-tab>
   </mat-tab-group>
+  
   <div class="main-title">
-    <h1>Перший у Львові</h1>
-    <h2>ресторан здорового харчування</h2>
-    <a [routerLink]="['/catalog']">Вибрати програму</a>
+    <div class="container">
+      <div class="row">
+        <h1>Перший у Львові</h1>
+        <h2>ресторан здорового харчування</h2>
+        <a [routerLink]="['/catalog']">Вибрати програму</a>
+      </div>
+    </div>
   </div>
+
 </div>
 
-    <!--Main section with slider end-->
+<!--Main section with slider end-->
 
-    <!--Features start-->
+<!--Features start-->
 
 <div class="features section">
   <h3>Чому ми:</h3>
@@ -52,7 +59,7 @@
         <div class="features-descr">
           Корисна їжа може і повинна бути смачною
         </div>
-        
+
       </div>
       <div class="col-md-4">
 
@@ -65,20 +72,20 @@
         <div class="features-descr">
           Якість і користь понад усе
         </div>
-        
+
       </div>
     </div>
   </div>
 </div>
 
-    <!--Features end-->
+<!--Features end-->
 
 
-    <!--Menu section start-->
+<!--Menu section start-->
 
 <div class="program section">
   <h3>
-      Ми підібрали програми під ваші задачі
+    Ми підібрали програми під ваші задачі
   </h3>
   <div class="container">
     <div class="row">
@@ -86,7 +93,7 @@
       <mat-tab-group>
 
         <mat-tab label="Зниження">
-          
+
           <pf-lower-1000></pf-lower-1000>
           <pf-lower-1500></pf-lower-1500>
 
@@ -94,29 +101,29 @@
         </mat-tab>
 
         <mat-tab label="Баланс">
-          
+
           <pf-balance-2000></pf-balance-2000>
 
         </mat-tab>
 
         <mat-tab label="Набір">
-          
+
           <pf-set-2500></pf-set-2500>
           <pf-set-3500></pf-set-3500>
 
         </mat-tab>
 
       </mat-tab-group>
-      
+
     </div>
   </div>
 </div>
 
-    <!--Menu section end-->
+<!--Menu section end-->
 
 <div class="information section">
   <h3>
-      ПРАВИЛЬНЕ ХАРЧУВАННЯ З ДОСТАВКОЮ
+    ПРАВИЛЬНЕ ХАРЧУВАННЯ З ДОСТАВКОЮ
   </h3>
 
   <div class="container">
@@ -124,38 +131,41 @@
 
       <div class="col-md-6 col-sm-12">
         <div class="inf-title">
-            КОМПАНИЯ LEVEL KITCHEN
+          КОМПАНИЯ LEVEL KITCHEN
         </div>
         <div class="inf-text">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sequi dolorem voluptas atque qui architecto totam sed, praesentium alias officiis numquam. Alias at, fuga autem dolor non voluptatum error minima.
-         Hic, facere cupiditate perferendis dolor iusto sapiente? Ipsam inventore et asperiores laborum? Doloremque commodi natus voluptate in hic consectetur facere, ratione omnis cupiditate repudiandae eum pariatur totam, numquam dicta quam!
-         Voluptatibus facilis ex ab ducimus eum doloremque doloribus, nostrum impedit quis assumenda nemo pariatur, distinctio quasi. Sapiente numquam officia officiis, cumque voluptatem nam minima blanditiis dolorem explicabo illum, velit labore!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sequi dolorem voluptas atque qui architecto totam sed,
+          praesentium alias officiis numquam. Alias at, fuga autem dolor non voluptatum error minima. Hic, facere cupiditate
+          perferendis dolor iusto sapiente? Ipsam inventore et asperiores laborum? Doloremque commodi natus voluptate in
+          hic consectetur facere, ratione omnis cupiditate repudiandae eum pariatur totam, numquam dicta quam! Voluptatibus
+          facilis ex ab ducimus eum doloremque doloribus, nostrum impedit quis assumenda nemo pariatur, distinctio quasi.
+          Sapiente numquam officia officiis, cumque voluptatem nam minima blanditiis dolorem explicabo illum, velit labore!
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
-          <div class="inf-title">
-              КОМПАНИЯ LEVEL KITCHEN
-          </div>
-          <div class="inf-text">
-           <p>
-              Виберіть програму, в залежності від потреб
-           </p>
-           <a [routerLink]='["lower1000descr"]'>
-              <i class="fa fa-check"></i> Зниження 1000 ккал; 
-           </a>
-           <a [routerLink]='["lower1500descr"]'>
-              <i class="fa fa-check"></i> Зниження 1500 ккал; 
-           </a>
-           <a [routerLink]='["balance2000descr"]'>
-              <i class="fa fa-check"></i> Баланс 2000 ккал
-           </a>
-           <a [routerLink]='["set2500descr"]'>
-              <i class="fa fa-check"></i> Набір 2500 ккал
-           </a>
-           <a [routerLink]='["set3500descr"]'>
-              <i class="fa fa-check"></i> Набір 3000 ккал
-           </a>
-          </div>
+        <div class="inf-title">
+          КОМПАНИЯ LEVEL KITCHEN
+        </div>
+        <div class="inf-text">
+          <p>
+            Виберіть програму, в залежності від потреб
+          </p>
+          <a [routerLink]='["lower1000descr"]'>
+            <i class="fa fa-check"></i> Зниження 1000 ккал;
+          </a>
+          <a [routerLink]='["lower1500descr"]'>
+            <i class="fa fa-check"></i> Зниження 1500 ккал;
+          </a>
+          <a [routerLink]='["balance2000descr"]'>
+            <i class="fa fa-check"></i> Баланс 2000 ккал
+          </a>
+          <a [routerLink]='["set2500descr"]'>
+            <i class="fa fa-check"></i> Набір 2500 ккал
+          </a>
+          <a [routerLink]='["set3500descr"]'>
+            <i class="fa fa-check"></i> Набір 3000 ккал
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -169,23 +179,29 @@
       </div>
     </div>
   </div>
-  
+
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-12 features">
-        <span> 
+        <span>
           1
         </span>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio eveniet molestiae ipsum nemo accusamus qui natus illo pariatur numquam minima, dolorum eaque eius, fugiat officia ipsam vitae doloremque itaque?Aspernatur laudantium, inventore similique fugiat unde culpa officia ab blanditiis tenetur iste quod quia minus. Laudantium eum, rerum dolorum consectetur necessitatibus quae voluptatum doloribus iure, dignissimos reiciendis amet distinctio ea.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio eveniet molestiae ipsum nemo accusamus qui natus
+          illo pariatur numquam minima, dolorum eaque eius, fugiat officia ipsam vitae doloremque itaque?Aspernatur laudantium,
+          inventore similique fugiat unde culpa officia ab blanditiis tenetur iste quod quia minus. Laudantium eum, rerum
+          dolorum consectetur necessitatibus quae voluptatum doloribus iure, dignissimos reiciendis amet distinctio ea.
         </p>
       </div>
       <div class="col-md-6 col-sm-12 features">
-        <span> 
+        <span>
           2
         </span>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio eveniet molestiae ipsum nemo accusamus qui natus illo pariatur numquam minima, dolorum eaque eius, fugiat officia ipsam vitae doloremque itaque?Aspernatur laudantium, inventore similique fugiat unde culpa officia ab blanditiis tenetur iste quod quia minus. Laudantium eum, rerum dolorum consectetur necessitatibus quae voluptatum doloribus iure, dignissimos reiciendis amet distinctio ea.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio eveniet molestiae ipsum nemo accusamus qui natus
+          illo pariatur numquam minima, dolorum eaque eius, fugiat officia ipsam vitae doloremque itaque?Aspernatur laudantium,
+          inventore similique fugiat unde culpa officia ab blanditiis tenetur iste quod quia minus. Laudantium eum, rerum
+          dolorum consectetur necessitatibus quae voluptatum doloribus iure, dignissimos reiciendis amet distinctio ea.
         </p>
       </div>
       <div class="col-md-6 col-sm-12 features">
@@ -193,7 +209,10 @@
           3
         </span>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis dignissimos itaque repellendus deleniti quas iusto minima similique labore? Deserunt itaque nemo iste iure odit cupiditate ducimus ex non ab soluta!Sequi dolorem temporibus quasi ab! Reiciendis ullam et at facere unde modi, quidem quae dignissimos error culpa incidunt consequatur officia corporis. Nulla libero pariatur vero optio voluptatum. Aut, ex amet!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis dignissimos itaque repellendus deleniti quas iusto minima
+          similique labore? Deserunt itaque nemo iste iure odit cupiditate ducimus ex non ab soluta!Sequi dolorem temporibus
+          quasi ab! Reiciendis ullam et at facere unde modi, quidem quae dignissimos error culpa incidunt consequatur officia
+          corporis. Nulla libero pariatur vero optio voluptatum. Aut, ex amet!
         </p>
       </div>
       <div class="col-md-6 col-sm-12 features">
@@ -201,7 +220,11 @@
           4
         </span>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, animi quas facilis ullam at veniam mollitia omnis necessitatibus. Neque assumenda sapiente porro expedita quod blanditiis ex aliquid, tenetur numquam voluptatum!Unde, veritatis? Quidem neque suscipit veritatis voluptatem perferendis ducimus dolorem sapiente, corporis praesentium saepe quam at quibusdam vel, accusantium ratione? Nostrum deleniti adipisci reiciendis consectetur odit doloremque harum aspernatur quos.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, animi quas facilis ullam at veniam mollitia omnis
+          necessitatibus. Neque assumenda sapiente porro expedita quod blanditiis ex aliquid, tenetur numquam voluptatum!Unde,
+          veritatis? Quidem neque suscipit veritatis voluptatem perferendis ducimus dolorem sapiente, corporis praesentium
+          saepe quam at quibusdam vel, accusantium ratione? Nostrum deleniti adipisci reiciendis consectetur odit doloremque
+          harum aspernatur quos.
         </p>
       </div>
 
@@ -222,20 +245,23 @@
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quibusdam officiis a corrupti obcaecati temporibus in numquam beatae voluptatibus molestias consequuntur deleniti eligendi, aperiam ratione dignissimos ipsum cum magnam sint.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quibusdam officiis a corrupti obcaecati temporibus in
+          numquam beatae voluptatibus molestias consequuntur deleniti eligendi, aperiam ratione dignissimos ipsum cum magnam
+          sint.
         </p>
       </div>
       <div class="col-md-6 col-sm-12">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laboriosam. Fugit eos alias ipsam necessitatibus, provident incidunt sed recusandae fugiat natus ipsum perspiciatis aliquam distinctio tempore iusto id. Porro, cumque.
-          </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laboriosam. Fugit eos alias ipsam necessitatibus, provident
+          incidunt sed recusandae fugiat natus ipsum perspiciatis aliquam distinctio tempore iusto id. Porro, cumque.
+        </p>
       </div>
     </div>
   </div>
 
 </div>
 
-    <!--Contacts start-->
+<!--Contacts start-->
 
 <div class="contact section">
   <div class="bg">
@@ -284,5 +310,4 @@
   </div>
 </div>
 
-    <!--Contacts end-->
-
+<!--Contacts end-->
