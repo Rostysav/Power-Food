@@ -1,73 +1,36 @@
-<div class="balance-descr product-descr section">
-  <h1>
-    зниження - 1500 ККАЛ
-  </h1>
-
+<div class="balance-descr product-descr section" *ngFor="let product of products">
+  <h1>{{ product.name }}</h1>
   <div class="container">
     <div class="row">
-
       <div class="col-md-6 product-descr-text">
-
         <div class="cal-wrap">
           <div class="calories">
-            <p>
-              В середньому на день
-            </p>
-
+            <p>В середньому на день</p>
             <div class="cal-item">
-              <span class="first">
-                1000
-              </span>
-              ккал
+              <span class="first">{{ product.id }}</span>ккал
             </div>
             <div class="cal-item">
-              <span>
-                120
-              </span>
-              білків
+              <span>120</span>білків
             </div>
             <div class="cal-item">
-              <span>
-                28
-              </span>
-              жирів
+              <span>28</span>жирів
             </div>
             <div class="cal-item">
-              <span>
-                80
-              </span>
-              вуглеводів
+              <span>80</span>вуглеводів
             </div>
-
           </div>
           <div class="kal-price">
-
             <i class="fa fa-shopping-bag"></i>
-            <p>
-              4 бокса
-            </p>
-
+            <p>4 бокса</p>
           </div>
         </div>
-
         <div class="program-descr">
-
-          <a class="program-title" href="#">
-            Баланс - 1000ккал
-          </a>
-          <p>
-            Кількість днів
-          </p>
-
+          <a class="program-title" href="#">Баланс - 1500ккал</a>
+          <p>Кількість днів</p>
           <div class="buy-block">
-            <div class="price">
-              1200 грн
-            </div>
-            <div class="price-by-day">
-              * 200 грн/день
-            </div>
+            <div class="price">{{ product.price }} грн</div>
+            <div class="price-by-day">* {{ product.dayPrice }} грн/день</div>
             <div class="days">
-
               <select name="select">
                 <option value="value1" selected>6 дн</option>
                 <option value="value2">2 дн</option>
@@ -75,26 +38,18 @@
                 <option value="value3">18 дн</option>
                 <option value="value3">24 дн</option>
               </select>
-
               <i class="fa fa-angle-down"></i>
-
             </div>
             <div class="buy-link">
-              <a href="#">
-                <i class="fa fa-shopping-bag"></i>
-                Замовити
+              <a [routerLink]="['/order']" (click)="orderProduct()">
+                <i class="fa fa-shopping-bag"></i>Замовити
               </a>
             </div>
           </div>
-
         </div>
-
         <div class="feature">
-
           <div class="col-md-6">
-            <p>
-              Особливості
-            </p>
+            <p>Особливості</p>
             <ul>
               <li>
                 <i class="fa fa-check"></i>поддержание баланса белков, жиров и углеводов;</li>
@@ -102,11 +57,8 @@
                 <i class="fa fa-check"></i>получение 1000 ккал в день.</li>
             </ul>
           </div>
-
           <div class="col-md-6">
-            <p>
-              Результат
-            </p>
+            <p>Результат</p>
             <ul>
               <li>
                 <i class="fa fa-check"></i>снижение веса без потери энергии;</li>
@@ -114,533 +66,83 @@
                 <i class="fa fa-check"></i>сохранение отличного эмоционального состояния.</li>
             </ul>
           </div>
-
         </div>
-
       </div>
-
       <div class="col-md-6">
         <img src="https://levelkitchen.com/upload/iblock/9ae/9aeb0b85d35c28c54466af46d25ee747.jpg">
       </div>
-
     </div>
   </div>
-
   <div class="week-menu">
-    <h1>
-      приблизне меню на тиждень
-    </h1>
+    <h1>приблизне меню на тиждень</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-
           <mat-tab-group>
-            <mat-tab label="Понеділок">
+            <mat-tab *ngFor="let w of week" label="{{ w.day }}">
               <div class="container">
                 <div class="row">
                   <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
+                    <p class="number">{{ w.first }}:</p>
                     <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
+                      <img [src]="w.image1"> {{ w.description1 }}
                     </div>
                     <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
+                      <span>{{ w.span1 }} ккал</span>
+                      <span>{{ w.span2 }} б</span>
+                      <span>{{ w.span3 }} ж</span>
+                      <span>{{ w.span4 }} у</span>
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
+                    <p class="number">{{ w.second }}:</p>
                     <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
+                      <img [src]="w.image2"> {{ w.description2 }}
                     </div>
                     <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
+                      <span>{{ w.span5 }} ккал</span>
+                      <span>{{ w.span6 }} б</span>
+                      <span>{{ w.span7 }} ж</span>
+                      <span>{{ w.span8 }} у</span>
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
+                    <p class="number">{{ w.third }}:</p>
                     <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
+                      <img [src]="w.image3"> {{ w.description3 }}
                     </div>
                     <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
+                      <span>{{ w.span9 }} ккал</span>
+                      <span>{{ w.span10 }} б</span>
+                      <span>{{ w.span11 }} ж</span>
+                      <span>{{ w.span12 }} у</span>
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
+                    <p class="number">{{ w.fourth }}:</p>
                     <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
+                      <img [src]="w.image4"> {{ w.description4 }}
                     </div>
                     <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Вівторок">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Середа">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Четвер">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Пятниця">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Субота">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-tab>
-            <mat-tab label="Неділя">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <p class="number">
-                      1:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      2:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      3:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <p class="number">
-                      4:
-                    </p>
-                    <div class="food">
-                      <img src="../../../../assets/img/icons/restaurant.png"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi, in numquam ab vero dolore
-                      hic reiciendis adipisci? Vel, veniam est! Blanditiis cumque aspernatur pariatur magni ducimus ad minus
-                      tempora!
-                    </div>
-                    <div class="kkal">
-                      <span>334 ккал</span>
-                      <span>10 б</span>
-                      <span>10 ж</span>
-                      <span>51 у</span>
+                      <span>{{ w.span13 }} ккал</span>
+                      <span>{{ w.span14 }} б</span>
+                      <span>{{ w.span15 }} ж</span>
+                      <span>{{ w.span16 }} у</span>
                     </div>
                   </div>
                 </div>
               </div>
             </mat-tab>
           </mat-tab-group>
-
         </div>
       </div>
     </div>
   </div>
-
   <div class="others-program">
-    <h1>
-      інші програми
-    </h1>
+    <h1>інші програми</h1>
     <pf-lower-1000></pf-lower-1000>
     <pf-balance-2000></pf-balance-2000>
     <pf-set-2500></pf-set-2500>
     <pf-set-3500></pf-set-3500>
   </div>
-
-
 </div>

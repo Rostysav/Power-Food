@@ -7,9 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
-  public mobileNav : boolean = false;
-  public popupMenu : boolean = false;
+
+  public mobileNav = false;
+  public popupMenu = false;
 
   constructor() { }
 
@@ -28,6 +28,6 @@ export class HeaderComponent implements OnInit {
     });
 
   }
-  
+
 
 }

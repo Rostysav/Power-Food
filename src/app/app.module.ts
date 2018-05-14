@@ -31,7 +31,7 @@ import { Set3500DescrComponent } from './products/set/set-3500-descr/set-3500-de
 import { OrderComponent } from './order/order.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 
-import { 
+import {
   MatTabsModule,
   MatRadioModule,
   MatInputModule,

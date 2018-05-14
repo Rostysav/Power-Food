@@ -1,32 +1,18 @@
-<div class="lower-1000 product">
+<div class="lower-1000 product" *ngFor="let product of products">
   <div class="container">
     <div class="row">
-
       <div class="col-lg-6 col-md-12 program-img">
-        <a [routerLink]='["lower1000descr"]'>
-          <img src="https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg">
+        <a [routerLink]='["/lower1000descr"]'>
+          <img [src]="product.imageUrl">
         </a>
       </div>
-
       <div class="col-lg-6 col-md-12 program-descr">
-
-        <a class="program-title" [routerLink]='["lower1000descr"]'>
-          Зниження - 1000ккал
-        </a>
-        <p>
-          Кількість днів
-        </p>
-
+        <a class="program-title" [routerLink]='["/lower1000descr"]'>{{ product.name }}</a>
+        <p>Кількість днів</p>
         <div class="buy-block">
-          
-          <div class="price">
-            1200 грн
-          </div>
-          <div class="price-by-day">
-            * 200 грн/день
-          </div>
+          <div class="price">{{ product.price }} грн</div>
+          <div class="price-by-day">* {{ product.dayPrice }} грн/день</div>
           <div class="days">
-            
             <select name="select">
               <option value="value1" selected>6 дн</option> 
               <option value="value2">2 дн</option>
@@ -34,66 +20,36 @@
               <option value="value3">18 дн</option>
               <option value="value3">24 дн</option>
             </select>
-
             <i class="fa fa-angle-down"></i>
-            
           </div>
-
-
           <div class="buy-link hidden-md-down">
-            <a href="#">
-              <i class="fa fa-shopping-bag"></i>
-              Замовити
+            <a [routerLink]="['/order']" (click)="orderProduct()">
+              <i class="fa fa-shopping-bag"></i>Замовити
             </a>
           </div>
-          
         </div>
-
-        <div class="program-anons">
-            Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів допоможе позбутися від зайвих кілограмів без втрати м'язової маси. Раціон - 1000 ккал.
-        </div>
-
+        <div class="program-anons">{{ product.description }}</div>
         <div class="calories">
-          <p class="hidden-md-down">
-            В середньому на день
-          </p>
-
+          <p class="hidden-md-down">В середньому на день</p>
           <div class="cal-item">
-            <span class="first">
-              1000
-            </span>
-            ккал
+            <span class="first">{{ product.id }}</span>ккал
           </div>
           <div class="cal-item">
-            <span>
-              120
-            </span>
-            білків
+            <span>120</span>білків
           </div>
           <div class="cal-item">
-            <span>
-              28
-            </span>
-            жирів
+            <span>28</span>жирів
           </div>
           <div class="cal-item">
-            <span>
-              80
-            </span>
-            вуглеводів
+            <span>80</span>вуглеводів
           </div>
-
         </div>
-
         <div class="buy-link hidden-lg-up">
-          <a href="#">
-            <i class="fa fa-shopping-bag"></i>
-            Замовити
+          <a [routerLink]="['/order']" (click)="orderProduct()">
+            <i class="fa fa-shopping-bag"></i>Замовити
           </a>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>
