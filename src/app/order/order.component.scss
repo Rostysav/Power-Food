@@ -76,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    width: 100%;
 
     p {
       color: #F0544F;
@@ -100,9 +101,9 @@
       }
     }
 
-    .col-md-4 {
-      margin-bottom: 50px;
-    }
+    // .col-md-4 {
+    //   margin-bottom: 50px;
+    // }
 
     input {
       width: 100%;
