@@ -18,7 +18,7 @@ export class Set2500Component implements OnInit {
       { id: 2500,
         name:"Набір - 2500ккал",
         price: 1204,
-        imageUrl: "https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg"}
+        imageUrl: "../../../assets/img/set-2500.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
   }
@@ -27,12 +27,10 @@ export class Set2500Component implements OnInit {
     {
       'id': 2500,
       'name': 'Набір - 2500ккал',
-      'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
-      ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
-      ' Раціон - 2500 ккал.',
+      'description': 'Баланс шкидких та повільних вуглеводів та постійний контроль кількості білків,жирів вуглеводів сприятливо впливають на набір мязевої маси.Меню розраховано на отримання 2500 ккал в день',
       'price': 1204,
       'dayPrice': 201,
-      'imageUrl': 'https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg'
+      'imageUrl': '../../../assets/img/set-2500.jpg'
     }
   ];
 

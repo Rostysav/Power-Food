@@ -33,13 +33,14 @@
 			<div class="col-md-2 logo-wrap">
 
 				<a routerLink="" (click)='mobileNav=!mobileNav'>
-					<img class="logo" src="../assets/img/logo-black.jpg">
+					<img class="logo" src="../assets/img/white-logo.png" alt="logo">
 				</a>
 
 			</div>
 			<div class="col-md-5 nav-right">
 
 				<div class="nav-rigth-top">
+
 					<div class="soc-icons">
 						<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
 							<i class="fa fa-facebook-f"></i>
@@ -48,6 +49,11 @@
 							<i class="fa fa-instagram"></i>
 						</a>
 					</div>
+
+					<div class="cart" [routerLink]='["order"]'>
+						<img src="../../../assets/img/shopping-cart.png">
+					</div>
+
 				</div>
 
 				<ul class="nav">

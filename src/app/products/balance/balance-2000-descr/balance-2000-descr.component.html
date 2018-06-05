@@ -1,11 +1,18 @@
 <div class="balance-descr product-descr section" *ngFor="let product of products">
-  <h1>{{ product.name }}</h1>
+  <h1>
+    {{ product.name }} 
+    <div class="kal-price">
+      <i class="fa fa-shopping-bag"></i>
+      <p>4 бокси</p>
+    </div>
+  </h1>
   <div class="container">
-    <div class="row">
+    <div class="row product-descr-wrap">
       <div class="col-md-6 product-descr-text">
         <div class="cal-wrap">
+          <p class="hidden-md-up">В середньому на день</p>
           <div class="calories">
-            <p>В середньому на день</p>
+            <p class="hidden-sm-down">В середньому на день</p>
             <div class="cal-item">
               <span class="first">{{ product.id }}</span>ккал
             </div>
@@ -19,10 +26,10 @@
               <span>80</span>вуглеводів
             </div>
           </div>
-          <div class="kal-price">
+          <!-- <div class="kal-price">
             <i class="fa fa-shopping-bag"></i>
             <p>4 бокси</p>
-          </div>
+          </div> -->
         </div>
         <div class="program-descr">
           <a class="program-title" href="#">{{ product.name }}</a>
@@ -34,9 +41,9 @@
               <select name="select">
                 <option value="value1" selected>2 дн</option>
                 <option value="value2">6 дн</option>
-                <option value="value3">12 дн</option>
-                <option value="value3">18 дн</option>
+                <option value="value3">14 дн</option>
                 <option value="value3">24 дн</option>
+                <option value="value3">30 дн</option>
               </select>
               <i class="fa fa-angle-down"></i>
             </div>
@@ -48,28 +55,43 @@
           </div>
         </div>
         <div class="feature">
-          <div class="col-md-6">
-            <p>Особливості</p>
-            <ul>
-              <li>
-                <i class="fa fa-check"></i>поддержание баланса белков, жиров и углеводов;</li>
-              <li>
-                <i class="fa fa-check"></i>получение 1000 ккал в день.</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <p>Результат</p>
-            <ul>
-              <li>
-                <i class="fa fa-check"></i>снижение веса без потери энергии;</li>
-              <li>
-                <i class="fa fa-check"></i>сохранение отличного эмоционального состояния.</li>
-            </ul>
+          <div class="row">
+            <div class="col-md-6">
+              <p>Особливості</p>
+              <ul>
+                <li>
+                  <i class="fa fa-check"></i>оптимальне співвідношення білків, жирів і вуглеводів;
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>продуманий раціон;
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>денна норма - 2000 ккал.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <p>Результат</p>
+              <ul>
+                <li>
+                  <i class="fa fa-check"></i>перебування в комфортній вазі;
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>покращення здоров'я і самопочуття;
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>нормалізація обміну речовин;
+                </li>
+                <li>
+                  <i class="fa fa-check"></i>отримання організмом корисних речовин.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <img src="https://levelkitchen.com/upload/iblock/9ae/9aeb0b85d35c28c54466af46d25ee747.jpg">
+        <img [src]="product.imageUrl">
       </div>
     </div>
   </div>

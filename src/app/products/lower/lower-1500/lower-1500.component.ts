@@ -18,7 +18,7 @@ export class Lower1500Component implements OnInit {
       { id: 1500,
         name:"Зниження - 1500ккал",
         price: 1202,
-        imageUrl: "https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg"}
+        imageUrl: "../../../assets/img/lover-1500.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
   }
@@ -27,12 +27,10 @@ export class Lower1500Component implements OnInit {
       {
         'id': 1500,
         'name': 'Зниження - 1500ккал',
-        'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
-        ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
-        ' Раціон - 1500 ккал.',
+        'description': 'Добова калорійність в розмірі 1500 ккал. Страви, що не містять цукру. Програма дозволить зберегти мязеву масу за рахунок правильного співвідношення кількості білків, жирів та вуглеводів.',
         'price': 1202,
         'dayPrice': 201,
-        'imageUrl': 'https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg',
+        'imageUrl': '../../../assets/img/lover-1500.jpg'
       }
   ];
 

@@ -18,7 +18,7 @@ export class Set3500Component implements OnInit {
       { id: 3500,
         name:"Набір - 3500ккал",
         price: 1205,
-        imageUrl: "https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg"}
+        imageUrl: "../../../assets/img/set-3500.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
   }
@@ -27,12 +27,10 @@ export class Set3500Component implements OnInit {
     {
       'id': 3500,
       'name': 'Набір - 3500ккал',
-      'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
-      ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
-      ' Раціон - 3500 ккал.',
+      'description': 'Якісне співвідноження білків,жирів і вуглеводів дозволяє ефективно набрати мязеву масу тіла.',
       'price': 1205,
       'dayPrice': 202,
-      'imageUrl': 'https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg'
+      'imageUrl': '../../../assets/img/set-3500.jpg'
     }
   ];
 

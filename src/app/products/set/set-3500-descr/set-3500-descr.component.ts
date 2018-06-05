@@ -22,7 +22,7 @@ export class Set3500DescrComponent implements OnInit {
       ' Раціон - 1000 ккал.',
       'price': 1205,
       'dayPrice': 202,
-      'imageUrl': 'https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg'
+      'imageUrl': '../../../assets/img/set-3500.jpg'
     }
   ];
 
@@ -31,7 +31,7 @@ export class Set3500DescrComponent implements OnInit {
       { id: 3500,
         name:"Набір - 3500ккал",
         price: 1205,
-        imageUrl: "https://levelkitchen.com/upload/iblock/e6c/e6c770196583e33b3826801628f61bce.jpg"}
+        imageUrl: "../../../assets/img/set-3500.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
   }
