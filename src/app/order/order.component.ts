@@ -1,15 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IProduct } from '../products/product';
+import {Router} from "@angular/router";
 
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
-
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
+import { FormGroup, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'pf-order',
@@ -21,42 +14,28 @@ export class OrderComponent implements OnInit {
 
   product: IProduct[];
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email
-  ]);
+  myform: FormGroup;
 
-  surnameFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(2)
-  ]);
-
-  nameFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(2)
-  ]);
-
-  midnameFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(5)
-  ]);
-
-  mobileFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(10)
-  ]);
-
-  addressFormControl = new FormControl('', [
-    Validators.required,
-    Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z]+.*)|[A-Za-z]+.*([0-9]+.*))')
-  ]);
-
-  matcher = new MyErrorStateMatcher();
-
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
+    this.myform = new FormGroup({
+      'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
+      'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
+      'address': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(15), Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z]+.*)|[A-Za-z]+.*([0-9]+.*))')])
+    });
+
     this.orderFromLocalStorage();
+  }
+
+
+  onSubmit() {
+    console.log("Form Submitted!");
+  }
+
+  onlyNumberKey(event) {
+    return (event.charCode == 8 || event.charCode == 0)
+        ? null : event.charCode >= 48 && event.charCode <= 57;
   }
 
   orderFromLocalStorage() {
@@ -64,6 +43,12 @@ export class OrderComponent implements OnInit {
     console.log('cache: ', prod);
 
     this.product = prod;
+  }
+
+  removeFromLocalStorage() {
+      console.log('removed!');
+      localStorage.clear();
+      this.router.navigate(['/home']);
   }
 
 }
