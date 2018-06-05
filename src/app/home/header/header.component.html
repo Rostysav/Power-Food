@@ -76,8 +76,14 @@
 
 			</div>
 
-			<div class="nav-btn" (click)='mobileNav=!mobileNav'>
-				<i class="fa fa-bars"></i>
+			<div class="nav-btn" (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect' [ngClass]="{'bar-effect':barEffect}">
+				<!-- <i class="fa fa-bars"></i> -->
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 
 			<!--mobile menu start-->

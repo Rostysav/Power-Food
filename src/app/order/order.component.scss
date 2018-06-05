@@ -39,10 +39,10 @@
   }
 
   .order-title {
-    display: flex;
+    // display: flex;
     width: 100%;
     align-items: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
   }
 
   .item-name {
@@ -77,6 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin: 15px 0;
     width: 100%;
 
     p {
@@ -111,7 +112,12 @@
     }
 
     .mat-radio-button {
-      margin: 0 10px;
+      margin: 10px 0;
+    }
+
+    .mat-radio-group {
+      display: flex;
+      flex-direction: column;
     }
 
     .to {
@@ -143,11 +149,11 @@
   }
 
   .pay-type {
-    margin-top: 50px;
+    margin-top: 20px;
 
     p {
       text-align: left;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
 
     .mat-radio-group {
@@ -166,8 +172,46 @@
 
   .buy-link {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     margin-top: 50px;
+    width: 100%;
+
+    .submit-btn {
+      background: #F0544F;
+      font-size: 21px;
+      padding: 10px 25px;
+      border-radius: 90px;
+      color: #fff;
+      -webkit-transition: .3s;
+      transition: .3s;
+      border: none;
+      height: 50px;
+      box-sizing: border-box;
+      cursor: pointer;
+      position: relative;
+
+      &:disabled {
+        background: #ccc;
+      }
+      
+    }
+
+    .remove-order {
+      background: #ccc;
+      font-size: 21px;
+      padding: 10px 25px;
+      border-radius: 90px;
+      color: #fff;
+      -webkit-transition: .3s;
+      transition: .3s;
+      border: none;
+      height: 50px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
 
     a {
       color: #fff;

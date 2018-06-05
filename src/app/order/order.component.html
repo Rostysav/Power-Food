@@ -1,6 +1,6 @@
 <div class="oder section">
-  <div class="container">
-    <div class="row">
+  <!-- <div class="container">
+    <div class="row"> -->
       <!-- <div class="col-md-12">
         <div class="title">
           <h3>оформлення замовлення</h3>
@@ -9,23 +9,35 @@
       </div> -->
       <div class="order-item">
         <div class="order-title" *ngFor="let p of product">
-          <div class="col-md-4 col-sm-12">
-            <div class="item-name">
-              <img [src]="p.imageUrl">
-              <p>{{ p.name }}</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="item-name">
+                  <img [src]="p.imageUrl">
+                  <p>{{ p.name }}</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="days">
-              <p>Тривалість
-                <span>12</span> днів
-              </p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="days">
+                  <p>Тривалість
+                    <span>12</span> днів
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="price">
-              <span>Ціна:</span>
-              <p>{{ p.price }}</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="price">
+                  <span>Ціна:</span>
+                  <p>{{ p.price }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -36,7 +48,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-md-4 col-sm-12">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="Ім'я" formControlName="name"
                            pattern="[a-zA-Z][a-zA-Z ]+">
@@ -45,8 +57,12 @@
                     </mat-error>
                   </mat-form-field>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4 col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                 <mat-form-field class="example-full-width">
                   <span matPrefix>+38 &nbsp;</span>
                   <input type="tel" matInput
@@ -58,8 +74,12 @@
                   </mat-error>
                 </mat-form-field>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4 col-sm-12 sex">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Адреса" formControlName="address">
                   <mat-error *ngIf="myform.get('address').invalid && (myform.get('address').dirty || myform.get('address').touched)">
@@ -72,10 +92,14 @@
 
           <div class="container">
             <div class="row pay-type">
-              <div class="col-md-12">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                 <p>Вибір оплати</p>
               </div>
-              <div class="col-md-12">
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                 <mat-radio-group>
                   <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
                   <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
@@ -90,7 +114,7 @@
                   <input matInput placeholder="Промокод">
                 </mat-form-field>
               </div> -->
-              <div class="col-md-12">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Ціна:</span>
                   <p>{{ p.price }}</p>
@@ -100,24 +124,30 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-md-6 col-sm-12">
-                <div class="col-md-12">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+
                   <mat-checkbox>
                     Я згоден з умовами даного
                     <a [routerLink]='["deliveri"]' target="_blank">договору</a>
                   </mat-checkbox>
-                </div>
+
                 <!-- <div class="col-md-12">
                   <mat-checkbox>
                     Я хочу отримувати свіжі новини і дізнаватися про акції
                   </mat-checkbox>
                 </div> -->
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-6 col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="buy-link">
-                  <button class="submit-btn"
-                  type="submit" [disabled]="!myform.valid">Оформити замовлення</button>
+
+                  <button class="remove-order" (click)="removeFromLocalStorage()">Видалити замовлення</button>
+                  
+                  <button class="submit-btn" type="submit" [disabled]="!myform.valid">Оформити замовлення</button>
                   <!--<button type="submit" [disabled]="!myform.valid">-->
                     <!--<a href="#">-->
                       <!--<i class="fa fa-shopping-bag"></i>Оформити замовлення &lt;!&ndash; todo send letter to email &ndash;&gt;-->
@@ -128,8 +158,8 @@
             </div>
           </div>
         </form>
-        <button (click)="removeFromLocalStorage()">Видалити замовлення</button>
+       
       </div>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
 </div>
