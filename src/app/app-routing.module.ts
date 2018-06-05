@@ -22,7 +22,7 @@ import { OrderComponent } from './order/order.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: MainComponent},
-  {path: 'deliveri', component: DeliveryComponent},
+  {path: 'order/deliveri', component: DeliveryComponent},
   {path: 'about', component: AboutCompanyComponent},
   {path: 'catalog', component: CatalogComponent},
   {path: 'price', component: PriceComponent},
