@@ -36,15 +36,22 @@ table {
 }
 a {
 	&:hover {
-		text-decoration: none;
+    text-decoration: none;
+    outline: none;
+    outline-offset: 0;
 	}
 	&:focus {
-		outline: none;
+    outline: none;
+    // outline-offset: 0;
 	}
 }
-button {
-	&:focus {
-		outline: none;
+button, img {
+	&:focus, &:active, &:hover {
+    outline: none;
+    // outline-offset: 0;
+    // box-shadow: none;
+    // -webkit-appearance: none;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 }
 input::-webkit-outer-spin-button,
@@ -199,7 +206,7 @@ button {
 @media (max-width: 992px) {
   .product {
     .program-img {
-      padding: 0;
+      // padding: 0;
       margin-bottom: 0px;
     }
   }
@@ -371,6 +378,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   p {
     font-size: 18px;
@@ -429,6 +437,12 @@ button {
 .product-descr {
   position: relative;
 
+  .product-descr-wrap {
+    img {
+      width: 100%;
+    }
+  }
+
 
   .row {
     display: flex;
@@ -446,6 +460,13 @@ button {
 
   h1 {
     color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .kal-price {
+      margin-left: 15px;
+    }
   }
 
   p {
@@ -455,12 +476,19 @@ button {
   .cal-wrap {
     position: relative;
     display: flex;
+    flex-direction: column;
     padding-right: 10px;
+    width: 100%;
+
+    &>p {
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   .program-descr {
     border: none;
-    margin: 100px 0;
+    margin: 30px 0;
     padding: 0;
     padding-right: 10px;
   }
@@ -507,8 +535,37 @@ button {
   }
 }
 
+@media (max-width: 992px) {
+  .product-descr {
+    h1 {
+      flex-direction: column;
+
+      .kal-price {
+        margin-top: 15px;
+      }
+    }
+    .cal-wrap {
+
+    }
+    .product-descr-wrap {
+      &>div {
+        &:first-child {
+          order: 2
+        }
+        &:nth-child(2) {
+          order: 1;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .product-descr {
+    p {
+      text-align: center;
+    }
     .program-descr {
       padding: 15px;
       .buy-block {
@@ -517,6 +574,15 @@ button {
         }
       }
     }
+    .feature {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .product-descr {
+
   }
 }
 

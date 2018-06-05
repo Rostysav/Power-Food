@@ -9,25 +9,34 @@
       </div> -->
       <div class="order-item">
         <div class="order-title" *ngFor="let p of product">
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-6 col-sm-12 offset-md-3">
             <div class="item-name">
               <img [src]="p.imageUrl">
               <p>{{ p.name }}</p>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
             <div class="days">
               <p>Тривалість
                 <span>12</span> днів
               </p>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
             <div class="price">
               <span>Ціна:</span>
               <p>{{ p.price }}</p>
             </div>
           </div>
+          <!-- <div class="col-md-4 col-sm-12">
+            <div class="days">
+              <p>Тривалість
+                <span>12</span> днів
+              </p>
+            </div>
+          </div> -->
+          <!-- <div class="col-md-4 col-sm-12">
+            <div class="price">
+              <span>Ціна:</span>
+              <p>{{ p.price }}</p>
+            </div>
+          </div> -->
         </div>
 
         <form class="order-form" *ngFor="let p of product">
@@ -35,7 +44,8 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-md-4 col-sm-12">
+              <div class="col-md-6 col-sm-12 offset-md-3">
+
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="Ім'я" [formControl]="nameFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="nameFormControl.hasError('name') && !nameFormControl.hasError('required')">
@@ -45,9 +55,32 @@
                       Name is <strong>required</strong>
                     </mat-error>
                   </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                    <span matPrefix>+38 &nbsp;</span>
+                    <input type="tel" matInput placeholder="Телефон" [formControl]="mobileFormControl" [errorStateMatcher]="matcher">
+  
+                    <mat-error *ngIf="mobileFormControl.hasError('mobile') && !mobileFormControl.hasError('required')">
+                      Please enter a valid mobile
+                    </mat-error>
+                    <mat-error *ngIf="mobileFormControl.hasError('required')">
+                      Mobile is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Адреса" [formControl]="addressFormControl" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="addressFormControl.hasError('address') && !addressFormControl.hasError('required')">
+                      Please enter a valid address
+                    </mat-error>
+                    <mat-error *ngIf="addressFormControl.hasError('required')">
+                      Address is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+
               </div>
 
-              <div class="col-md-4 col-sm-12">
+              <!-- <div class="col-md-4 col-sm-12">
                 <mat-form-field class="example-full-width">
                   <span matPrefix>+38 &nbsp;</span>
                   <input type="tel" matInput placeholder="Телефон" [formControl]="mobileFormControl" [errorStateMatcher]="matcher">
@@ -71,7 +104,7 @@
                     Address is <strong>required</strong>
                   </mat-error>
                 </mat-form-field>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -171,10 +204,10 @@
           
           <div class="container">
             <div class="row pay-type">
-              <div class="col-md-12">
+              <div class="col-md-6 col-sm-12 offset-md-3">
                 <p>Вибір оплати</p>
               </div>
-              <div class="col-md-12">
+              <div class="col-md-6 col-sm-12 offset-md-3">
                 <mat-radio-group>
                   <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
                   <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
@@ -189,7 +222,7 @@
                   <input matInput placeholder="Промокод">
                 </mat-form-field>
               </div> -->
-              <div class="col-md-12">
+              <div class="col-md-6 col-sm-12 offset-md-3">
                 <div class="price">
                   <span>Ціна:</span>
                   <p>{{ p.price }}</p>
@@ -199,7 +232,7 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-md-6 col-sm-12">
+              <div class="col-md-6 col-sm-12 offset-md-3">
                 <div class="col-md-12">
                   <mat-checkbox>
                     Я згоден з умовами даного <a [routerLink]='["deliveri"]'>договору</a>
@@ -211,15 +244,18 @@
                   </mat-checkbox>
                 </div> -->
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-6 col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 offset-md-3">
                 <div class="buy-link">
                   <a href="#">
                     <i class="fa fa-shopping-bag"></i>Оформити замовлення <!-- todo send letter to email -->
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
 

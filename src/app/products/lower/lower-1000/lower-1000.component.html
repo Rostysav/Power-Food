@@ -3,22 +3,22 @@
     <div class="row">
       <div class="col-lg-6 col-md-12 program-img">
         <a [routerLink]='["/lower1000descr"]'>
-          <img [src]="product.imageUrl">
+          <img [src]="product.imageUrl" title="Детальніше про програму">
         </a>
       </div>
       <div class="col-lg-6 col-md-12 program-descr">
-        <a class="program-title" [routerLink]='["/lower1000descr"]'>{{ product.name }}</a>
+        <a class="program-title" [routerLink]='["/lower1000descr"]' title="Детальніше про програму">{{ product.name }}</a>
         <p>Кількість днів</p>
         <div class="buy-block">
           <div class="price">{{ product.price }} грн</div>
           <div class="price-by-day">* {{ product.dayPrice }} грн/день</div>
           <div class="days">
             <select name="select">
-              <option value="value1" selected>2 дн</option> 
+              <option value="value1" selected>2 дн</option>
               <option value="value2">6 дн</option>
-              <option value="value3">12 дн</option>
-              <option value="value3">18 дн</option>
+              <option value="value3">14 дн</option>
               <option value="value3">24 дн</option>
+              <option value="value3">30 дн</option>
             </select>
             <i class="fa fa-angle-down"></i>
           </div>

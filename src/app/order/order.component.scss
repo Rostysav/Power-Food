@@ -58,6 +58,7 @@
   }
 
   .days {
+    margin: 15px 0;
     p {
       display: flex;
       justify-content: center;
@@ -165,7 +166,8 @@
 
   .buy-link {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 50px;
 
     a {
       color: #fff;
