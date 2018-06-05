@@ -117,8 +117,8 @@
               <div class="col-md-6 col-sm-12">
                 <div class="buy-link">
                   <button class="submit-btn"
-                  type="submit" [disabled]="!myform.valid">Submit</button>
-                  <!--<button type="submit">-->
+                  type="submit" [disabled]="!myform.valid">Оформити замовлення</button>
+                  <!--<button type="submit" [disabled]="!myform.valid">-->
                     <!--<a href="#">-->
                       <!--<i class="fa fa-shopping-bag"></i>Оформити замовлення &lt;!&ndash; todo send letter to email &ndash;&gt;-->
                     <!--</a>-->
@@ -128,6 +128,7 @@
             </div>
           </div>
         </form>
+        <button (click)="removeFromLocalStorage()">Видалити замовлення</button>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IProduct } from '../products/product';
+import {Router} from "@angular/router";
 
 import { FormGroup, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 
@@ -15,7 +16,7 @@ export class OrderComponent implements OnInit {
 
   myform: FormGroup;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.myform = new FormGroup({
@@ -42,6 +43,12 @@ export class OrderComponent implements OnInit {
     console.log('cache: ', prod);
 
     this.product = prod;
+  }
+
+  removeFromLocalStorage() {
+      console.log('removed!');
+      localStorage.clear();
+      this.router.navigate(['/home']);
   }
 
 }
