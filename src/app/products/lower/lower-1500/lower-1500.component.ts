@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../../product';
+import { Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'pf-lower-1500',
@@ -7,17 +8,31 @@ import { IProduct } from '../../product';
   styleUrls: ['./lower-1500.component.scss']
 })
 export class Lower1500Component implements OnInit {
+  selectedValue: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  daysControl = new FormControl('', [Validators.required]);
+
+  days = [
+    {number: '2 дні', price: '400'},
+    {number: '6 днів', price: '1200'},
+    {number: '14 днів', price: '2800'},
+    {number: '24 дні', price: '4800'},
+    {number: '30 днів', price: '6000'}
+  ];
+
+  onSelected(data) {
+  }
+
   orderProduct() {
     let myArray =  [
       { id: 1500,
         name:"Зниження - 1500ккал",
-        price: 1202,
+        price: this.selectedValue,
         imageUrl: "../../../assets/img/lover-1500.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
@@ -28,8 +43,8 @@ export class Lower1500Component implements OnInit {
         'id': 1500,
         'name': 'Зниження - 1500ккал',
         'description': 'Добова калорійність в розмірі 1500 ккал. Страви, що не містять цукру. Програма дозволить зберегти мязеву масу за рахунок правильного співвідношення кількості білків, жирів та вуглеводів.',
-        'price': 1202,
-        'dayPrice': 201,
+        'price': 1200,
+        'dayPrice': 200,
         'imageUrl': '../../../assets/img/lover-1500.jpg'
       }
   ];
