@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../../product';
+import { Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'pf-balance-2000',
@@ -7,17 +8,31 @@ import { IProduct } from '../../product';
   styleUrls: ['./balance-2000.component.scss']
 })
 export class Balance2000Component implements OnInit {
+  selectedValue: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  daysControl = new FormControl('', [Validators.required]);
+
+  days = [
+    {number: '2 дні', price: '400'},
+    {number: '6 днів', price: '1200'},
+    {number: '14 днів', price: '2800'},
+    {number: '24 дні', price: '4800'},
+    {number: '30 днів', price: '6000'}
+  ];
+
+  onSelected(data) {
+  }
+
   orderProduct() {
     let myArray =  [
       { id: 2000,
         name:"Баланс - 2000ккал",
-        price: 1203,
+        price: this.selectedValue,
         imageUrl: "../../../assets/img/balance-2000.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
@@ -28,7 +43,7 @@ export class Balance2000Component implements OnInit {
       'id': 2000,
       'name': 'Баланс - 2000ккал',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 1203,
+      'price': 1200,
       'dayPrice': 200,
       'imageUrl': '../../../assets/img/balance-2000.jpg'
     }
