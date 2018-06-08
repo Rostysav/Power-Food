@@ -586,6 +586,26 @@ header.black-bg {
 			float: left;
 			width: auto;
 		}
+
+		.nav-btn {
+			width: 40px;
+			height: 25px;
+			span {
+				height: 3px;
+			}
+		}
+		.nav-btn span:nth-child(odd) {
+			left: 0;
+		}
+		.nav-btn span:nth-child(3), .nav-btn span:nth-child(4) {
+			top: 9px;
+		}
+		.nav-btn span:nth-child(5), .nav-btn span:nth-child(6) {
+			top: 18px;
+		}
+		.nav-btn.bar-effect span:nth-child(5), .nav-btn.bar-effect span:nth-child(6) {
+			top: 20px;
+		}
 	}
 	.popup-menu {
 		.popup-wrap {

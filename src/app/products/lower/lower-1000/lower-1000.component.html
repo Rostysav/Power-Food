@@ -29,7 +29,7 @@
             </mat-form-field>
           </div>
 
-          <div class="buy-link hidden-md-down">
+          <div class="buy-link d-none d-lg-block">
             <a [routerLink]="['/order']" (click)="orderProduct()">
               <i class="fa fa-shopping-bag"></i>Замовити
             </a>
@@ -51,7 +51,7 @@
             <span>80</span>вуглеводів
           </div>
         </div>
-        <div class="buy-link hidden-lg-up">
+        <div class="buy-link d-lg-none d-xl-none">
           <a [routerLink]="['/order']" (click)="orderProduct()">
             <i class="fa fa-shopping-bag"></i>Замовити
           </a>

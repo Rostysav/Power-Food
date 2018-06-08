@@ -44,6 +44,8 @@ import {
 import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +86,8 @@ import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    Ng2CarouselamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

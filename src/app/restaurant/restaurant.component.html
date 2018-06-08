@@ -10,6 +10,39 @@
         <h6>
           Перший у Львові ресторан здорового харчування. Для Вас ми розробили унікальне меню з урахуванням кількості калорій, білків, жирів та вуглеводів. Збалансоване харчування є основою вашого здоров'я  та гарного настрою. В затишній атмосфері нашого ресторану ви зможете гарно провести час, смакуючи різноманітні страви та напої, розроблені за нашою унікальною рецептурою.
         </h6>
+
+        <div class="slider-wrap">
+          <div id="container" class="container">
+            <div class="row">
+              <div
+                ng2-carouselamos
+                class="slides-wrapper"
+                [items]="items"
+                [width]="900"
+                [$prev]="prev"
+                [$next]="next"
+                [$item]="item"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #prev>
+          <img src="../../assets/img/restourant/arr-left.png" id="left" />
+        </ng-template>
+        <ng-template #next>
+          <img src="../../assets/img/restourant/arr-right.png" id="right" />
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+    
+          <div class="items">
+            <img src="{{ item.name }}">
+          </div>
+  
+        </ng-template>
+
+
         <div class="container breakfast-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 breakfast">
