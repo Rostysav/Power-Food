@@ -11,10 +11,9 @@
            title="Детальніше про програму">{{ product.name }}</a>
         <p>Кількість днів</p>
         <div class="buy-block">
-          <!--<div class="price">{{ product.price }} грн</div>-->
-          <div class="price">{{ data }} грн</div>
+          <div class="price" *ngIf="selectedValue">{{ selectedValue }} грн</div>
+          <div class="price" *ngIf="!selectedValue">0 грн</div>
           <div class="price-by-day">* {{ product.dayPrice }} грн/день</div>
-
           <div class="days">
             <mat-form-field>
               <mat-select placeholder="Виберіть тривалість" [formControl]="daysControl"

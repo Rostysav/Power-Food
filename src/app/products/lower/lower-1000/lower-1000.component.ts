@@ -27,13 +27,14 @@ export class Lower1000Component implements OnInit {
 
   onSelected(data) {
     console.log(data);
+    console.log('selectedValue', this.selectedValue);
   }
 
   orderProduct() {
     let myArray =  [
         { id: 1000,
           name:"Зниження - 1000ккал",
-          price: 1201,
+          price: this.selectedValue,
           imageUrl: "../../../assets/img/lover-1000.jpg"}
     ];
     localStorage.setItem('product', JSON.stringify(myArray));
@@ -45,7 +46,7 @@ export class Lower1000Component implements OnInit {
       'name': 'Зниження - 1000ккал',
       'description': 'Вміст оптимального рівня білків, жирів та вуглеводів, що допоможуть позбутися зайвої ваги без втрати мязевоі маси.' +
       ' Раціон - 1000 ккал.',
-      'price': 1201,
+      'price': 1200,
       'dayPrice': 200,
       'imageUrl': '../../../assets/img/lover-1000.jpg'
     }

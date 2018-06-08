@@ -8,4 +8,5 @@ export interface IProduct {
     price: number;
     dayPrice: number;
     imageUrl: string;
+    daysNumber?: number;
 }

@@ -40,13 +40,10 @@ export class OrderComponent implements OnInit {
 
   orderFromLocalStorage() {
     let prod = JSON.parse(localStorage.getItem('product'));
-    console.log('cache: ', prod);
-
     this.product = prod;
   }
 
   removeFromLocalStorage() {
-      console.log('removed!');
       localStorage.clear();
       this.router.navigate(['/home']);
   }
