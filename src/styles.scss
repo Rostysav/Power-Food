@@ -203,12 +203,37 @@ button {
 
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+  .product {
+    &>.container {
+      &>.row {
+        flex-direction: column;
+        &>.col-lg-6 {
+          width: 100%;
+          max-width: 100%;
+        }
+        .program-img {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .product {
     .program-img {
       // padding: 0;
       margin-bottom: 0px;
+      padding: 0;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .mat-tab-label {
+    min-width: 100px;
+    max-width: 100px;
   }
 }
 
@@ -694,6 +719,26 @@ button {
       p {
         text-align: right;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .program-descr {
+    .calories {
+      padding-top: 50px;
+      position: relative;
+
+      &>p {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+    .cal-item {
+      margin: 0;
     }
   }
 }
