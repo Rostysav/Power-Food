@@ -13,6 +13,7 @@ export class Lower1000Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedValue = '400';
   }
 
   daysControl = new FormControl('', [Validators.required]);
@@ -25,10 +26,7 @@ export class Lower1000Component implements OnInit {
     { number: '30 днів', price: '6000' }
   ];
 
-  onSelected(data) {
-    console.log(data);
-    console.log('selectedValue', this.selectedValue);
-  }
+  onSelected(data) {}
 
   orderProduct() {
     let myArray =  [
