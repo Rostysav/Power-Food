@@ -13,6 +13,7 @@ export class Lower1500DescrComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedValue = '400';
   }
 
   daysControl = new FormControl('', [Validators.required]);

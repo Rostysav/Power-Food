@@ -43,7 +43,6 @@
                 <mat-select placeholder="Виберіть тривалість" [formControl]="daysControl"
                             (change)="onSelected($event.value)"
                             [(ngModel)]="selectedValue" required>
-                  <mat-option>--</mat-option>
                   <mat-option *ngFor="let day of days" [value]="day.price">
                     {{day.number}}
                   </mat-option>

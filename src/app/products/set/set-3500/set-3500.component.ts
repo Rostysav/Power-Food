@@ -13,6 +13,7 @@ export class Set3500Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedValue = '400';
   }
 
   daysControl = new FormControl('', [Validators.required]);

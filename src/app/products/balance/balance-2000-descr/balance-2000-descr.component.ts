@@ -13,6 +13,7 @@ export class Balance2000DescrComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedValue = '400';
   }
 
   daysControl = new FormControl('', [Validators.required]);

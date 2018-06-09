@@ -14,6 +14,7 @@ export class Lower1000DescrComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedValue = '400';
   }
 
   daysControl = new FormControl('', [Validators.required]);
