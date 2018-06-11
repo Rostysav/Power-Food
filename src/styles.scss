@@ -260,7 +260,7 @@ button {
 }
 
 .program-descr {
-  padding: 40px;
+  padding: 40px 20px;
   background: #fff;
   border: 1px solid rgba(0,0,0, .2);
 
@@ -569,9 +569,6 @@ button {
         margin-top: 15px;
       }
     }
-    .cal-wrap {
-
-    }
     .product-descr-wrap {
       &>div {
         &:first-child {
@@ -605,11 +602,11 @@ button {
   }
 }
 
-@media (max-width: 992px) {
-  .product-descr {
+// @media (max-width: 992px) {
+//   .product-descr {
 
-  }
-}
+//   }
+// }
 
 .week-menu {
   margin-top: 100px;

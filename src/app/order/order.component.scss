@@ -17,10 +17,12 @@
   a {
     color: #F0544F;
     transition: .3s;
+    position: relative;
+    opacity: .7;
 
     &:hover {
       transition: .3s;
-      text-decoration: underline;
+      opacity: 1;
     }
   }
 
@@ -46,10 +48,10 @@
   }
 
   .order-item {
-    padding: 50px;
+    // padding: 50px;
     background: #fff;
     width: 100%;
-    padding-top: 50px;
+    // padding-top: 50px;
     position: relative;
     z-index: 3;
     p {
