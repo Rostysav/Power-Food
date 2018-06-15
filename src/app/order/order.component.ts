@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IProduct } from '../products/product';
 import {Router} from "@angular/router";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -16,7 +17,7 @@ export class OrderComponent implements OnInit {
 
   myform: FormGroup;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,private http: HttpClient) {}
 
   ngOnInit() {
     this.myform = new FormGroup({
@@ -31,6 +32,16 @@ export class OrderComponent implements OnInit {
 
   onSubmit() {
     console.log("Form Submitted!");
+    // const headers = new HttpHeaders()
+    //     .set('Authorization', 'my-auth-token')
+    //     .set('Content-Type', 'application/json');
+    //
+    // this.http.post('http://127.0.0.1:3000/order', JSON.stringify(this.product), {
+    //   headers: headers
+    // })
+    //     .subscribe(data => {
+    //       console.log('form data: ', data);
+    //     });
   }
 
   onlyNumberKey(event) {
