@@ -191,6 +191,14 @@ button {
 .product {
   display: flex;
   margin-bottom: 50px;
+
+  .mat-form-field {
+    width: 130px;
+  }
+
+  .mat-select-value {
+    padding: 0 5px;
+  }
   
   .program-img {
     // padding: 0;
@@ -202,6 +210,7 @@ button {
   }
 
 }
+
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .product {
@@ -267,7 +276,7 @@ button {
   .program-title {
     color: #0A0807;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: block;
 
     &:hover {
@@ -296,8 +305,12 @@ button {
 
     .days {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       position: relative;
+      p {
+        margin-bottom: 0;
+      }
       select {
         padding: 5px 45px 5px 15px;
         border-radius: 5px;
@@ -322,11 +335,20 @@ button {
         font-weight: bold;
         z-index: 0;
       }
+      .mat-form-field {
+        width: 130px;
+      }
+      .mat-option-text {
+        text-align: center;
+      }
+      .mat-form-field-infix {
+        padding-top: 0;
+      }
     }
 
     .price-by-day {
       position: absolute;
-      bottom: -25px;
+      bottom: -10px;
       color: rgba(0,0,0, .6);
     }
 
@@ -462,6 +484,10 @@ button {
 .product-descr {
   position: relative;
 
+  .mat-select-value {
+    padding: 0 5px;
+  }
+
   .product-descr-wrap {
     img {
       width: 100%;
@@ -531,6 +557,10 @@ button {
   .feature {
     display: flex;
     padding-right: 10px;
+
+    .row {
+      align-items: flex-start;
+    }
 
     p {
       font-size: 25px;

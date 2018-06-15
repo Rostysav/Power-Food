@@ -146,6 +146,15 @@
 	p {
 		font-size: 25px;
 		margin-bottom: 20px;
+		a {
+			font-size: 25px;
+			color: #fff; 
+			pointer-events: none;
+			&:hover {
+				text-decoration: none;
+				color: #fff;	
+			}
+		}
 	}
 	iframe {
 		width: 100%;
@@ -172,7 +181,14 @@
   				order: 2;
   			}
   		}
-  	}
+		}
+		.contact {
+			p {
+				a {
+					pointer-events: auto;
+				}
+			}
+		}
 	}
 	
 	@media(max-width: 767px) {

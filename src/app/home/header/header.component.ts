@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-  	window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
       // //Here you forgot to update the value
       const scrollPos = window.scrollY;
       const header = document.getElementById('header');

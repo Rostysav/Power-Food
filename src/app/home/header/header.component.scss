@@ -25,6 +25,7 @@ header {
 		// right: 0;
 		height: calc(100% - 30px);
 		z-index: 3;
+		padding: 0;
 		a {
 			width: 100%;
 		}
@@ -227,8 +228,10 @@ header {
 
 header.black-bg {
 	background: #000;
+	transform: translateY(0px);
 	transition: .3s;
 	position: fixed;
+	opacity: 1;
 }
 
 .feedback-popup {

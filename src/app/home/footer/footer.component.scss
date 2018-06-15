@@ -1,6 +1,7 @@
 footer {
 	background: #0A0807;
 	padding: 30px 0;
+	border-top: 1px solid #fff;
 
 	.row {
 		display: flex;
@@ -8,6 +9,8 @@ footer {
 	}
 
 	.left-side {
+		display: flex;
+    flex-direction: column;
 		.fa {
 			color: #fff;
 			font-size: 16px;
@@ -15,8 +18,18 @@ footer {
 		}
 		p {
 			font-size: 14px;
-			&+p {
+			margin-top: 5px;
+		}
+		a {
+			pointer-events: none;
+			font-size: 14px;
+			color: #fff;
+			&+a {
 				margin-top: 5px;
+			}
+			&:hover {
+				text-decoration: none;
+				color: #fff;
 			}
 		}
 	}
@@ -155,6 +168,11 @@ footer {
 	footer {
 		p {
 			font-size: 15px;
+		}
+		.left-side {
+			a {
+				pointer-events: auto;
+			}
 		}
 	}
 }
