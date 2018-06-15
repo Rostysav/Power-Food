@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -45,6 +44,8 @@ import {
 import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +87,7 @@ import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
     MatSelectModule,
     MatButtonModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    Ng2CarouselamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

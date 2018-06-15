@@ -88,8 +88,32 @@
 		height: 100%;
 		max-height: 400px;
 	}
+
+	.slider-wrap {
+		margin-bottom: 50px;
+	}
+
+	.slides-wrapper {
+		width: 100%;
+
+		.div {
+			width: 100%;
+		}
+	}
 	
-	
+	.items {
+    width: 100%;
+    height: auto;
+    background: #ECECEC;
+	}
+
+	.ng2-carouselamos {
+		display: -webkit-box !important;
+	}
+
+	.ng2-carouselamos-wrapper {
+		width: 80% !important;
+	}
 
 }
 	
