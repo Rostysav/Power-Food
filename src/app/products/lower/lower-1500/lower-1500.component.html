@@ -8,14 +8,15 @@
       </div>
       <div class="col-lg-6 col-md-12 program-descr">
         <a class="program-title" [routerLink]='["/lower1500descr"]' title="Детальніше про програму">{{ product.name }}</a>
-        <p>Кількість днів</p>
+        
         <div class="buy-block">
           <div class="price" *ngIf="selectedValue">{{ selectedValue }} грн</div>
           <div class="price" *ngIf="!selectedValue">0 грн</div>
           <div class="price-by-day">* {{ product.dayPrice }} грн/день</div>
           <div class="days">
+            <p>Кількість днів</p>
             <mat-form-field>
-              <mat-select placeholder="Виберіть тривалість" [formControl]="daysControl"
+              <mat-select placeholder="" [formControl]="daysControl"
                           (change)="onSelected($event.value)"
                           [(ngModel)]="selectedValue" required>
                 <mat-option *ngFor="let day of days" [value]="day.price">
@@ -25,7 +26,7 @@
               <mat-error *ngIf="daysControl.hasError('required')">Виберіть тривалість курсу</mat-error>
             </mat-form-field>
           </div>
-          <div class="buy-link hidden-md-down">
+          <div class="buy-link d-none d-lg-block">
             <a [routerLink]="['/order']" (click)="orderProduct()">
               <i class="fa fa-shopping-bag"></i>Замовити
             </a>
@@ -47,7 +48,7 @@
             <span>80</span>вуглеводів
           </div>
         </div>
-        <div class="buy-link hidden-lg-up">
+        <div class="buy-link d-lg-none d-xl-none">
           <a [routerLink]="['/order']" (click)="orderProduct()">
             <i class="fa fa-shopping-bag"></i>Замовити
           </a>

@@ -191,6 +191,14 @@ button {
 .product {
   display: flex;
   margin-bottom: 50px;
+
+  .mat-form-field {
+    width: 130px;
+  }
+
+  .mat-select-value {
+    padding: 0 5px;
+  }
   
   .program-img {
     // padding: 0;
@@ -203,12 +211,38 @@ button {
 
 }
 
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .product {
+    &>.container {
+      &>.row {
+        flex-direction: column;
+        &>.col-lg-6 {
+          width: 100%;
+          max-width: 100%;
+        }
+        .program-img {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .product {
     .program-img {
       // padding: 0;
       margin-bottom: 0px;
+      padding: 0;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .mat-tab-label {
+    min-width: 100px;
+    max-width: 100px;
   }
 }
 
@@ -235,14 +269,14 @@ button {
 }
 
 .program-descr {
-  padding: 40px;
+  padding: 40px 20px;
   background: #fff;
   border: 1px solid rgba(0,0,0, .2);
 
   .program-title {
     color: #0A0807;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: block;
 
     &:hover {
@@ -271,8 +305,12 @@ button {
 
     .days {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       position: relative;
+      p {
+        margin-bottom: 0;
+      }
       select {
         padding: 5px 45px 5px 15px;
         border-radius: 5px;
@@ -297,11 +335,20 @@ button {
         font-weight: bold;
         z-index: 0;
       }
+      .mat-form-field {
+        width: 130px;
+      }
+      .mat-option-text {
+        text-align: center;
+      }
+      .mat-form-field-infix {
+        padding-top: 0;
+      }
     }
 
     .price-by-day {
       position: absolute;
-      bottom: -25px;
+      bottom: -10px;
       color: rgba(0,0,0, .6);
     }
 
@@ -437,6 +484,10 @@ button {
 .product-descr {
   position: relative;
 
+  .mat-select-value {
+    padding: 0 5px;
+  }
+
   .product-descr-wrap {
     img {
       width: 100%;
@@ -507,6 +558,10 @@ button {
     display: flex;
     padding-right: 10px;
 
+    .row {
+      align-items: flex-start;
+    }
+
     p {
       font-size: 25px;
       margin-bottom: 15px;
@@ -544,9 +599,6 @@ button {
         margin-top: 15px;
       }
     }
-    .cal-wrap {
-
-    }
     .product-descr-wrap {
       &>div {
         &:first-child {
@@ -580,11 +632,11 @@ button {
   }
 }
 
-@media (max-width: 992px) {
-  .product-descr {
+// @media (max-width: 992px) {
+//   .product-descr {
 
-  }
-}
+//   }
+// }
 
 .week-menu {
   margin-top: 100px;
@@ -694,6 +746,26 @@ button {
       p {
         text-align: right;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .program-descr {
+    .calories {
+      padding-top: 50px;
+      position: relative;
+
+      &>p {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+    .cal-item {
+      margin: 0;
     }
   }
 }
