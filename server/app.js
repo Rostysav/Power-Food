@@ -3,12 +3,15 @@
  */
 
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
+app.use(cors());
 
 // View engine setup
 app.engine('handlebars', exphbs());
