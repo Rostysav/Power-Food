@@ -47,6 +47,13 @@
               (ngSubmit)="onSubmit(f)"
               [formGroup]="myform">
 
+          <!--input id must be honeypot or else it wont work-->
+          <label class="sr-only">Keep this field blank</label>
+          <input id="honeypot" type="text"
+                 name="honeypot" value=""
+                 formControlName='honeypot'/>
+          <!--the rest of your form-->
+
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">

@@ -27,20 +27,32 @@ export class OrderComponent implements OnInit {
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
       'address': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(25),
         Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z\u0400-\u04ff]+.*)|[A-Za-z\u0400-\u04ff]+.*([0-9]+.*))')]),
-      'checkbox': new FormControl('', Validators.required)
+      'checkbox': new FormControl('', Validators.required),
+      'honeypot': new FormControl('')
     });
 
     this.orderFromLocalStorage();
   }
 
+  validateHuman(honeypot) {
+    if (honeypot) {  //if hidden form filled up
+      console.log("Robot Detected!");
+      return true;
+    } else {
+      console.log("Welcome Human!");
+    }
+  }
+
   onSubmit(form) {
+    if (this.validateHuman(this.myform.get('honeypot').touched)) {  //if form is filled, form will not be submitted
+      return false;
+    }
     console.log("Form Submitted!");
     let order_prod = JSON.parse(localStorage.getItem('product'))[0];
     let array_new = {};
     array_new['phone'] = form.value.mobile;
     array_new['address_customer']= form.value.address;
     array_new['name_customer'] = form.value.name;
-    //ff.push({price:order_prod.price});
     array_new['price'] = order_prod.price;
     array_new['name_product'] = order_prod.name;
     console.log(array_new);
