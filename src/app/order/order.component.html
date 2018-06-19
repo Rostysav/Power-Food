@@ -41,18 +41,25 @@
             </div>
           </div>
         </div>
-        <form method="POST" action="send"
+        <form method="POST" #f="ngForm"
               *ngFor="let p of product"
               class="order-form" novalidate
-              (ngSubmit)="onSubmit()"
+              (ngSubmit)="onSubmit(f)"
               [formGroup]="myform">
+
+          <!--input id must be honeypot or else it wont work-->
+          <label class="sr-only">Keep this field blank</label>
+          <input id="honeypot" type="text"
+                 name="honeypot" value=""
+                 formControlName='honeypot'/>
+          <!--the rest of your form-->
 
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="Ім'я" formControlName="name" name="name"
-                           pattern="[a-zA-Z][a-zA-Z ]+">
+                           pattern="[a-zA-Z\u0400-\u04ff][a-zA-Z\u0400-\u04ff ]+">
                     <mat-error *ngIf="myform.get('name').invalid && myform.get('name').touched">
                       Введіть не менше <strong>3</strong> і не більше <strong>15</strong> літер імені
                     </mat-error>
