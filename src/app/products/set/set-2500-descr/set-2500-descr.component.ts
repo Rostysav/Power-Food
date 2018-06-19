@@ -31,7 +31,7 @@ export class Set2500DescrComponent implements OnInit {
   products: IProduct[] = [
     {
       'id': 2500,
-      'name': 'Набір - 2500ккал',
+      'name': 'Набір - 2500 ккал',
       'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
       ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
       ' Раціон - 1000 ккал.',
@@ -44,7 +44,7 @@ export class Set2500DescrComponent implements OnInit {
   orderProduct() {
     let myArray =  [
       { id: 2500,
-        name:"Набір - 2500ккал",
+        name:"Набір - 2500 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/set-2500.jpg"}
     ];

@@ -32,7 +32,7 @@ export class Lower1500Component implements OnInit {
   orderProduct() {
     let myArray =  [
       { id: 1500,
-        name:"Зниження - 1500ккал",
+        name:"Зниження - 1500 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/lover-1500.jpg"}
     ];
@@ -42,7 +42,7 @@ export class Lower1500Component implements OnInit {
   products: IProduct[] = [
       {
         'id': 1500,
-        'name': 'Зниження - 1500ккал',
+        'name': 'Зниження - 1500 ккал',
         'description': "Добова калорійність в розмірі 1500 ккал. Страви, що не містять цукру. Програма дозволить зберегти м'язеву масу за рахунок правильного співвідношення кількості білків, жирів та вуглеводів.",
         'price': 1200,
         'dayPrice': 200,

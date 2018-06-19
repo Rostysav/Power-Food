@@ -33,7 +33,7 @@ export class Lower1000DescrComponent implements OnInit {
   products: IProduct[] = [
     {
       'id': 1000,
-      'name': 'Зниження - 1000ккал',
+      'name': 'Зниження - 1000 ккал',
       'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
       ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
       ' Раціон - 1000 ккал.',
@@ -48,7 +48,7 @@ export class Lower1000DescrComponent implements OnInit {
     let myArray = [
       {
         id: 1000,
-        name: "Зниження - 1000ккал",
+        name: "Зниження - 1000 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/lover-1000.jpg"
       }

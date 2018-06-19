@@ -31,7 +31,7 @@ export class Set3500Component implements OnInit {
   orderProduct() {
     let myArray =  [
       { id: 3500,
-        name:"Набір - 3500ккал",
+        name:"Набір - 3500 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/set-3500.jpg"}
     ];
@@ -41,7 +41,7 @@ export class Set3500Component implements OnInit {
   products: IProduct[] = [
     {
       'id': 3500,
-      'name': 'Набір - 3500ккал',
+      'name': 'Набір - 3500 ккал',
       'description': "Якісне співвідношення білків, жирів та вуглеводів дозволяє ефективно набрати м'язеву масу тіла.",
       'price': 1200,
       'dayPrice': 200,

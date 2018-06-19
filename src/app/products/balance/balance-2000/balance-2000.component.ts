@@ -32,7 +32,7 @@ export class Balance2000Component implements OnInit {
   orderProduct() {
     let myArray =  [
       { id: 2000,
-        name:"Баланс - 2000ккал",
+        name:"Баланс - 2000 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/balance-2000.jpg"}
     ];
@@ -42,7 +42,7 @@ export class Balance2000Component implements OnInit {
   products: IProduct[] = [
     {
       'id': 2000,
-      'name': 'Баланс - 2000ккал',
+      'name': 'Баланс - 2000 ккал',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 1200,
       'dayPrice': 200,

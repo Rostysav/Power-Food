@@ -31,7 +31,7 @@ export class Lower1000Component implements OnInit {
   orderProduct() {
     let myArray =  [
         { id: 1000,
-          name:"Зниження - 1000ккал",
+          name:"Зниження - 1000 ккал",
           price: this.selectedValue,
           imageUrl: "../../../assets/img/lover-1000.jpg"}
     ];
@@ -41,7 +41,7 @@ export class Lower1000Component implements OnInit {
   products: IProduct[] = [
     {
       'id': 1000,
-      'name': 'Зниження - 1000ккал',
+      'name': 'Зниження - 1000 ккал',
       'description': "Вміст оптимального рівня білків, жирів та вуглеводів, що допоможуть позбутися зайвої ваги без втрати м'язевої маси. Раціон допомагає отримати близько 1000 ккал",
       'price': 1200,
       'dayPrice': 200,

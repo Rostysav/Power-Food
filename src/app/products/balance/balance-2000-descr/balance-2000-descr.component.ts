@@ -31,7 +31,7 @@ export class Balance2000DescrComponent implements OnInit {
   products: IProduct[] = [
     {
       'id': 2000,
-      'name': 'Баланс - 2000ккал',
+      'name': 'Баланс - 2000 ккал',
       'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
       ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
       ' Раціон - 1000 ккал.',
@@ -44,7 +44,7 @@ export class Balance2000DescrComponent implements OnInit {
   orderProduct() {
     let myArray =  [
       { id: 2000,
-        name:"Баланс - 2000ккал",
+        name:"Баланс - 2000 ккал",
         price: this.selectedValue,
         imageUrl: "../../../assets/img/lover-1500.jpg"}
     ];
