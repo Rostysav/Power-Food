@@ -1,9 +1,7 @@
 <header id="header">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-5 nav-left">
-
 				<div class="nav-left-top">
 					<div class="feedback">
 						<button (click)='popupMenu=!popupMenu'>
@@ -28,19 +26,14 @@
 						</a>
 					</li>
 				</ul>
-
 			</div>
 			<div class="col-md-2 logo-wrap">
-
 				<a routerLink="" (click)='mobileNav=!mobileNav'>
 					<img class="logo" src="../assets/img/white-logo.png" alt="logo">
 				</a>
-
 			</div>
 			<div class="col-md-5 nav-right">
-
 				<div class="nav-rigth-top">
-
 					<div class="soc-icons">
 						<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
 							<i class="fa fa-facebook-f"></i>
@@ -49,13 +42,10 @@
 							<i class="fa fa-instagram"></i>
 						</a>
 					</div>
-
 					<div class="cart" [routerLink]='["order"]'>
 						<img src="../../../assets/img/shopping-cart.png">
 					</div>
-
 				</div>
-
 				<ul class="nav">
 					<li>
 						<a [routerLink]='["price"]'>
@@ -73,9 +63,7 @@
 						</a>
 					</li>
 				</ul>
-
 			</div>
-
 			<div class="nav-btn" (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect' [ngClass]="{'bar-effect':barEffect}">
 				<!-- <i class="fa fa-bars"></i> -->
 				<span></span>
@@ -85,9 +73,7 @@
 				<span></span>
 				<span></span>
 			</div>
-
 			<!--mobile menu start-->
-
 			<div class="mobile-menu-open" [ngClass]="{'mobile-menu':mobileNav}">
 				<ul class="nav">
 					<li>
@@ -138,35 +124,64 @@
 					</a>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </header>
 
 <div class="feedback-popup" [ngClass]="{'popup-menu':popupMenu}">
-	<div class="container">
-		<div class="row">
-			<div class="popup-wrap col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-12">
-				<div class="close-popup">
-					<i class="fa fa-times-circle" (click)='popupMenu=!popupMenu'></i>
+	<form method="POST" novalidate #f="ngForm"
+		  (ngSubmit)="callSubmit(f)"
+		  [formGroup]="callForm">
+
+		<!--input id must be honeypot or else it wont work-->
+		<label class="sr-only">Keep this field blank</label>
+		<input id="honeypot" type="text"
+			   name="honeypot" value=""
+			   formControlName='honeypot'/>
+		<!--the rest of your form-->
+
+		<div class="container">
+			<div class="row">
+				<div class="popup-wrap col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-12">
+					<div class="close-popup">
+						<i class="fa fa-times-circle" (click)='popupMenu=!popupMenu'></i>
+					</div>
+					<h3>
+						Зворотній дзвінок
+					</h3>
+					<div id="needs-validation">
+						<span>
+							Ваше ім'я
+						</span>
+						<mat-form-field class="example-full-width">
+							<input matInput placeholder="Ім'я"
+								   formControlName="name" name="name"
+								   pattern="[a-zA-Z\u0400-\u04ff][a-zA-Z\u0400-\u04ff ]+">
+							<mat-error
+								*ngIf="callForm.get('name').invalid && callForm.get('name').touched">
+								Введіть не менше <strong>3</strong> і не більше <strong>15</strong> літер імені
+							</mat-error>
+						</mat-form-field>
+						<span>
+							Телефон
+						</span>
+						<mat-form-field class="example-full-width">
+							<span matPrefix>+38 &nbsp;</span>
+							<input type="tel" matInput
+								   placeholder="Телефон" formControlName="mobile" name="mobile"
+								   (keypress)="onlyNumberKey($event)">
+							<mat-error
+								*ngIf="callForm.get('mobile').invalid && (callForm.get('mobile').dirty ||
+										callForm.get('mobile').touched)">
+								Введіть <strong>10</strong> цифр мобільного телефону
+							</mat-error>
+						</mat-form-field>
+						<button class="submit-btn" type="submit" [disabled]="!callForm.valid">
+							Замовити дзвінок
+						</button>
+					</div>
 				</div>
-				<h3>
-					Зворотній дзвінок
-				</h3>
-				<form id="needs-validation">
-					<span>
-						Ваше ім'я
-					</span>
-					<input type="text" class="form-control">
-					<span>
-						Телефон
-					</span>
-					<input type="number" class="form-control">
-					<button type="submit">
-						Відправити
-					</button>
-				</form>
 			</div>
 		</div>
-	</div>
+	</form>
 </div>
