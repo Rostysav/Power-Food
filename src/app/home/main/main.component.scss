@@ -10,6 +10,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 110px;
 
 	.bg {
 		position: absolute;
@@ -65,6 +66,12 @@
 	}
 }
 
+@media(max-width: 992px) {
+	.main {
+		margin-top: 85px;
+	}
+}
+
 @media(max-width: 1024px) {
 	.main {
 		.main-title {
@@ -110,6 +117,12 @@
 				margin-bottom: 30px;
 			}
 		}
+	}
+}
+
+@media (max-width:576px) {
+	.main {
+	  margin-top: 60px;
 	}
 }
 

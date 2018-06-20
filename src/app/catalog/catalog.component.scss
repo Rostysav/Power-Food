@@ -1,5 +1,6 @@
 .catalog {
   position: relative;
+  margin-top: 110px;
 
   h3 {
     color: #000;
@@ -88,6 +89,7 @@
 
 @media(max-width: 992px) {
   .catalog {
+    margin-top: 85px;
     .catalod-desc {
       flex-direction: column;
     }
@@ -98,5 +100,11 @@
       order: 1;
       margin-bottom: 30px;
     }
+  }
+}
+
+@media (max-width:576px) {
+  .catalog {
+    margin-top: 60px;
   }
 }

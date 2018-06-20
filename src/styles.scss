@@ -434,6 +434,11 @@ button {
   p {
     font-size: 18px;
     font-weight: bold;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 }
 
@@ -487,6 +492,7 @@ button {
 
 .product-descr {
   position: relative;
+  margin-top: 110px;
 
   .mat-select-value {
     padding: 0 5px;
@@ -596,6 +602,7 @@ button {
 
 @media (max-width: 992px) {
   .product-descr {
+    margin-top: 85px;
     h1 {
       flex-direction: column;
 
@@ -635,7 +642,11 @@ button {
     }
   }
 }
-
+@media (max-width:576px) {
+	.product-descr {
+	  margin-top: 60px;
+	}
+}
 // @media (max-width: 992px) {
 //   .product-descr {
 
@@ -800,8 +811,8 @@ button {
   padding-top: 80px;
 }
 
-.mat-select-panel {
-  min-width: 100px;
-  width: 100px;
-  min-width: 100px !important;
-}
+// .mat-select-panel {
+//   min-width: 100px !important;
+//   width: 100px !important;
+//   min-width: 100px !important;
+// }

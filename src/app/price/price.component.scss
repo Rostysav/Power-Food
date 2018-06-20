@@ -1,6 +1,7 @@
 .price {
   background: url(../../assets/img/price-bg.jpg);
   background-size: cover;
+  margin-top: 110px;
 
   .table-wrap {
     margin-bottom: 30px;
@@ -90,4 +91,15 @@
       }
     }
   }
+}
+
+@media(max-width: 992px) {
+	.price {
+		margin-top: 85px;
+	}
+}
+@media (max-width:576px) {
+	.price {
+	  margin-top: 60px;
+	}
 }

@@ -16,18 +16,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    window.addEventListener('scroll', function() {
-      // //Here you forgot to update the value
-      const scrollPos = window.scrollY;
-      const header = document.getElementById('header');
-
-      if (scrollPos > 85) {
-        header.classList.add('black-bg');
-      } else {
-        header.classList.remove('black-bg');
-      }
-    });
-
   }
 
 
