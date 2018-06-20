@@ -1,6 +1,3 @@
-/**
- * Created by valdemar on 09.06.18.
- */
 //import { environment } from './environments/environment';
 // const environment = require('environment');
 const express = require('express');
@@ -65,6 +62,52 @@ let mailOptions = {
     text: 'Hello world?', // plain text body
     html: output // html body
 };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+    });
+});
+
+// callback
+app.post('/callback', (req, res) => {
+    const output = `
+    <p>Замовлення зворотнього дзвінка</p>
+    <h3>Contact Details</h3>
+    <ul>
+      <li>Імя клієнта: ${req.body.name_customer}</li>
+      <li>Телефон: +38 ${req.body.phone}</li>
+    </ul>
+  `;
+
+// create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        // port: 587,
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: 'valdemarrr26@gmail.com', // generated ethereal user
+            pass: '102938qwerty'  // generated ethereal password
+        },
+        tls:{
+            rejectUnauthorized:false // only for localhost, need to be removed in production
+        }
+    });
+
+// setup email data with unicode symbols
+    let mailOptions = {
+        from: '"Nodemailer Contact"', // sender address
+        to: 'valdemarrr26@gmail.com', // list of receivers
+        subject: 'Node Contact Request Callback Form', // Subject line
+        text: 'Hello world?', // plain text body
+        html: output // html body
+    };
 
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
