@@ -156,10 +156,10 @@
 						<mat-form-field class="example-full-width">
 							<input matInput placeholder="Ім'я"
 								   formControlName="name" name="name"
-								   pattern="[a-zA-Z\u0400-\u04ff][a-zA-Z\u0400-\u04ff ]+">
+								   pattern="[\u0400-\u04ff][\u0400-\u04ff ]+">
 							<mat-error
 								*ngIf="callForm.get('name').invalid && callForm.get('name').touched">
-								Введіть не менше <strong>3</strong> і не більше <strong>15</strong> літер імені
+								Введіть не менше <strong>3</strong> і не більше <strong>15</strong> літер імені кирилицею
 							</mat-error>
 						</mat-form-field>
 						<span>
