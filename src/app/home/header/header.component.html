@@ -150,9 +150,9 @@
 						Зворотній дзвінок
 					</h3>
 					<div id="needs-validation">
-						<span>
+						<!-- <span>
 							Ваше ім'я
-						</span>
+						</span> -->
 						<mat-form-field class="example-full-width">
 							<input matInput placeholder="Ім'я"
 								   formControlName="name" name="name"
@@ -162,9 +162,9 @@
 								Введіть не менше <strong>3</strong> і не більше <strong>15</strong> літер імені
 							</mat-error>
 						</mat-form-field>
-						<span>
+						<!-- <span>
 							Телефон
-						</span>
+						</span> -->
 						<mat-form-field class="example-full-width">
 							<span matPrefix>+38 &nbsp;</span>
 							<input type="tel" matInput
@@ -176,7 +176,7 @@
 								Введіть <strong>10</strong> цифр мобільного телефону
 							</mat-error>
 						</mat-form-field>
-						<button class="submit-btn" type="submit" [disabled]="!callForm.valid">
+						<button  (click)='popupMenu=!popupMenu' class="submit-btn" type="submit" [disabled]="!callForm.valid">
 							Замовити дзвінок
 						</button>
 					</div>

@@ -340,7 +340,7 @@ button {
         z-index: 0;
       }
       .mat-form-field {
-        width: 130px;
+        width: 90px;
       }
       .mat-option-text {
         text-align: center;
@@ -361,13 +361,14 @@ button {
   .program-anons {
     color: #0A0807;
     line-height: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .calories {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     p {
       font-size: 18px;
@@ -430,6 +431,7 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
 
   p {
     font-size: 18px;
@@ -524,6 +526,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 70px;
 
     .kal-price {
       margin-left: 15px;
@@ -811,8 +814,6 @@ button {
   padding-top: 80px;
 }
 
-// .mat-select-panel {
-//   min-width: 100px !important;
-//   width: 100px !important;
-//   min-width: 100px !important;
-// }
+.mat-option-text {
+  text-align: center;
+}

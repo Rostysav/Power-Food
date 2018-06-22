@@ -127,6 +127,7 @@ footer {
 		h3 {
 			color: #000;
 			font-size: 30px;
+			text-transform: inherit;
 		}
 
 		form {
@@ -144,22 +145,26 @@ footer {
 			input {
 				margin-bottom: 30px;
 			}
+		}
+	}
+	#needs-validation {
+		text-align: center;
+	}
 
-			button {
-				background: transparent;
-				border: 1px solid #000;
-				padding: 10px 25px;
-				border-radius: 25px;
-				font-size: 20px;
-				margin-right:auto; 
-				margin-left:auto;
-				transition: .3s;
-				cursor: pointer;
-				&:hover {
-					transition: .3s;
-					background: rgba(0,0,0, 0.1);
-				}
-			}
+	.submit-btn {
+		background: transparent;
+		border: 1px solid #000;
+		padding: 10px 25px;
+		border-radius: 25px;
+		font-size: 20px;
+		margin-right:auto; 
+		margin-left:auto;
+		transition: .3s;
+		margin-top: 50px;
+		cursor: pointer;
+		&:hover {
+			transition: .3s;
+			background: rgba(0,0,0, 0.1);
 		}
 	}
 }

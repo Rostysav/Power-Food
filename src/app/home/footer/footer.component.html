@@ -101,7 +101,7 @@
 								Введіть <strong>10</strong> цифр мобільного телефону
 							</mat-error>
 						</mat-form-field>
-						<button class="submit-btn" type="submit" [disabled]="!callForm.valid">
+						<button class="submit-btn" type="submit"  (click)='popupMenu=!popupMenu' [disabled]="!callForm.valid">
 							Замовити дзвінок
 						</button>
 					</div>
