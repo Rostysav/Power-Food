@@ -45,6 +45,11 @@ a {
     // outline-offset: 0;
 	}
 }
+div {
+  &:focus {
+    outline: none;
+  }
+}
 button, img {
 	&:focus, &:active, &:hover {
     outline: none;
@@ -58,6 +63,18 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+a, button, input, textarea {
+  transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+}
+a:hover, button:hover, input:hover, textarea:hover {
+  transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
 }
 		/*Main styles*/
 
@@ -81,7 +98,7 @@ h2 {
   margin: 0;
 }
 
-p, a, li {
+p, a, li, th, td {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
   font-size: 16px;
@@ -165,6 +182,18 @@ button {
 
 .mat-tab-label {
   opacity: 1 !important;
+  transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+
+  &:hover {
+    opacity: .8 !important;
+    transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+  }
 }
 
 .mat-tab-label-content {
@@ -816,4 +845,194 @@ button {
 
 .mat-option-text {
   text-align: center;
+}
+
+
+
+
+
+// Restourant dish-item
+.restaurant {
+  
+
+  .dish-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+
+    .row, .container, .col-md-6 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+
+      .col-md-6 {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .dish-img {
+      flex-direction: column;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .dish-name {
+      display: none;
+    }
+
+    .dish-price {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .mat-form-field {
+      display: none;
+    }
+
+    .nutritional-value {
+      // font-size: 16px;
+      // color: #fff;
+      display: none;
+    }
+
+    .buy-link {
+      justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 100px;
+    }
+
+  }
+}
+
+// Dish item start
+.dish-container {
+  padding-top: 170px;
+  padding-bottom: 50px;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+
+  .dish-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      color: #000;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .dish-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .dish-price {
+    color: #F0544F;
+    font-size: 28px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .mat-form-field {
+    width: 50px;
+    margin-left: 100px;
+
+    &:before {
+      position: absolute;
+      content: 'Кількість';
+      color: rgba(0,0,0, .6);
+      font-family: 'Source Sans Pro', sans-serif;
+      top: -15px;
+      left: 0;
+      font-size: 12px;
+    }
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .mat-form-field-infix {
+      padding: 0;
+      border-top: none;
+    }
+
+    .mat-form-field-label-wrapper {
+      padding-top: 0;
+    }
+
+    .mat-form-field-underline {
+      bottom: 0;
+    }
+  }
+
+  .mat-form-field.mat-focused {
+    // display: none;
+  }
+
+  .nutritional-value {
+    font-size: 18px;
+
+    span {
+      color: #F0544F;
+    }
+  }
+
+  .buy-link {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    a {
+      color: #fff;
+      display: inline-block;
+    }
+    .fa {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .dish-container {
+    padding-top: 135px;
+  
+    img {
+      width: 100%;
+    }
+  }
 }

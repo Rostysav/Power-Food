@@ -1,7 +1,7 @@
 footer {
 	background: #0A0807;
 	padding: 30px 0;
-	border-top: 1px solid #fff;
+	// border-top: 1px solid #fff;
 
 	.row {
 		display: flex;
@@ -32,6 +32,14 @@ footer {
 				color: #fff;
 			}
 		}
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.center-wrap {
+		display: flex;
+    justify-content: flex-end
 	}
 
 	.center {

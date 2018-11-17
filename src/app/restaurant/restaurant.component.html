@@ -11,7 +11,7 @@
           Перший у Львові ресторан здорового харчування. Для Вас ми розробили унікальне меню з урахуванням кількості калорій, білків, жирів та вуглеводів. Збалансоване харчування є основою вашого здоров'я  та гарного настрою. В затишній атмосфері нашого ресторану ви зможете гарно провести час, смакуючи різноманітні страви та напої, розроблені за нашою унікальною рецептурою.
         </h6>
 
-        <div class="slider-wrap">
+        <!-- <div class="slider-wrap">
           <div id="container" class="container">
             <div class="row">
               <div
@@ -40,10 +40,66 @@
             <img src="{{ item.name }}">
           </div>
   
-        </ng-template>
+        </ng-template> -->
 
 
-        <div class="container breakfast-wrap">
+        <mat-tab-group>
+          <mat-tab label="Бургери"> 
+
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-veal-burger></pf-veal-burger>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <pf-green-burger></pf-green-burger>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-turkey-burger></pf-turkey-burger>
+                </div>
+
+              </div>
+            </div>
+
+          </mat-tab>
+
+          <mat-tab label="Напої">
+            
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-classic-smuzi></pf-classic-smuzi>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-tropical-smuzi></pf-tropical-smuzi>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-green-smuzi></pf-green-smuzi>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                  <pf-fresh-smuzi></pf-fresh-smuzi>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <pf-vatamin-smuzi></pf-vatamin-smuzi>
+                </div>
+
+              </div>
+            </div>
+
+          </mat-tab>
+
+          <mat-tab label="Third"> Content 3 </mat-tab>
+        </mat-tab-group>
+
+
+        <!-- <div class="container breakfast-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 breakfast">
 
@@ -91,8 +147,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container bruschetta-wrap">
+        </div> -->
+        <!-- <div class="container bruschetta-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 bruschetta-img">
 
@@ -133,8 +189,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container salad-wrap">
+        </div> -->
+        <!-- <div class="container salad-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 salad">
 
@@ -179,8 +235,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container spinning-roles-wrap">
+        </div> -->
+        <!-- <div class="container spinning-roles-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 spinning-roles-img">
 
@@ -221,8 +277,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container soups-wrap">
+        </div> -->
+        <!-- <div class="container soups-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 soups">
 
@@ -267,8 +323,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container main-dishes-wrap">
+        </div> -->
+        <!-- <div class="container main-dishes-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 main-dishes-img">
 
@@ -333,8 +389,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="container desserts-wrap">
+        </div> -->
+        <!-- <div class="container desserts-wrap">
           <div class="row">
             <div class="col-lg-6 col-md-12 desserts">
 
@@ -386,7 +442,7 @@
               
             </div>
           </div>
-        </div>
+        </div> -->
 
 
       </div>

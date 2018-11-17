@@ -15,7 +15,7 @@ export class RestaurantComponent implements OnInit {
       { name: '../assets/img/restourant/restourant1.jpg' },
       { name: '../assets/img/restourant/restourant2.jpg' },
       { name: '../assets/img/restourant/restourant3.jpg' },
-      { name: '../assets/img/restourant/restourant4.jpg' }
+      { name: '../assets/img/restourant/restourant4.jpg' },
     ]
   }
 

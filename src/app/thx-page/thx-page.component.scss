@@ -1,0 +1,38 @@
+.thx-page {
+  display: block;
+  margin-top: 110px;
+
+  .title {
+    color: #000;
+    font-size: 38px;
+    margin-bottom: 50px;
+  }
+
+  p {
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .thx-page-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 110px);
+  }
+
+  a {
+    background: #F0544F;
+    font-size: 21px;
+    padding: 10px 25px;
+    border-radius: 90px;
+    color: #fff;
+
+    &:hover {
+      background: red;
+      border-bottom: none;
+    }
+  }
+}

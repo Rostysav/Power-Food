@@ -35,14 +35,14 @@
 		}
 
     h1 {
-	    font-size: 60px;
+	    font-size: 50px;
 	    margin-bottom: 20px;
 			text-align: center;
 			font-weight: normal;
     }
 
     h2 {
-    	font-size: 50px;
+    	font-size: 40px;
 			text-align: center;
 			font-weight: normal;
     }
@@ -56,13 +56,22 @@
 	    border-radius: 90px;
 			transition: .3s;
 			opacity: .8;
-			margin-top: 100px;
+			display: block;
 
 	    &:hover {
 	    	opacity: 1;
 	    	transition: .3s;
-	    }
-    }
+			}
+			
+			& + a {
+				margin-left: 50px;
+			}
+		}
+		
+		.main-links {
+			display: flex;
+			margin-top: 50px;
+		}
 	}
 }
 

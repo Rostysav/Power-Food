@@ -2,6 +2,10 @@
 	background: #000;
 	margin-top: 110px;
 
+	#left, #right {
+		cursor: pointer;
+	}
+
 	.container {
 		margin-bottom: 100px;
 
@@ -10,15 +14,14 @@
 		}
 
 		.row {
-			display: flex;
-			align-items: center;
+			width: 100%;
 		}
 	}
 
-	.col-md-6 {
-		display: flex;
-		align-items: center;
-	}
+	// .col-md-6 {
+	// 	display: flex;
+	// 	align-items: center;
+	// }
 	
 	h6 {
 		color: #fff;
@@ -26,95 +29,105 @@
 		text-align: center;
 		margin-bottom: 50px;
 	}
+
+	// New styles start
+	.mat-tab-label-content {
+		color: #fff;
+	}
+	// News style end
+
+
+
+
 	
-	.menu-item {
-		width: 100%;
-	}
+	// .menu-item {
+	// 	width: 100%;
+	// }
 
-	.menu-title {
-		text-align: left;
-		margin-bottom: 15px;
+	// .menu-title {
+	// 	text-align: left;
+	// 	margin-bottom: 15px;
 
-			span {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 30px;
-			text-transform: uppercase;
-			color: #fff;
-			border: 2px solid #fff;
-			padding: 10px 20px;
-			display: inline-block;
-			// margin-bottom: 15px;
-		}	
+	// 		span {
+	// 		font-family: 'Montserrat', sans-serif;
+	// 		font-size: 30px;
+	// 		text-transform: uppercase;
+	// 		color: #fff;
+	// 		border: 2px solid #fff;
+	// 		padding: 10px 20px;
+	// 		display: inline-block;
+	// 		// margin-bottom: 15px;
+	// 	}	
 
-		p {
-			font-size: 25px;
-			margin: 30px 0;
-		}
-	}
+	// 	p {
+	// 		font-size: 25px;
+	// 		margin: 30px 0;
+	// 	}
+	// }
 
-	.menu-list {
+	// .menu-list {
 
-		ul {
-			margin-left: 15px;
-		}
-		li {
-			color: #fff;
-			font-size: 20px;
-			margin-bottom: 10px;
-			margin-left: 10px;
-			position: relative;
-			line-height: 25px;
+	// 	ul {
+	// 		margin-left: 15px;
+	// 	}
+	// 	li {
+	// 		color: #fff;
+	// 		font-size: 20px;
+	// 		margin-bottom: 10px;
+	// 		margin-left: 10px;
+	// 		position: relative;
+	// 		line-height: 25px;
 
-			&:before {
-				content: "";
-				width: 5px;
-				height: 5px;
-				background: #fff;
-				position: absolute;
-				border-radius: 90%;
-				left: -25px;
-				top: 10px;
-			}
+	// 		&:before {
+	// 			content: "";
+	// 			width: 5px;
+	// 			height: 5px;
+	// 			background: #fff;
+	// 			position: absolute;
+	// 			border-radius: 90%;
+	// 			left: -25px;
+	// 			top: 10px;
+	// 		}
 			
-			span {
-				color: #F0544F;
-				font-size: 22px;
-			}
-		}
-	}
+	// 		span {
+	// 			color: #F0544F;
+	// 			font-size: 22px;
+	// 		}
+	// 	}
+	// }
 
-	img {
-		width: 100%;
-		display: flex;
-		height: 100%;
-		max-height: 400px;
-	}
+	// img {
+	// 	width: 100%;
+	// 	display: flex;
+	// 	height: 100%;
+	// 	max-height: 400px;
+	// }
 
-	.slider-wrap {
-		margin-bottom: 50px;
-	}
+	// .slider-wrap {
+	// 	margin-bottom: 50px;
+	// }
 
-	.slides-wrapper {
-		width: 100%;
+	// .slides-wrapper {
+	// 	width: 100%;
 
-		.div {
-			width: 100%;
-		}
-	}
+	// 	.div {
+	// 		width: 100%;
+	// 	}
+	// }
 	
-	.items {
-    width: 100%;
-    height: auto;
-    background: #ECECEC;
-	}
+	// .items {
+  //   width: 100%;
+  //   height: auto;
+  //   background: #ECECEC;
+	// }
 
-	.ng2-carouselamos {
-		display: -webkit-box !important;
-	}
+	// .ng2-carouselamos {
+	// 	display: -webkit-box !important;
+	// }
 
-	.ng2-carouselamos-wrapper {
-		width: 80% !important;
-	}
+	// .ng2-carouselamos-wrapper {
+	// 	width: 80% !important;
+	// }
 
 }
 	
@@ -170,64 +183,64 @@
 	}
 }
   
-  @media(max-width: 991px) {
-  	.menu {
+@media(max-width: 991px) {
+	.menu {
 
-			.menu-title {
-				text-align: center;
-			}
-  
-  		.menu-item {
-  			margin-bottom: 30px;
-  		}
-  
-  		.bruschetta-wrap, .spinning-roles-wrap, .main-dishes-wrap {
-  			display: flex;
-  
-  			.bruschetta-img, .spinning-roles-img, .main-dishes-img {
-  				order: 2;
-  			}
-  		}
+		.menu-title {
+			text-align: center;
 		}
-		.contact {
-			p {
-				a {
-					pointer-events: auto;
-				}
+
+		.menu-item {
+			margin-bottom: 30px;
+		}
+
+		.bruschetta-wrap, .spinning-roles-wrap, .main-dishes-wrap {
+			display: flex;
+
+			.bruschetta-img, .spinning-roles-img, .main-dishes-img {
+				order: 2;
 			}
 		}
 	}
-	
-	@media(max-width: 767px) {
-		.contact {
-
-			h3 {
-				font-size: 20px;
-			}
-	
-			p {
-				font-size: 20px;
+	.contact {
+		p {
+			a {
+				pointer-events: auto;
 			}
 		}
 	}
-  
-  @media(max-width: 576px) {
-	.restaurant {
-		margin-top: 60px;
-	}
-  	.menu {
-  		.menu-list {
-  			margin-left: 15px;
-  		}
-		}
-		.contact {
+}
 
-			p {
-				font-size: 15px;
-			}
-	
-			.fa {
-				margin-right: 5px;
-			}
+@media(max-width: 767px) {
+	.contact {
+
+		h3 {
+			font-size: 20px;
 		}
-  }
+
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media(max-width: 576px) {
+.restaurant {
+	margin-top: 60px;
+}
+	.menu {
+		.menu-list {
+			margin-left: 15px;
+		}
+	}
+	.contact {
+
+		p {
+			font-size: 15px;
+		}
+
+		.fa {
+			margin-right: 5px;
+		}
+	}
+}

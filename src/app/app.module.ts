@@ -46,6 +46,17 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { ThxPageComponent } from './thx-page/thx-page.component';
+import { BurgersComponent } from './restaurant/burgers/burgers.component';
+import { VealBurgerComponent } from './restaurant/burgers/veal-burger/veal-burger.component';
+import { GreenBurgerComponent } from './restaurant/burgers/green-burger/green-burger.component';
+import { TurkeyBurgerComponent } from './restaurant/burgers/turkey-burger/turkey-burger.component';
+import { DrinksComponent } from './restaurant/drinks/drinks.component';
+import { ClassicSmuziComponent } from './restaurant/drinks/classic-smuzi/classic-smuzi.component';
+import { TropicalSmuziComponent } from './restaurant/drinks/tropical-smuzi/tropical-smuzi.component';
+import { GreenSmuziComponent } from './restaurant/drinks/green-smuzi/green-smuzi.component';
+import { FreshSmuziComponent } from './restaurant/drinks/fresh-smuzi/fresh-smuzi.component';
+import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin-smuzi.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +82,18 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     OrderComponent,
     AuthorizationComponent,
     RegistrationComponent,
-    ForgotPassComponent
+    ForgotPassComponent,
+    ThxPageComponent,
+    BurgersComponent,
+    VealBurgerComponent,
+    GreenBurgerComponent,
+    TurkeyBurgerComponent,
+    DrinksComponent,
+    ClassicSmuziComponent,
+    TropicalSmuziComponent,
+    GreenSmuziComponent,
+    FreshSmuziComponent,
+    VataminSmuziComponent
   ],
   imports: [
     BrowserModule,

@@ -153,7 +153,7 @@
 
                   <button class="remove-order" (click)="removeFromLocalStorage()">Видалити замовлення</button>
                   
-                  <button class="submit-btn" type="submit" [disabled]="!myform.valid">Оформити замовлення</button>
+                  <button class="submit-btn" type="submit" [disabled]="!myform.valid" [routerLink]='["/thx-page"]'>Оформити замовлення</button>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@
       <div class="empty-order">
         <h2>Корзина пуста</h2>
         <p>Для вибору товарів, перейдіть в наш 
-          <a [routerLink]="['/catalog']">каталог товарів</a>
+          <a [routerLink]="['/ration']">каталог товарів</a>
         </p>
       </div>
 
