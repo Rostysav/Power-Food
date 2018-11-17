@@ -26,11 +26,11 @@ import { TurkeyBurgerComponent } from './restaurant/burgers/turkey-burger/turkey
 
 
 // Smuzi
-import { ClassicSmuziComponent } from './restaurant/drinks/classic-smuzi/classic-smuzi.component',
-import { TropicalSmuziComponent } from './restaurant/drinks/tropical-smuzi/tropical-smuzi.component',
-import { GreenSmuziComponent } from './restaurant/drinks/green-smuzi/green-smuzi.component',
-import { FreshSmuziComponent } from './restaurant/drinks/fresh-smuzi/fresh-smuzi.component',
-import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin-smuzi.component',
+import { ClassicSmuziComponent } from './restaurant/drinks/classic-smuzi/classic-smuzi.component';
+import { TropicalSmuziComponent } from './restaurant/drinks/tropical-smuzi/tropical-smuzi.component';
+import { GreenSmuziComponent } from './restaurant/drinks/green-smuzi/green-smuzi.component';
+import { FreshSmuziComponent } from './restaurant/drinks/fresh-smuzi/fresh-smuzi.component';
+import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin-smuzi.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
