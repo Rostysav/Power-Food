@@ -57,6 +57,15 @@ import { TropicalSmuziComponent } from './restaurant/drinks/tropical-smuzi/tropi
 import { GreenSmuziComponent } from './restaurant/drinks/green-smuzi/green-smuzi.component';
 import { FreshSmuziComponent } from './restaurant/drinks/fresh-smuzi/fresh-smuzi.component';
 import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin-smuzi.component';
+import { VanilCoclailComponent } from './restaurant/drinks/vanil-coclail/vanil-coclail.component';
+import { ChocolateCoclailComponent } from './restaurant/drinks/chocolate-coclail/chocolate-coclail.component';
+import { StrawberryCoclailComponent } from './restaurant/drinks/strawberry-coclail/strawberry-coclail.component';
+import { DesertsComponent } from './restaurant/deserts/deserts.component';
+import { MilkPiddingComponent } from './restaurant/deserts/milk-pidding/milk-pidding.component';
+import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-musse.component';
+import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
+import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
+import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +102,16 @@ import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin
     TropicalSmuziComponent,
     GreenSmuziComponent,
     FreshSmuziComponent,
-    VataminSmuziComponent
+    VataminSmuziComponent,
+    VanilCoclailComponent,
+    ChocolateCoclailComponent,
+    StrawberryCoclailComponent,
+    DesertsComponent,
+    MilkPiddingComponent,
+    CherryMusseComponent,
+    CheesecakeComponent,
+    PanaKotaComponent,
+    CheesePearComponent
   ],
   imports: [
     BrowserModule,

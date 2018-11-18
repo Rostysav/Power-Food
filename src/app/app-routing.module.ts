@@ -32,6 +32,19 @@ import { GreenSmuziComponent } from './restaurant/drinks/green-smuzi/green-smuzi
 import { FreshSmuziComponent } from './restaurant/drinks/fresh-smuzi/fresh-smuzi.component';
 import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin-smuzi.component';
 
+// Coctails
+import { VanilCoclailComponent } from './restaurant/drinks/vanil-coclail/vanil-coclail.component';
+import { ChocolateCoclailComponent } from './restaurant/drinks/chocolate-coclail/chocolate-coclail.component';
+import { StrawberryCoclailComponent } from './restaurant/drinks/strawberry-coclail/strawberry-coclail.component';
+
+// Deserts
+import { MilkPiddingComponent } from './restaurant/deserts/milk-pidding/milk-pidding.component';
+import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-musse.component';
+import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
+import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
+import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
+
+
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: MainComponent},
@@ -63,6 +76,19 @@ const routes: Routes = [
   {path: 'restaurant/green-smuzi' , component: GreenSmuziComponent},
   {path: 'restaurant/fresh-smuzi', component: FreshSmuziComponent},
   {path: 'restaurant/vatamin-smuzi', component: VataminSmuziComponent},
+
+  // coctails
+  {path: 'restaurant/vanil-coclail', component: VanilCoclailComponent},
+  {path: 'restaurant/chocolate-coclail', component: ChocolateCoclailComponent},
+  {path: 'restaurant/strawberry-coclail', component: StrawberryCoclailComponent},
+
+  // deserts
+  {path: 'restaurant/milk-pudding', component: MilkPiddingComponent},
+  {path: 'restaurant/cherry-musse', component: CherryMusseComponent},
+  {path: 'restaurant/cheesecake', component: CheesecakeComponent},
+  {path: 'restaurant/pana-kota', component: PanaKotaComponent},
+  {path: 'restaurant/cheese-pear', component: CheesePearComponent},
+
 ];
 
 @NgModule({
