@@ -36,6 +36,9 @@ import { VataminSmuziComponent } from './restaurant/drinks/vatamin-smuzi/vatamin
 import { VanilCoclailComponent } from './restaurant/drinks/vanil-coclail/vanil-coclail.component';
 import { ChocolateCoclailComponent } from './restaurant/drinks/chocolate-coclail/chocolate-coclail.component';
 import { StrawberryCoclailComponent } from './restaurant/drinks/strawberry-coclail/strawberry-coclail.component';
+import { AppleCoctailComponent } from './restaurant/drinks/apple-coctail/apple-coctail.component';
+import { MangoCoctailComponent } from './restaurant/drinks/mango-coctail/mango-coctail.component';
+import { ColaLaymCoctailComponent } from './restaurant/drinks/cola-laym--coctail/cola-laym--coctail.component';
 
 // Deserts
 import { MilkPiddingComponent } from './restaurant/deserts/milk-pidding/milk-pidding.component';
@@ -81,6 +84,9 @@ const routes: Routes = [
   {path: 'restaurant/vanil-coclail', component: VanilCoclailComponent},
   {path: 'restaurant/chocolate-coclail', component: ChocolateCoclailComponent},
   {path: 'restaurant/strawberry-coclail', component: StrawberryCoclailComponent},
+  {path: 'restaurant/apple-coctail', component: AppleCoctailComponent},
+  {path: 'restaurant/mango-coctail', component: MangoCoctailComponent},
+  {path: 'restaurant/cola-laym-coctail', component: ColaLaymCoctailComponent},
 
   // deserts
   {path: 'restaurant/milk-pudding', component: MilkPiddingComponent},

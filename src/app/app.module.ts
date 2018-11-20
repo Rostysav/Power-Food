@@ -66,6 +66,9 @@ import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-m
 import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
 import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
+import { AppleCoctailComponent } from './restaurant/drinks/apple-coctail/apple-coctail.component';
+import { MangoCoctailComponent } from './restaurant/drinks/mango-coctail/mango-coctail.component';
+import { ColaLaymCoctailComponent } from './restaurant/drinks/cola-laym--coctail/cola-laym--coctail.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +114,10 @@ import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pea
     CherryMusseComponent,
     CheesecakeComponent,
     PanaKotaComponent,
-    CheesePearComponent
+    CheesePearComponent,
+    AppleCoctailComponent,
+    MangoCoctailComponent,
+    ColaLaymCoctailComponent
   ],
   imports: [
     BrowserModule,
