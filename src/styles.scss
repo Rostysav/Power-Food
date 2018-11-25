@@ -1,5 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 		/*Reset style*/
 html, body, div, span, applet, object, iframe,
@@ -11,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -159,7 +160,7 @@ button {
 	}
 }
 
-#honeypot {
+#honeypot, #honeypot1 {
   display: none; /*makes the field not visible to humans*/
 }
 
@@ -232,7 +233,7 @@ button {
   .mat-select-value {
     padding: 0 5px;
   }
-  
+
   .program-img {
     // padding: 0;
 
@@ -853,7 +854,7 @@ button {
 
 // Restourant dish-item
 .restaurant {
-  
+
 
   .dish-container {
     padding-top: 0;
@@ -1035,7 +1036,7 @@ button {
 @media (max-width: 992px) {
   .dish-container {
     padding-top: 135px;
-  
+
     img {
       width: 100%;
     }

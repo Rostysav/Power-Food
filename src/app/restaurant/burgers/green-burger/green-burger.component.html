@@ -1,33 +1,39 @@
-<div class="dish-container">
+<div class="dish-container" *ngFor="let restaurant of restaurants">
   <div class="container">
     <div class="row">
 
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["green-burger"]'>
-          <p>Green бургер - 340гр</p>
-          <img src="../../../../assets/img/restourant/burgers/green-burger.jpg" alt="green-burger.jpg">
+          <p>{{ restaurant.name }}</p>
+          <img [src]="restaurant.imageUrl" alt="green-burger.jpg">
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="dish-name">
-          <p>Green бургер - 340гр</p>
+          <p>{{ restaurant.name }}</p>
         </div>
         <div class="dish-price">
-          92грн 
+          92грн
           <mat-form-field class="example-full-width">
-            <input matInput type="number" value="1">
+            <input type="number" min="1" max="99" required matInput
+                   [(ngModel)]="item" value="1">
           </mat-form-field>
+          <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 92 }}</span> грн</p>
         </div>
         <div class="nutritional-value">
           Харчова цінність страви (грам):
-          білки - <span>22,2</span>; 
+          білки - <span>22,2</span>;
           жири - <span>28,4</span>;
           вуглуводи - <span>77</span>;
           ккал - <span>525,6</span>;
         </div>
         <div class="buy-link">
-          <a><i class="fa fa-shopping-bag"></i>Замовити</a>
+          <a (click)="orderProduct()" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>
+            {{ buttonText }}
+          </a>
+          <!--<a *ngIf="item"><i class="fa fa-shopping-bag"></i>{{ buttonGreenText }}</a>-->
         </div>
       </div>
 

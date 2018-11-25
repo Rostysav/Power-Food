@@ -9,6 +9,9 @@
 # dependencies
 /node_modules
 
+// app.js
+app.js
+
 # IDEs and editors
 /.idea
 .project

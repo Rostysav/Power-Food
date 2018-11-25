@@ -43,6 +43,7 @@ import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-m
 import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
 import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
+import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
 
 
 const routes: Routes = [
@@ -64,6 +65,7 @@ const routes: Routes = [
   {path: 'thx-page', component: ThxPageComponent},
 
   {path: 'order', component: OrderComponent},
+  {path: 'order-restaurant', component: OrderRestaurantComponent},
 
   // burgers
   {path: 'restaurant/veal-burger', component: VealBurgerComponent},

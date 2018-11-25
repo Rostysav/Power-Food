@@ -66,6 +66,8 @@ import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-m
 import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
 import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
+import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
+import { ToastrModule } from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -111,7 +113,8 @@ import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pea
     CherryMusseComponent,
     CheesecakeComponent,
     PanaKotaComponent,
-    CheesePearComponent
+    CheesePearComponent,
+    OrderRestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -129,7 +132,12 @@ import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pea
     MatSelectModule,
     MatButtonModule,
     AngularFontAwesomeModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-center',
+      closeButton: true,
+      timeOut: 3000
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

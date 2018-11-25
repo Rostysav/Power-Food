@@ -1,17 +1,17 @@
-<div class="dish-container">
+<div class="dish-container" *ngFor="let restaurant of restaurants">
   <div class="container">
     <div class="row">
 
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["turkey-burger"]'>
-          <p>Бургер з індичкою - 340гр</p>
-          <img src="../../../../assets/img/restourant/burgers/turkey-burger.jpg" alt="turkey-burger.jpg">
+          <p>{{ restaurant.name }}</p>
+          <img [src]="restaurant.imageUrl" alt="turkey-burger.jpg">
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="dish-name">
-          <p>Бургер з індичкою - 340гр</p>
+          <p>{{ restaurant.name }}</p>
         </div>
         <div class="dish-price">
           124грн
@@ -21,13 +21,16 @@
         </div>
         <div class="nutritional-value">
           Харчова цінність страви (грам):
-          білки - <span>22,2</span>; 
+          білки - <span>22,2</span>;
           жири - <span>28,4</span>;
           вуглуводи - <span>77</span>;
           ккал - <span>525,6</span>;
         </div>
         <div class="buy-link">
-          <a><i class="fa fa-shopping-bag"></i>Замовити</a>
+          <a (click)="orderProduct()" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>
+            {{ buttonText }}
+          </a>
         </div>
       </div>
 
