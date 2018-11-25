@@ -66,6 +66,9 @@ import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-m
 import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
 import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
+import { AppleCoctailComponent } from './restaurant/drinks/apple-coctail/apple-coctail.component';
+import { MangoCoctailComponent } from './restaurant/drinks/mango-coctail/mango-coctail.component';
+import { ColaLaymCoctailComponent } from './restaurant/drinks/cola-laym--coctail/cola-laym--coctail.component';
 import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
 import { ToastrModule } from "ngx-toastr";
 
@@ -113,6 +116,10 @@ import { ToastrModule } from "ngx-toastr";
     CherryMusseComponent,
     CheesecakeComponent,
     PanaKotaComponent,
+    CheesePearComponent,
+    AppleCoctailComponent,
+    MangoCoctailComponent,
+    ColaLaymCoctailComponent
     CheesePearComponent,
     OrderRestaurantComponent
   ],

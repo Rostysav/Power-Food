@@ -6,12 +6,23 @@
         <div>
           <h1>Перший у Львові</h1>
           <h2>ресторан здорового харчування</h2>
-          <h2>з доставкою</h2>
-          <h2>збалансованих програм</h2>
+          <!-- <h2>з доставкою</h2>
+          <h2>збалансованих програм</h2> -->
         </div>
         <div class="main-links">
-          <a [routerLink]="['/restaurant']">Меню ресторану</a>
-          <a [routerLink]="['/ration']">Замовити раціон</a>
+          <div class="col-md-6">
+            <a [routerLink]="['/restaurant']">
+              <p>Доставка з меню ресторану</p>
+              <img src="../../../assets/img/restourant-delivery.jpg" alt="restourant-delivery.jpg">
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a [routerLink]="['/ration']">
+              <p>Доставка збалансованих програм</p>
+              <img src="../../../assets/img/program-delivery.jpg" alt="program-delivery.jpg">
+            </a>
+          </div>
+          
         </div>
       </div>
     </div>
