@@ -2,6 +2,19 @@
 	background: #000;
 	margin-top: 110px;
 
+	.mat-tab-header {
+		width: 100%;
+	}
+
+	.mat-tab-header-pagination-chevron {
+		border-color: #F0544F;
+		width: 12px;
+		height: 12px;
+	}
+	.mat-tab-header-pagination-disabled {
+		opacity: 0;
+	}
+
 	#left, #right {
 		cursor: pointer;
 	}
@@ -14,7 +27,7 @@
 		}
 
 		.row {
-			width: 100%;
+			// width: 100%;
 		}
 	}
 

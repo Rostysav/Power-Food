@@ -48,6 +48,28 @@ import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.comp
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
 import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
 
+//Lanch
+import { FirstLanchComponent } from './restaurant/lanch/first-lanch/first-lanch.component';
+import { SecondLanchComponent } from './restaurant/lanch/second-lanch/second-lanch.component';
+import { ThirdLanchComponent } from './restaurant/lanch/third-lanch/third-lanch.component';
+
+// Breakfast
+import { OmeletComponent } from './restaurant/breakfast/omelet/omelet.component';
+import { OatmealComponent } from './restaurant/breakfast/oatmeal/oatmeal.component';
+import { GranolaComponent } from './restaurant/breakfast/granola/granola.component';
+
+
+// Bryskety
+import { GuakamoleComponent } from './restaurant/bruskety/guakamole/guakamole.component';
+import { SpinachComponent } from './restaurant/bruskety/spinach/spinach.component';
+import { RostfibComponent } from './restaurant/bruskety/rostfib/rostfib.component';
+
+// Salaty
+import { ShrimpSalatComponent } from './restaurant/salaty/shrimp-salat/shrimp-salat.component';
+import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.component';
+import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
+import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -96,6 +118,28 @@ const routes: Routes = [
   {path: 'restaurant/cheesecake', component: CheesecakeComponent},
   {path: 'restaurant/pana-kota', component: PanaKotaComponent},
   {path: 'restaurant/cheese-pear', component: CheesePearComponent},
+
+  // lanch
+  {path: 'restaurant/lanch-N1', component: FirstLanchComponent},
+  {path: 'restaurant/lanch-N2', component: SecondLanchComponent},
+  {path: 'restaurant/lanch-N3', component: ThirdLanchComponent},
+
+
+  // breakfast
+  {path: 'restaurant/omelet', component: OmeletComponent},
+  {path: 'restaurant/oatmeal', component: OatmealComponent},
+  {path: 'restaurant/granola', component: GranolaComponent},
+
+  // bryskety
+  {path: 'restaurant/brysketa-guakamole', component: GuakamoleComponent},
+  {path: 'restaurant/brysketa-spinach', component: SpinachComponent},
+  {path: 'restaurant/brysketa-rostbif', component: RostfibComponent},
+
+  // salaty
+  {path: 'restaurant/shrimp-salad', component: ShrimpSalatComponent},
+  {path: 'restaurant/beet-salad', component: BeetSalatComponent},
+  {path: 'restaurant/kinoa-salad', component: KinoaSalatComponent},
+  {path: 'restaurant/bylgyr-salad', component: BylgyrSalatComponent},
 
 ];
 

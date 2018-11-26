@@ -71,6 +71,23 @@ import { MangoCoctailComponent } from './restaurant/drinks/mango-coctail/mango-c
 import { ColaLaymCoctailComponent } from './restaurant/drinks/cola-laym--coctail/cola-laym--coctail.component';
 import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
 import { ToastrModule } from "ngx-toastr";
+import { FirstLanchComponent } from './restaurant/lanch/first-lanch/first-lanch.component';
+import { LanchComponent } from './restaurant/lanch/lanch.component';
+import { SecondLanchComponent } from './restaurant/lanch/second-lanch/second-lanch.component';
+import { ThirdLanchComponent } from './restaurant/lanch/third-lanch/third-lanch.component';
+import { BreakfastComponent } from './restaurant/breakfast/breakfast.component';
+import { OmeletComponent } from './restaurant/breakfast/omelet/omelet.component';
+import { OatmealComponent } from './restaurant/breakfast/oatmeal/oatmeal.component';
+import { GranolaComponent } from './restaurant/breakfast/granola/granola.component';
+import { BrusketyComponent } from './restaurant/bruskety/bruskety.component';
+import { GuakamoleComponent } from './restaurant/bruskety/guakamole/guakamole.component';
+import { SpinachComponent } from './restaurant/bruskety/spinach/spinach.component';
+import { RostfibComponent } from './restaurant/bruskety/rostfib/rostfib.component';
+import { SalatyComponent } from './restaurant/salaty/salaty.component';
+import { ShrimpSalatComponent } from './restaurant/salaty/shrimp-salat/shrimp-salat.component';
+import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.component';
+import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
+import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
 
 @NgModule({
   declarations: [
@@ -119,9 +136,25 @@ import { ToastrModule } from "ngx-toastr";
     CheesePearComponent,
     AppleCoctailComponent,
     MangoCoctailComponent,
-    ColaLaymCoctailComponent
-    CheesePearComponent,
-    OrderRestaurantComponent
+    ColaLaymCoctailComponent,
+    OrderRestaurantComponent,
+    FirstLanchComponent,
+    LanchComponent,
+    SecondLanchComponent,
+    ThirdLanchComponent,
+    BreakfastComponent,
+    OmeletComponent,
+    OatmealComponent,
+    GranolaComponent,
+    BrusketyComponent,
+    GuakamoleComponent,
+    SpinachComponent,
+    RostfibComponent,
+    SalatyComponent,
+    ShrimpSalatComponent,
+    BeetSalatComponent,
+    KinoaSalatComponent,
+    BylgyrSalatComponent
   ],
   imports: [
     BrowserModule,
