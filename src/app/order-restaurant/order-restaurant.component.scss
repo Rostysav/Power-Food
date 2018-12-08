@@ -3,7 +3,7 @@
   position: relative;
   min-height: calc(100vh - 249px);
   margin-top: 110px;
-  
+
   h3 {
     color: #000;
     width: 100%;
@@ -227,11 +227,11 @@
           opacity: .7;
         }
       }
-      
+
     }
 
-    .remove-order {
-      background: #ccc;
+    .remove-order, .continue-order {
+      background: #F0544F;
       font-size: 21px;
       padding: 10px 25px;
       border-radius: 90px;
@@ -244,6 +244,9 @@
       cursor: pointer;
       margin-bottom: 30px;
     }
+    .continue-order {
+      background: #F89406;
+    }
 
     a {
       color: #fff;
@@ -253,7 +256,7 @@
       }
     }
   }
-  
+
 }
 
 @media(max-width: 992px) {

@@ -119,7 +119,7 @@ import { ToastrModule } from "ngx-toastr";
     CheesePearComponent,
     AppleCoctailComponent,
     MangoCoctailComponent,
-    ColaLaymCoctailComponent
+    ColaLaymCoctailComponent,
     CheesePearComponent,
     OrderRestaurantComponent
   ],

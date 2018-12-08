@@ -9,7 +9,7 @@
       </div> -->
       <div class="order-item">
         <div class="order-item">
-          <div class="order-title" *ngFor="let r of restaurant">
+          <div class="order-title" *ngFor="let r of restaurant; let i = index;">
             <div class="container">
               <div class="row">
                 <div class="col-md-6 offset-md-3 col-sm-12">
@@ -25,8 +25,19 @@
                 <div class="col-md-6 offset-md-3 col-sm-12">
                   <div class="price">
                     <span>Ціна:</span>
-                    <p>{{ r.price }}</p>
+                    <!--<p>{{ items[i] }} штук по {{ r.price / items[i] }} грн = {{ r.price }} грн</p>-->
+                    <p>{{ r.pieces }} штук по {{ r.price / r.pieces }} грн = {{ r.price }} грн</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="price">
+                  <span>Загальна ціна:</span>
+                  <p>{{total}} грн за {{pieces}} товарів.</p>
                 </div>
               </div>
             </div>
@@ -137,6 +148,7 @@
                 <div class="buy-link">
 
                   <button class="remove-order" (click)="removeFromLocalStorage()">Видалити замовлення</button>
+                  <!--<button class="continue-order" (click)="redirectToHomePage()">Продовжити замовляти</button>-->
 
                   <button class="submit-btn" type="submit"
                           [disabled]="!myRestaurantForm.valid">Оформити замовлення</button>
