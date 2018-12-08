@@ -71,5 +71,4 @@ export class VealBurgerComponent implements OnInit {
     this.router.navigate(['/restaurant']);
     document.getElementById('continue').style.display = 'none';
   }
-
 }

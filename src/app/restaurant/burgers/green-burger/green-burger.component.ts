@@ -73,5 +73,4 @@ export class GreenBurgerComponent implements OnInit, OnChanges {
     this.router.navigate(['/restaurant']);
     document.getElementById('continue').style.display = 'none';
   }
-
 }
