@@ -3,7 +3,6 @@ export interface IRestaurant {
   name: string;
   description: string;
   price: number;
-  dayPrice: number;
   imageUrl: string;
   daysNumber?: number;
 }

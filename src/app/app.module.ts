@@ -137,6 +137,7 @@ import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-sa
     AppleCoctailComponent,
     MangoCoctailComponent,
     ColaLaymCoctailComponent,
+    CheesePearComponent,
     OrderRestaurantComponent,
     FirstLanchComponent,
     LanchComponent,
@@ -183,3 +184,4 @@ import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-sa
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

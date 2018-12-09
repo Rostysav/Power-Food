@@ -1,36 +1,50 @@
-<div class="dish-container">
+<div class="dish-container" *ngFor="let restaurant of restaurants">
   <div class="container">
     <div class="row">
 
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["veal-burger"]'>
-          <p>Бургер з телятиною - 350г</p>
-          <img src="../../../../assets/img/restourant/burgers/veal-burger.jpg" alt="veal-burger.img">
+          <p>{{ restaurant.name }}</p>
+          <img [src]="restaurant.imageUrl" alt="veal-burger.img">
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="dish-name">
-          <p>Бургер з телятиною - 350гр</p>
+          <p>{{ restaurant.name }}</p>
         </div>
         <div class="dish-price">
           146грн
           <mat-form-field class="example-full-width">
-            <input matInput type="number" value="1">
+            <input type="number" min="1" max="99" required matInput
+                   [(ngModel)]="item" value="1">
           </mat-form-field>
+          <p *ngIf="item" class="full-price">Загальна сума:
+            <span>
+            {{ item * 124 }}
+            </span> грн</p>
         </div>
         <div class="nutritional-value">
           Харчова цінність страви (грам):
-          білки - <span>40,6</span>; 
+          білки - <span>40,6</span>;
           жири - <span>15,8</span>;
           вуглуводи - <span>45,7</span>;
           ккал - <span>393,1</span>;
         </div>
         <div class="buy-link">
-          <a><i class="fa fa-shopping-bag"></i>Замовити</a>
+          <a *ngIf="!makeOrder" (click)="orderProduct()">
+            <i class="fa fa-shopping-bag"></i>{{ buttonText }}
+          </a>
+          <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>{{ orderText }}
+          </a>
+          <a id="continue" *ngIf="makeOrder" (click)="continue()">
+            <i class="fa fa-shopping-bag"></i>{{ continueText }}
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 </div>
+
