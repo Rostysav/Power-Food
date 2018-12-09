@@ -291,7 +291,7 @@ button {
     transition: .3s;
 
     &:hover {
-      transition: 3s;
+      transition: .3s;
       background: red;
       border-bottom: none;
       text-decoration: none;
@@ -861,6 +861,8 @@ button {
     padding-top: 0;
     padding-bottom: 0;
     height: auto;
+    min-height: initial;
+    margin-bottom: 100px;
 
     &:hover {
       img {
@@ -869,9 +871,11 @@ button {
         -webkit-transform: translate3d(40px,0,0);
         transform: translate3d(40px,0,0);
       }
-      a {
-        background: red;
-      }
+      // a {
+      //   &:first-child {
+      //     background: red;
+      //   }
+      // }
     }
 
     img {
@@ -939,7 +943,7 @@ button {
     .buy-link {
       justify-content: center;
       margin-top: 15px;
-      margin-bottom: 100px;
+      // margin-bottom: 100px;
     }
 
   }
@@ -958,6 +962,7 @@ button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 15px;
 
     p {
       color: #000;
@@ -1032,8 +1037,11 @@ button {
   }
 
   .nutritional-value {
-    font-size: 18px;
-    color: rgba(0,0,0, .5);
+    
+    p {
+      font-size: 18px;
+      color: rgba(0,0,0, .5);
+    }
 
     span {
       color: #F0544F;
@@ -1047,6 +1055,10 @@ button {
     a {
       color: #fff;
       display: inline-block;
+
+      & + a {
+        margin-left: 15px;
+      }
 
       &:hover {
         color: #fff;

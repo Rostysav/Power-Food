@@ -3,11 +3,11 @@
 		<div class="row">
 			<div class="col-md-4 nav-left">
 				<div class="nav-left-top">
-					<!-- <div class="feedback">
-						<button (click)='popupMenu=!popupMenu'>
-							Замовити зворотній дзвінок
-						</button>
-					</div> -->
+					<div class="feedback">
+						<div class="cart" [routerLink]='["order-restaurant"]'>
+							<img src="../../../assets/img/shopping-cart.png">
+						</div>
+					</div>
 				</div>
 				<ul class="nav">
 					<li>
@@ -18,6 +18,11 @@
 					<li>
 						<a [routerLink]='["restaurant"]'>
 							Ресторан
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["ration"]'>
+							Раціони
 						</a>
 					</li>
 					<!-- <li>
@@ -53,8 +58,8 @@
 						</a>
 					</li> -->
 					<li>
-						<a [routerLink]='["ration"]'>
-							Раціони
+						<a [routerLink]='["contacts"]'>
+							Контакти
 						</a>
 					</li>
 					<li>
