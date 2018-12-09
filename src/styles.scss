@@ -80,7 +80,8 @@ a:hover, button:hover, input:hover, textarea:hover {
 		/*Main styles*/
 
 .section {
-	padding: 100px 0;
+  padding: 100px 0;
+  width: 100%;
 }
 div {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -917,6 +918,10 @@ button {
       display: none;
     }
 
+    .storage {
+      display: none;
+    }
+
     .buy-link {
       justify-content: center;
       margin-top: 15px;
@@ -970,6 +975,11 @@ button {
     align-items: center;
   }
 
+  .storage {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
   .mat-form-field {
     width: 50px;
     margin-left: 100px;
@@ -1009,6 +1019,7 @@ button {
 
   .nutritional-value {
     font-size: 18px;
+    color: rgba(0,0,0, .5);
 
     span {
       color: #F0544F;
