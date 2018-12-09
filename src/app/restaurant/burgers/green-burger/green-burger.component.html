@@ -29,14 +29,19 @@
           ккал - <span>525,6</span>;
         </div>
         <div class="buy-link">
-          <a (click)="orderProduct()" [routerLink]="['/order-restaurant']">
-            <i class="fa fa-shopping-bag"></i>
-            {{ buttonText }}
+          <a *ngIf="!makeOrder" (click)="orderProduct()">
+            <i class="fa fa-shopping-bag"></i>{{ buttonText }}
           </a>
-          <!--<a *ngIf="item"><i class="fa fa-shopping-bag"></i>{{ buttonGreenText }}</a>-->
+          <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>{{ orderText }}
+          </a>
+          <a id="continue" *ngIf="makeOrder" (click)="continue()">
+            <i class="fa fa-shopping-bag"></i>{{ continueText }}
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 </div>
+

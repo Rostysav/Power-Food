@@ -1,11 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { IProduct } from '../products/product';
 import { Router } from "@angular/router";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IRestaurant } from "../restaurant/restaurant";
-import {ToastService} from "../service/toastr.service";
+import { ToastService } from "../service/toastr.service";
 
 @Component({
   selector: 'pf-order',
@@ -15,6 +14,9 @@ import {ToastService} from "../service/toastr.service";
 })
 export class OrderRestaurantComponent implements OnInit {
   restaurant: IRestaurant[];
+  items: number;
+  total: number;
+  pieces;
 
   myRestaurantForm: FormGroup;
 
@@ -53,7 +55,9 @@ export class OrderRestaurantComponent implements OnInit {
     console.log("Form Submitted!");
 
     // RESTAURANT
-    let restItem = localStorage.getItem('restaurant').length;
+    if (localStorage.getItem('restaurant')) {
+      let restItem = localStorage.getItem('restaurant').length;
+    }
 
     if (localStorage.getItem('restaurant')) {
       // for (let i = 0; i < restItem; i++) {
@@ -97,12 +101,31 @@ export class OrderRestaurantComponent implements OnInit {
   orderFromLocalStorage() {
     let restaur = JSON.parse(localStorage.getItem('restaurant'));
     this.restaurant = restaur;
+    this.total = 0;
+    this.pieces = 0;
+    for (let i = 0; i < restaur.length; i++) {
+      this.total += restaur[i].price;
+      this.pieces += restaur[i].pieces;
+    }
+    return this.total, this.pieces;
   }
 
   removeFromLocalStorage() {
-      localStorage.clear();
+    localStorage.clear();
+    this.toastService.showToast('error', 'Корзину очищено!');
+    setTimeout((x) => {
       this.router.navigate(['/home']);
+    }, 1500);
   }
 
-
+  // redirectToHomePage() {
+  //   this.toastService.showToast(
+  //     'warning',
+  //     'Ви можете продовжити замовлення і повернутися до корзини в будь-який час!',
+  //     4000);
+  //   setTimeout((x) => {
+  //     this.router.navigate(['/home']);
+  //   }, 1500);
+  // }
 }
+
