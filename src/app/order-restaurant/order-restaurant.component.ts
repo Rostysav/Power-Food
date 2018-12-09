@@ -128,3 +128,4 @@ export class OrderRestaurantComponent implements OnInit {
   //   }, 1500);
   // }
 }
+
