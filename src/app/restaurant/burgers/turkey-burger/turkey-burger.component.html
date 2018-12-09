@@ -13,6 +13,15 @@
         <div class="dish-name">
           <p>{{ restaurant.name }}</p>
         </div>
+
+        <div class="nutritional-value">
+          <p>Харчова цінність страви (грам):</p>
+          <p>білки - <span>22,2</span>;</p>
+          <p>жири - <span>28,4</span>;</p>
+          <p>вуглуводи - <span>77</span>;</p>
+          <p>ккал - <span>525,6</span>;</p>
+        </div>
+
         <div class="dish-price">
           124грн
           <mat-form-field class="example-full-width">
@@ -23,13 +32,6 @@
             <span>
             {{ item * 124 }}
             </span> грн</p>
-        </div>
-        <div class="nutritional-value">
-          Харчова цінність страви (грам):
-          білки - <span>22,2</span>;
-          жири - <span>28,4</span>;
-          вуглуводи - <span>77</span>;
-          ккал - <span>525,6</span>;
         </div>
         <div class="buy-link">
           <a *ngIf="!makeOrder" (click)="orderProduct()">

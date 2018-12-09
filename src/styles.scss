@@ -291,7 +291,7 @@ button {
     transition: .3s;
 
     &:hover {
-      transition: 3s;
+      transition: .3s;
       background: red;
       border-bottom: none;
       text-decoration: none;
@@ -861,6 +861,27 @@ button {
     padding-top: 0;
     padding-bottom: 0;
     height: auto;
+    min-height: initial;
+    margin-bottom: 100px;
+
+    &:hover {
+      img {
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+        -webkit-transform: translate3d(40px,0,0);
+        transform: translate3d(40px,0,0);
+      }
+      // a {
+      //   &:first-child {
+      //     background: red;
+      //   }
+      // }
+    }
+
+    img {
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+      transition: opacity 0.35s, transform 0.45s;
+    }
 
     .row, .container, .col-md-6 {
       margin: 0;
@@ -880,10 +901,7 @@ button {
     .dish-img {
       flex-direction: column;
       cursor: pointer;
-
-      img {
-        width: 100%;
-      }
+      overflow: hidden;
 
       p {
         color: #fff;
@@ -925,7 +943,7 @@ button {
     .buy-link {
       justify-content: center;
       margin-top: 15px;
-      margin-bottom: 100px;
+      // margin-bottom: 100px;
     }
 
   }
@@ -936,7 +954,7 @@ button {
   padding-top: 170px;
   padding-bottom: 50px;
   position: relative;
-  // min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
 
@@ -944,6 +962,7 @@ button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 15px;
 
     p {
       color: #000;
@@ -1018,8 +1037,11 @@ button {
   }
 
   .nutritional-value {
-    font-size: 18px;
-    color: rgba(0,0,0, .5);
+    
+    p {
+      font-size: 18px;
+      color: rgba(0,0,0, .5);
+    }
 
     span {
       color: #F0544F;
@@ -1033,6 +1055,10 @@ button {
     a {
       color: #fff;
       display: inline-block;
+
+      & + a {
+        margin-left: 15px;
+      }
 
       &:hover {
         color: #fff;
