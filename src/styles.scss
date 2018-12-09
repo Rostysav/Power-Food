@@ -862,6 +862,23 @@ button {
     padding-bottom: 0;
     height: auto;
 
+    &:hover {
+      img {
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+        -webkit-transform: translate3d(40px,0,0);
+        transform: translate3d(40px,0,0);
+      }
+      a {
+        background: red;
+      }
+    }
+
+    img {
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+      transition: opacity 0.35s, transform 0.45s;
+    }
+
     .row, .container, .col-md-6 {
       margin: 0;
       padding: 0;
@@ -880,10 +897,7 @@ button {
     .dish-img {
       flex-direction: column;
       cursor: pointer;
-
-      img {
-        width: 100%;
-      }
+      overflow: hidden;
 
       p {
         color: #fff;
@@ -936,7 +950,7 @@ button {
   padding-top: 170px;
   padding-bottom: 50px;
   position: relative;
-  // min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
 
