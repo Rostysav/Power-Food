@@ -44,7 +44,6 @@
           </div>
 
         <form method="POST" #r="ngForm"
-              *ngFor="let r of restaurant"
               class="order-form" novalidate
               (ngSubmit)="onSubmit(r)"
               [formGroup]="myRestaurantForm">
@@ -121,16 +120,16 @@
               </div>
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 offset-md-3 col-sm-12">
-                <div class="price">
-                  <span>Ціна:</span>
-                  <p>{{ r.price }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!--<div class="container">-->
+            <!--<div class="row">-->
+              <!--<div class="col-md-6 offset-md-3 col-sm-12">-->
+                <!--<div class="price">-->
+                  <!--<span>Ціна:</span>-->
+                  <!--<p>{{ r.price }}</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
