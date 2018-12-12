@@ -1,5 +1,5 @@
 .restaurant {
-	background: #000;
+	background: #fff;
 	margin-top: 110px;
 
 	.mat-tab-header {
@@ -35,9 +35,12 @@
 	// 	display: flex;
 	// 	align-items: center;
 	// }
+	h3 {
+		color: #000;
+	}
 
 	h6 {
-		color: #fff;
+		color: #000;
 		font-size: 20px;
 		text-align: center;
 		margin-bottom: 50px;
@@ -45,7 +48,7 @@
 
 	// New styles start
 	.mat-tab-label-content {
-		color: #fff;
+		color: #000;
   }
   
   .buy-link {
@@ -190,11 +193,11 @@
 		margin-bottom: 20px;
 		a {
 			font-size: 25px;
-			color: #fff;
+			color: #000;
 			pointer-events: none;
 			&:hover {
 				text-decoration: none;
-				color: #fff;
+				color: #000;
 			}
 		}
 	}

@@ -5,7 +5,9 @@
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["green-burger"]'>
           <p>{{ restaurant.name }}</p>
-          <img [src]="restaurant.imageUrl" alt="green-burger.jpg">
+          <div class="dish-img-conteiner">
+            <img [src]="restaurant.imageUrl" alt="green-burger.jpg">
+          </div>
         </div>
       </div>
 
