@@ -74,4 +74,3 @@ export class GreenBurgerComponent implements OnInit, OnChanges {
     document.getElementById('continue').style.display = 'none';
   }
 }
-

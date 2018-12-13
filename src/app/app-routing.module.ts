@@ -6,7 +6,6 @@ import { DeliveryComponent } from './delivery/delivery.component';
 // import { AboutCompanyComponent } from './about-company/about-company.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PriceComponent } from './price/price.component';
-import { ContactComponent } from './contact/contact.component';
 // import { AuthorizationComponent } from './authorization/authorization.component';
 // import { RegistrationComponent } from './registration/registration.component';
 // import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
@@ -70,7 +69,6 @@ import { ShrimpSalatComponent } from './restaurant/salaty/shrimp-salat/shrimp-sa
 import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.component';
 import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
 import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
-import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -81,7 +79,6 @@ const routes: Routes = [
   {path: 'ration', component: CatalogComponent},
   {path: 'price', component: PriceComponent},
   {path: 'restaurant', component: RestaurantComponent},
-  {path: 'contacts', component: ContactComponent},
   // {path: 'authorization', component: AuthorizationComponent},
   // {path: 'registration', component: RegistrationComponent},
   // {path: 'forgot-pass', component: ForgotPassComponent},

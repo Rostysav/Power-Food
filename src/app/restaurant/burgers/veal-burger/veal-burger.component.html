@@ -5,9 +5,7 @@
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["veal-burger"]'>
           <p>{{ restaurant.name }}</p>
-          <div class="dish-img-conteiner"> 
-            <img [src]="restaurant.imageUrl" alt="veal-burger.img">
-          </div>
+          <img [src]="restaurant.imageUrl" alt="veal-burger.img">
         </div>
       </div>
 
@@ -15,15 +13,6 @@
         <div class="dish-name">
           <p>{{ restaurant.name }}</p>
         </div>
-
-        <div class="nutritional-value">
-          <p>Харчова цінність страви (грам):</p>
-          <p>білки - <span>40,6</span>;</p>
-          <p>жири - <span>15,8</span>;</p>
-          <p>вуглуводи - <span>45,7</span>;</p>
-          <p>ккал - <span>393,1</span>;</p>
-        </div>
-
         <div class="dish-price">
           146грн
           <mat-form-field class="example-full-width">
@@ -35,7 +24,13 @@
             {{ item * 124 }}
             </span> грн</p>
         </div>
-
+        <div class="nutritional-value">
+          Харчова цінність страви (грам):
+          білки - <span>40,6</span>;
+          жири - <span>15,8</span>;
+          вуглуводи - <span>45,7</span>;
+          ккал - <span>393,1</span>;
+        </div>
         <div class="buy-link">
           <a *ngIf="!makeOrder" (click)="orderProduct()">
             <i class="fa fa-shopping-bag"></i>{{ buttonText }}
@@ -52,5 +47,4 @@
     </div>
   </div>
 </div>
-
 

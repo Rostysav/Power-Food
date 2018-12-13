@@ -1,5 +1,5 @@
 header {
-  background: #000;
+  background: #0A0807;
 	padding: 15px 0;
 	height: auto;
 	position: fixed;
@@ -17,11 +17,6 @@ header {
 	.row {
 		display: flex;
 		// align-items: center;
-	}
-
-	.cart {
-		display: flex;
-		align-items: center;
 	}
 
 	.logo-wrap {
@@ -73,7 +68,6 @@ header {
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
-			height: 35px;
 			margin-bottom: 15px;
 		}
 
@@ -95,44 +89,20 @@ header {
     .nav {
     	li {
 				&+li {
-	    		margin-left: 30px;
+	    		margin-left: 50px;
 				}
 				
 				a {
 					text-transform: uppercase;
 				}
     	}
-		}
-		
-		.cart {
-			cursor: pointer;
-			transition: .3s;
-
-			&:hover {
-				transition: .3s;
-
-				img, p {
-					opacity: 1;
-					transition: .3s;
-				}
-			}
-
-			&:focus {
-				outline: none;
-			}
-
-			img, p {
-				opacity: .7;
-				transition: .3s;
-				margin-right: 10px;
-			}
-		}
+    }
 	}
 
 	.nav-right {
 		display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 		align-items: flex-end;
 		z-index: 2;
 
@@ -156,7 +126,7 @@ header {
 			&:hover {
 				transition: .3s;
 
-				img, p {
+				img {
 					opacity: 1;
 					transition: .3s;
 				}
@@ -167,10 +137,6 @@ header {
 			}
 
 			img {
-				margin-right: 10px;
-			}
-
-			img, p {
 				opacity: .7;
 				transition: .3s;
 			}
@@ -210,7 +176,6 @@ header {
 			justify-content: flex-end;
 			width: 100%;
 			margin-bottom: 15px;
-			height: 35px;
 
 			.my-cabinet {
 				display: flex;
