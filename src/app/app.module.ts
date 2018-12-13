@@ -88,7 +88,6 @@ import { ShrimpSalatComponent } from './restaurant/salaty/shrimp-salat/shrimp-sa
 import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.component';
 import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
 import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
-import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -156,8 +155,7 @@ import { ContactComponent } from './contact/contact.component';
     ShrimpSalatComponent,
     BeetSalatComponent,
     KinoaSalatComponent,
-    BylgyrSalatComponent,
-    ContactComponent
+    BylgyrSalatComponent
   ],
   imports: [
     BrowserModule,

@@ -71,4 +71,3 @@ export class TurkeyBurgerComponent implements OnInit {
     document.getElementById('continue').style.display = 'none';
   }
 }
-

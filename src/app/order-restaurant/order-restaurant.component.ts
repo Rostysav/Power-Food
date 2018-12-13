@@ -61,23 +61,14 @@ export class OrderRestaurantComponent implements OnInit {
 
     if (localStorage.getItem('restaurant')) {
       // for (let i = 0; i < restItem; i++) {
-        let order_rest = JSON.parse(localStorage.getItem('restaurant'));
-        // console.log('json: ', order_rest);
-        let summ = 0;
-        let product = {};
-        order_rest.forEach(function(element) {
-          summ += element.price;
-          product[element.name] = "count " + element.pieces + ' price ' + element.price;
-          console.log('suma ',summ);
-          console.log(product);
-        });
+        let order_rest = JSON.parse(localStorage.getItem('restaurant'))[0];
         let array_new = {};
         array_new['phone'] = form.value.mobile;
         array_new['address_customer']= form.value.address;
         array_new['name_customer'] = form.value.name;
-        array_new['price'] = summ;
-        array_new['name_product'] = product;
-        // console.log(array_new);
+        array_new['price'] = order_rest.price;
+        array_new['name_product'] = order_rest.name;
+        console.log(array_new);
         const headers = new HttpHeaders()
           .set('Authorization', 'my-auth-token')
           .set('Content-Type', 'application/json');
@@ -91,7 +82,7 @@ export class OrderRestaurantComponent implements OnInit {
 
         form.reset();
         this.toastService.showToast('success', 'Замовлення прийнято!');
-        // console.log(this.toastService.showToast('success', 'Замовлення прийнято!'));
+        console.log(this.toastService.showToast('success', 'Замовлення прийнято!'));
         localStorage.clear();
         setTimeout(this.router.navigate(['/home']), 5000);
       // }
@@ -136,5 +127,4 @@ export class OrderRestaurantComponent implements OnInit {
   //     this.router.navigate(['/home']);
   //   }, 1500);
   // }
-
 }

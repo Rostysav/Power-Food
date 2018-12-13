@@ -72,7 +72,6 @@ app.post('/send', (req, res) => {
 });
 
 app.post('/send-restaurant', (req, res) => {
-  console.log('запит ',req);
   const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -82,7 +81,8 @@ app.post('/send-restaurant', (req, res) => {
       <li>Телефон: +38 ${req.body.phone}</li>
       <li>Продукт: ${req.body.name_product}</li>
       <li>Ціна: ${req.body.price} грн</li>
-      <!--<li>Час замовлення: test.time</li>-->
+      <li>Час замовлення: test.time</li>
+      <li>Ура, замовлення з ресторану працює!!!</li>
     </ul>
   `;
 
