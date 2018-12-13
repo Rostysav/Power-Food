@@ -127,5 +127,6 @@ export class OrderRestaurantComponent implements OnInit {
   //     this.router.navigate(['/home']);
   //   }, 1500);
   // }
+  
 }
 
