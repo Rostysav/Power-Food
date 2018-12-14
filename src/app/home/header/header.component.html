@@ -3,11 +3,12 @@
 		<div class="row">
 			<div class="col-md-4 nav-left">
 				<div class="nav-left-top">
-					<!-- <div class="feedback">
-						<button (click)='popupMenu=!popupMenu'>
-							Замовити зворотній дзвінок
-						</button>
-					</div> -->
+					<div class="feedback">
+						<div class="cart" [routerLink]='["order-restaurant"]'>
+							<img src="../../../assets/img/shopping-cart.png">
+							<p>Корзина ресторану</p>
+						</div>
+					</div>
 				</div>
 				<ul class="nav">
 					<li>
@@ -18,6 +19,11 @@
 					<li>
 						<a [routerLink]='["restaurant"]'>
 							Ресторан
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["ration"]'>
+							Раціони
 						</a>
 					</li>
 					<!-- <li>
@@ -43,6 +49,7 @@
 						</a>
 					</div>
 					<div class="cart" [routerLink]='["order"]'>
+						<p>Корзина раціонів</p>
 						<img src="../../../assets/img/shopping-cart.png">
 					</div>
 				</div>
@@ -53,8 +60,8 @@
 						</a>
 					</li> -->
 					<li>
-						<a [routerLink]='["ration"]'>
-							Раціони
+						<a [routerLink]='["contacts"]'>
+							Контакти
 						</a>
 					</li>
 					<li>
@@ -137,7 +144,6 @@
 		<input id="honeypot" type="text"
 			   name="honeypot" value=""
 			   formControlName='honeypot'/>
-
 		<div class="container">
 			<div class="row">
 				<div class="popup-wrap col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-12">
