@@ -33,6 +33,7 @@
 		.row {
 			flex-direction: column;
 			align-items: center;
+			padding-bottom: 100px;
 		}
 
     h1 {
@@ -43,10 +44,14 @@
     }
 
     h2 {
-    	font-size: 40px;
+    	font-size: 26px;
 			text-align: center;
 			font-weight: normal;
-    }
+		}
+		
+		.title-wrap {
+			margin-bottom: -100px;
+		}
 
     a {
 			display: flex;
@@ -55,6 +60,7 @@
 			align-items: center;
 			overflow: hidden;
 			position: relative;
+			overflow: visible;
 			
 			p {
 				font-size: 24px;
@@ -74,7 +80,7 @@
 				width: 100%;
 				margin-top: 30px;
 				max-width: none;
-				width: calc(100% + 60px);
+				// width: calc(100% + 60px);
 				-webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
 				transition: opacity 0.35s, transform 0.45s;
 			}
@@ -93,8 +99,8 @@
 				img {
 					opacity: 0.6;
 					filter: alpha(opacity=60);
-					-webkit-transform: translate3d(40px,0,0);
-					transform: translate3d(40px,0,0);
+					// -webkit-transform: translate3d(40px,0,0);
+					// transform: translate3d(40px,0,0);
 				}
 			}
 		}
@@ -109,14 +115,14 @@
 	.restourant {
 
 		img {
-			transform: rotate(45deg);
+			transform: rotate(30deg);
 		}
 	}
 
 	.ration {
 
 		img {
-			transform: rotate(-45deg);
+			transform: rotate(-30deg);
 		}
 	}
 }

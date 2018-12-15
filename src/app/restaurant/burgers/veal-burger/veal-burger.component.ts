@@ -27,7 +27,7 @@ export class VealBurgerComponent implements OnInit {
   restaurants: IRestaurant[] = [
     {
       'id': 3,
-      'name': 'Бургер з телятиною - 350гр',
+      'name': 'Бургер з телятиною - 350г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 146,
       'imageUrl': '../../../../assets/img/restourant/burgers/veal-burger.jpg'
