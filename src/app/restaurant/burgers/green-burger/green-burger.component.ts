@@ -29,7 +29,7 @@ export class GreenBurgerComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 1,
-      'name': 'Green бургер - 340гр',
+      'name': 'Green бургер - 340г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 92,
       'imageUrl': '../../../../assets/img/restourant/burgers/green-burger.jpg'

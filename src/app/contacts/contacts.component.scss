@@ -3,6 +3,10 @@
 	padding: 50px 0;
 	background: #fff;
 
+	.row {
+		align-items: center;
+	}
+
 	.left-side {
 			padding: 50px 0;
 			display: flex;
@@ -16,6 +20,7 @@
 
 		p {
 			color: #000;
+			font-size: 20px;
 		}
 	}
 

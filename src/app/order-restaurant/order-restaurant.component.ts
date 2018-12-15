@@ -33,7 +33,6 @@ export class OrderRestaurantComponent implements OnInit {
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
       'address': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(25),
         Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z\u0400-\u04ff]+.*)|[A-Za-z\u0400-\u04ff]+.*([0-9]+.*))')]),
-      'checkbox': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
     });
 
