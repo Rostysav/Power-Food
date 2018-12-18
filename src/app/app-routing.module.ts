@@ -19,6 +19,8 @@ import { ThxPageComponent } from './thx-page/thx-page.component';
 
 import { OrderComponent } from './order/order.component';
 
+import { ContactsComponent } from './contacts/contacts.component';
+
 // Burgers
 import { VealBurgerComponent } from './restaurant/burgers/veal-burger/veal-burger.component';
 import { GreenBurgerComponent } from './restaurant/burgers/green-burger/green-burger.component';
@@ -91,6 +93,8 @@ const routes: Routes = [
 
   {path: 'order', component: OrderComponent},
   {path: 'order-restaurant', component: OrderRestaurantComponent},
+
+  {path: 'contacts', component: ContactsComponent},
 
   // burgers
   {path: 'restaurant/veal-burger', component: VealBurgerComponent},
