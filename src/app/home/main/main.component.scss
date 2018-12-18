@@ -1,7 +1,7 @@
 /*Main section with slider start*/
 
 .main {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	position: relative;
 	background: #000;
@@ -141,7 +141,7 @@
 				font-size: 50px;
 			}
 			h2 {
-				font-size: 40px;
+				font-size: 26px;
 			}
 		}
 	}
@@ -394,188 +394,67 @@
   }
 }
 
-			/*Menu section finish*/
-
-
-			/*Information start*/
-
-// .information {
-// 	position: relative;
-// 	background: #fff;
-
-// 	h3 {
-// 		color: #000;
-// 	}
-
-// 	p {
-// 		font-size: 18px;
-// 		line-height: initial;
-// 		color: #000;
-// 	}
-
-// 	.inf-title {
-// 		color: #F0544F;
-// 		margin-bottom: 30px;
-// 		font-size: 25px;
-// 		font-weight: bolder;
-// 	}
-
-// 	.inf-text {
-// 		font-size: 18px;
-// 		line-height: initial;
-// 		color: #000;
-// 		margin-bottom: 50px;
-
-// 		p {
-// 			margin-bottom: 30px;
-// 		}
-
-// 		a {
-// 			display: block;
-// 			color: #F0544F;
-// 			font-size: 22px;
-// 			opacity: .8;
-// 			transition: .3s;
-// 			&:hover {
-// 				transition: .3s;
-// 				opacity: 1;
-// 				text-decoration: underline;
-// 			}
-// 			&+a {
-// 				margin-top: 15px;
-// 			}
-// 			.fa {
-// 				margin-right: 10px;
-// 			}
-// 		}
-// 	}
-
-// 	.features {
-// 		display: flex;
-// 		margin-bottom: 30px;
-
-// 		span {
-// 			background: #F0544F;
-// 			width: 50px;
-// 			height: 50px;
-// 			display: flex;
-// 			align-items: center;
-// 			justify-content: center;
-// 			border-radius: 90%;
-// 			color: #fff;
-// 			font-size: 30px;
-// 			padding: 0 20px;
-// 			line-height: 0;
-// 			margin-right: 15px;
-// 		}
-
-// 	}
-// }
-
-// @media(max-width: 992px) {
-// 	.information {
-// 		h1, h2, h3 {
-// 			font-size: 20px;
-// 		}
-// 		p {
-// 			font-size: 16px;
-// 		}
-// 		.inf-text {
-// 			font-size: 16px;
-
-// 			p {
-// 				font-size: 16px;
-// 			}
-			
-// 			a {
-// 				font-size: 18px;
-// 			}
-// 		}
-// 		.inf-title {
-// 			font-size: 18px;
-// 		}
-
-// 		.features  {
-// 			flex-direction: column;
-// 			span {
-// 				width: 40px;
-// 				height: 40px;
-// 				font-size: 20px;
-// 				text-align: center;
-// 				margin-right:auto; 
-// 				margin-left:auto;
-// 				margin-bottom: 10px;
-// 			}
-// 		}
-// 	}
-// }
-
-			/*Information end*/
-
-
-			/*Contacts start*/
-
-// .contact {
-// 	background: url("../../../assets/img/contact.jpg") no-repeat center;
-// 	background-size: cover;
-//   position: relative;
-	
-// 	.bg {
-// 		position: absolute;
-//     width: 100%;
-//     top: 0;
-//     bottom: 0;
-//     background: rgba(0,0,0, .6);
-//     z-index: 2;
-// 	}
-// 	h3 {
-// 		position: relative;
-// 		z-index: 3;
-// 	}
-// 	.row {
-// 		display: flex;
-//     align-items: center;
-//     position: relative;
-// 		z-index: 3;
-// 	}
-// 	.fa {
-// 		margin-right: 15px;
-// 	}
-// 	p {
-//     font-size: 25px;
-//     margin-bottom: 20px;
-// 	}
-// 	iframe {
-// 		width: 100%;
-// 		min-height: 300px;
-// 		border: none;
-// 	}
-// }
-
-// @media(max-width: 767px) {
-// 	.contact {
-
-// 		h3 {
-// 			font-size: 20px;
-// 		}
-
-// 		p {
-// 			font-size: 20px;
-// 		}
-// 	}
-// }
-
-// @media(max-width: 576px) {
-// 	.contact {
-
-// 		p {
-// 			font-size: 15px;
-// 		}
-
-// 		.fa {
-// 			margin-right: 5px;
-// 		}
-// 	}
-// }
-
-			/*Contacts finish*/
+@media (max-width: 1200px) {
+	.main {
+		margin-top: 50px;
+	}
+}
+@media (max-width: 1024px) {
+	.main .main-title h2 {
+		font-size: 30px;
+	}
+	.main .main-title .title-wrap {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 992px) {
+	.main .restourant img, .main .ration img {
+		transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	.main {
+		margin-top: 0;
+		padding-top: 100px;
+	}
+	.main .main-title a img {
+		margin-top: 0;
+	}
+	.main .main-title a {
+		& + a {
+			margin-left: 30px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.main .main-title .main-links {
+		flex-direction: column;
+	}
+	.main .main-title a {
+		& + a {
+			margin-left: 0px;
+			margin-top: 30px;
+		}
+	}
+	.main .main-title a p {
+		padding: 15px 45px;
+    font-size: 28px;
+	}
+	.main {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.main .main-title a {
+		margin-top: 0;
+	}
+	.main .main-title a p {
+		padding: 10px 25px;
+    font-size: 18px;
+	}
+	.main .main-title h2 {
+		font-size: 18px;
+	}
+}
