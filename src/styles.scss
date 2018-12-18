@@ -311,11 +311,18 @@ button {
   .program-title {
     color: #0A0807;
     font-size: 30px;
-    margin-bottom: 30px;
-    display: block;
+    // margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    span {
+      font-size: 22px;
     }
   }
 
@@ -332,6 +339,7 @@ button {
     align-items: center;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 30px;
 
     .price {
       font-size: 35px;
@@ -393,6 +401,7 @@ button {
     color: #0A0807;
     line-height: 20px;
     margin-bottom: 50px;
+    text-align: left;
   }
 
   .calories {
@@ -540,7 +549,7 @@ button {
 
   .row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     // width: 100%;
   }
 

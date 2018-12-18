@@ -8,6 +8,10 @@
       </div>
       <div class="col-lg-6 col-md-12 program-descr">
         <a class="program-title" [routerLink]='["/balance2000descr"]' title="Детальніше про програму">{{ product.name }}</a>       
+        <div class="kal-price">
+          <i class="fa fa-shopping-bag"></i>
+          <p>5 боксів</p>
+        </div>
         <div class="buy-block">
           <div class="price" *ngIf="selectedValue">{{ selectedValue }} грн</div>
           <div class="price" *ngIf="!selectedValue">0 грн</div>
@@ -38,13 +42,13 @@
             <span class="first">{{ product.id }}</span>ккал
           </div>
           <div class="cal-item">
-            <span>120</span>білків
+            <span>150</span>білків
           </div>
           <div class="cal-item">
-            <span>28</span>жирів
+            <span>75</span>жирів
           </div>
           <div class="cal-item">
-            <span>80</span>вуглеводів
+            <span>160</span>вуглеводів
           </div>
         </div>
         <div class="buy-link d-lg-none d-xl-none">

@@ -4,6 +4,10 @@
 
   h3 {
     color: #000;
+
+    & + p {
+      text-align: center;
+    }
   }
 
   p {
@@ -11,6 +15,10 @@
     line-height: normal;
     font-size: 20px;
     margin-bottom: 30px;
+    text-align: left;
+  }
+  .catalog-wrap-title {
+    text-align: center;
   }
 
   .catalod-desc {

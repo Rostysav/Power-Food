@@ -13,17 +13,17 @@ export class Lower1500Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '600';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '400'},
-    {number: '6 дн', price: '1200'},
-    {number: '14 дн', price: '2800'},
-    {number: '24 дн', price: '4800'},
-    {number: '30 дн', price: '6000'}
+    {number: '2 дн', price: '600'},
+    {number: '4 дн', price: '1180'},
+    {number: '6 дн', price: '1740'},
+    {number: '12 дн', price: '3360'},
+    {number: '24 дн', price: '6480'}
   ];
 
   onSelected(data) {
@@ -43,7 +43,7 @@ export class Lower1500Component implements OnInit {
       {
         'id': 1500,
         'name': 'Зниження - 1500 ккал',
-        'description': "Добова калорійність в розмірі 1500 ккал. Страви, що не містять цукру. Програма дозволить зберегти м'язеву масу за рахунок правильного співвідношення кількості білків, жирів та вуглеводів.",
+        'description': "Програма для тих, хто хоче схуднути за допомогою правильного харчування і регулярних тренувань. Вона розрахована на 5 прийомів їжі на день.",
         'price': 1200,
         'dayPrice': 200,
         'imageUrl': '../../../assets/img/lover-1500.jpg'
