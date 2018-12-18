@@ -69,7 +69,8 @@ export class OrderRestaurantComponent implements OnInit {
         let product = [];
         order_rest.forEach(function(element) {
           summ += element.price;
-          product[element.name] = "count " + element.pieces + ' price ' + element.price;
+          // product[element.name] = "count " + element.pieces + ' price ' + element.price;
+          product.push({name: element.name, piece : element.pieces, price: element.price});
           console.log('suma ',summ);
           console.log(product);
         });

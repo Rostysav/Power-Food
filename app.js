@@ -72,6 +72,7 @@ app.post('/send', (req, res) => {
 });
 
 app.post('/send-restaurant', (req, res) => {
+  console.log('debug data ', JSON.stringify(req.body.name_product));
   const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -79,10 +80,8 @@ app.post('/send-restaurant', (req, res) => {
       <li>Імя клієнта: ${req.body.name_customer}</li>
       <li>Адреса доставки: ${req.body.address_customer}</li>
       <li>Телефон: +38 ${req.body.phone}</li>
-      <li>Продукт: ${req.body.name_product}</li>
+      <li>Продукт: ${JSON.stringify(req.body.name_product)}</li>
       <li>Ціна: ${req.body.price} грн</li>
-      <li>Час замовлення: test.time</li>
-      <li>Ура, замовлення з ресторану працює!!!</li>
     </ul>
   `;
 
