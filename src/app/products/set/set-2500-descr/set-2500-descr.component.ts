@@ -13,17 +13,17 @@ export class Set2500DescrComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '800';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '400'},
-    {number: '6 дн', price: '1200'},
-    {number: '14 дн', price: '2800'},
-    {number: '24 дн', price: '4800'},
-    {number: '30 дн', price: '6000'}
+    {number: '2 дн', price: '800'},
+    {number: '4 дн', price: '1580'},
+    {number: '6 дн', price: '2340'},
+    {number: '14 дн', price: '4560'},
+    {number: '24 дн', price: '8880'}
   ];
 
   onSelected(data) {}

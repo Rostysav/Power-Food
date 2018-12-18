@@ -13,17 +13,17 @@ export class Set2500Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '800';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '400'},
-    {number: '6 дн', price: '1200'},
-    {number: '14 дн', price: '2800'},
-    {number: '24 дн', price: '4800'},
-    {number: '30 дн', price: '6000'}
+    {number: '2 дн', price: '800'},
+    {number: '4 дн', price: '1580'},
+    {number: '6 дн', price: '2340'},
+    {number: '14 дн', price: '4560'},
+    {number: '24 дн', price: '8880'}
   ];
 
   onSelected(data) {}
@@ -42,7 +42,7 @@ export class Set2500Component implements OnInit {
     {
       'id': 2500,
       'name': 'Набір - 2500 ккал',
-      'description': "Баланс швидких та повільних білків, жирів та вуглеводів та постійний контроль кількості білків,жирів вуглеводів сприятливо впливають на набір м'язевої маси. Меню розраховано на отримання 2500 ккал на день",
+      'description': "Швидкі і повільні вуглеводи в поєднанні з оптимальними значеннями білків і жирів необхідними для набору м&#39;язевої маси. Раціон розрахований на 6 прийомів їжі.",
       'price': 1200,
       'dayPrice': 200,
       'imageUrl': '../../../assets/img/set-2500.jpg'

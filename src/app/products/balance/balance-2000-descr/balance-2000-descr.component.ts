@@ -13,17 +13,17 @@ export class Balance2000DescrComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '700';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '400'},
-    {number: '6 дн', price: '1200'},
-    {number: '14 дн', price: '2800'},
-    {number: '24 дн', price: '4800'},
-    {number: '30 дн', price: '6000'}
+    {number: '2 дн', price: '700'},
+    {number: '4 дн', price: '1380'},
+    {number: '6 дн', price: '2040'},
+    {number: '14 дн', price: '3960'},
+    {number: '24 дн', price: '7680'}
   ];
 
   onSelected(data) {}
