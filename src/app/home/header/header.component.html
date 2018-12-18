@@ -82,6 +82,18 @@
 			</div>
 			<!--mobile menu start-->
 			<div class="mobile-menu-open" [ngClass]="{'mobile-menu':mobileNav}">
+				
+				<div class="mobile-carts">
+					<div class="cart restourant-cart" [routerLink]='["order-restaurant"]'>
+						<img src="../../../assets/img/shopping-cart.png">
+						<p>Корзина ресторану</p>
+					</div>
+					<div class="cart ration-cart" [routerLink]='["order"]'>
+						<p>Корзина раціонів</p>
+						<img src="../../../assets/img/shopping-cart.png">
+					</div>
+				</div>
+
 				<ul class="nav">
 					<li>
 						<a [routerLink]='[""]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
