@@ -8,7 +8,7 @@
         </div>
       </div> -->
 
-      <div class="order-title-wrap">
+      <div class="order-title-wrap order-product-list">
         <div class="container">
           <div class="row">
             <p>Товар</p>
@@ -19,7 +19,16 @@
         </div>
       </div>
 
-      <div class="order-item">
+      <!-- <div class="order-title-wrap ">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div> -->
+
+      <div class="order-item order-product-list">
+
         <div class="order-item">
           <div class="order-title" *ngFor="let r of restaurant; let i = index;">
             <div class="container">
@@ -49,7 +58,7 @@
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Загальна ціна:</span>
-                  <p>{{total}}</p>
+                  <p>{{total}} грн</p>
                 </div>
               </div>
             </div>
@@ -122,6 +131,7 @@
               </div>
             </div>
           </div>
+
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
@@ -132,12 +142,13 @@
               </div>
             </div>
           </div>
+
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Ціна:</span>
-                  <p>{{ r.price }}</p>
+                  <p>{{total}} грн</p>
                 </div>
               </div>
             </div>

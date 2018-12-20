@@ -39,7 +39,7 @@ export class GreenBurgerComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Green бургер - 340гр",
+        name:"Green бургер - 340г",
         price: this.item*92 || 92,
         pieces: (this.item*92 || 92)/92,
         imageUrl: "../../../../assets/img/restourant/burgers/green-burger.jpg"

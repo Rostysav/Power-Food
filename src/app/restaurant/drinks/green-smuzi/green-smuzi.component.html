@@ -1,26 +1,39 @@
-<div class="dish-container">
+<div class="dish-container" *ngFor="let restaurant of restaurants">
   <div class="container">
     <div class="row">
 
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["green-smuzi"]'>
-          <p>Смузі зелений - 300мл</p>
-          <img src="../../../../assets/img/restourant/smuzi/green-smuzi.jpg" alt="green-smuzi.jpg">
+          <p>{{ restaurant.name }}</p>
+          <div class="dish-img-conteiner">
+            <img [src]="restaurant.imageUrl" alt="green-smuzi.img">
+          </div>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="dish-name">
-          <p>Смузі зелений - 300мл</p>
+          <p>{{ restaurant.name }}</p>
         </div>
         <div class="dish-price">
           41грн
           <mat-form-field class="example-full-width">
-            <input matInput type="number" value="1">
+            <input type="number" min="1" max="99" required matInput
+                    [(ngModel)]="item" value="1">
           </mat-form-field>
+          <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 41 }} грн</span> </p>
         </div>
+
         <div class="buy-link">
-          <a><i class="fa fa-shopping-bag"></i>Замовити</a>
+          <a *ngIf="!makeOrder" (click)="orderProduct()">
+            <i class="fa fa-shopping-bag"></i>{{ buttonText }}
+          </a>
+          <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>{{ orderText }}
+          </a>
+          <a id="continue" *ngIf="makeOrder" (click)="continue()">
+            <i class="fa fa-shopping-bag"></i>{{ continueText }}
+          </a>
         </div>
       </div>
 

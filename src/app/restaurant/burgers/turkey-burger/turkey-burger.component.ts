@@ -36,7 +36,7 @@ export class TurkeyBurgerComponent implements OnInit {
   orderProduct() {
     let myArray =
       { id: 2,
-        name:"Бургер з індичкою - 340гр",
+        name:"Бургер з індичкою - 340г",
         price: this.item*124 || 124,
         pieces: (this.item*124 || 124)/124,
         imageUrl: "../../../../assets/img/restourant/burgers/turkey-burger.jpg"
