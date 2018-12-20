@@ -32,8 +32,8 @@
           </mat-form-field>
           <p *ngIf="item" class="full-price">Загальна сума:
             <span>
-            {{ item * 124 }}
-            </span> грн</p>
+            {{ item * 124 }} грн
+            </span> </p>
         </div>
         <div class="buy-link">
           <a *ngIf="!makeOrder" (click)="orderProduct()">
