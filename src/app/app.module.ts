@@ -40,8 +40,11 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatCheckboxModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
+// import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { RegistrationComponent } from './registration/registration.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 
@@ -216,6 +219,9 @@ import { RiceComponent } from './restaurant/main-dishes/rice/rice.component';
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
+    MatDatepickerModule,
+    // MatMomentDateModule,
+    MatNativeDateModule,
     AngularFontAwesomeModule,
     Ng2CarouselamosModule,
     ToastrModule.forRoot({
