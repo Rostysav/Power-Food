@@ -87,11 +87,31 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-md-6 offset-md-3 col-sm-12 sex">
+              <div class="col-md-4 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Адреса" formControlName="address" name="address">
+                  <input matInput placeholder="Вулиця"
+                         formControlName="address" name="address"
+                         pattern="[\u0400-\u04ff][\u0400-\u04ff ]+">
                   <mat-error *ngIf="myform.get('address').invalid && (myform.get('address').dirty || myform.get('address').touched)">
-                    Введіть вулицю і номер будинку
+                    Введіть вулицю (не менше трьох літер)
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4 col-sm-12 sex">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Номер будинку"
+                         formControlName="house" name="house">
+                  <mat-error *ngIf="myform.get('house').invalid && (myform.get('house').dirty || myform.get('house').touched)">
+                    Номер будинку (не менше однієї і не більше трьох цифр)
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4 col-sm-12 sex">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Номер квартири"
+                         formControlName="room" name="room">
+                  <mat-error *ngIf="myform.get('room').invalid && (myform.get('room').dirty || myform.get('room').touched)">
+                    Номер квартири (не менше однієї і не більше трьох цифр)
                   </mat-error>
                 </mat-form-field>
               </div>
@@ -108,13 +128,40 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
-                <mat-radio-group>
-                  <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
-                  <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
+                <mat-radio-group formControlName="payment">
+                  <mat-radio-button value="Онлайн оплата" checked="true">Онлайн оплата</mat-radio-button>
+                  <mat-radio-button value="Готівка курєру">Готівка кур'єру</mat-radio-button>
                 </mat-radio-group>
               </div>
             </div>
           </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <label>Оберіть інтервал доставки</label>
+                <mat-form-field>
+                  <mat-select placeholder="Мінімальний інтервал 2 години" formControlName="delivery">
+                    <mat-option *ngFor="let t of time" [value]="t.value">
+                      {{t.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <label>Оберіть дату доставки</label>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="datepicker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+
           <div class="container">
             <div class="row">
               <!-- <div class="col-md-6 col-sm-12">
@@ -153,7 +200,8 @@
 
                   <button class="remove-order" (click)="removeFromLocalStorage()">Видалити замовлення</button>
 
-                  <button class="submit-btn" type="submit" [disabled]="!myform.valid" [routerLink]='["/thx-page"]'>Оформити замовлення</button>
+                  <button class="submit-btn" type="submit" [disabled]="!myform.valid">Оформити замовлення</button>
+                  <!--<button class="submit-btn" type="submit" [disabled]="!myform.valid" [routerLink]='["/thx-page"]'>Оформити замовлення</button>-->
                 </div>
               </div>
             </div>
