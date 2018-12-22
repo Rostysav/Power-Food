@@ -48,8 +48,8 @@ app.post('/send', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'valdemarrr26@gmail.com', // generated ethereal user
-      pass: '102938qwerty!!!'  // generated ethereal password
+      user: '', // generated ethereal user
+      pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false // only for localhost, need to be removed in production
@@ -59,7 +59,7 @@ app.post('/send', (req, res) => {
 // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact"', // sender address
-    to: 'valdemarrr26@gmail.com', // list of receivers
+    to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
@@ -97,8 +97,8 @@ app.post('/send-restaurant', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'valdemarrr26@gmail.com', // generated ethereal user
-      pass: '102938qwerty!!!'  // generated ethereal password
+      user: '', // generated ethereal user
+      pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false // only for localhost, need to be removed in production
@@ -108,7 +108,7 @@ app.post('/send-restaurant', (req, res) => {
 // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact"', // sender address
-    to: 'valdemarrr26@gmail.com', // list of receivers
+    to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
