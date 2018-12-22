@@ -7,7 +7,28 @@
           <p>Якщо ви вже купували -<a [routerLink]='["authorization"]'>авторизуйтесь</a></p>
         </div>
       </div> -->
-      <div class="order-item">
+
+      <div class="order-title-wrap order-product-list">
+        <div class="container">
+          <div class="row">
+            <p>Товар</p>
+            <p>Ціна</p>
+            <p>Кількість</p>
+            <p>Загалом</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="order-title-wrap ">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div> -->
+
+      <div class="order-item order-product-list">
+
         <div class="order-item">
           <div class="order-title" *ngFor="let r of restaurant; let i = index;">
             <div class="container">
@@ -26,7 +47,7 @@
                   <div class="price">
                     <span>Ціна:</span>
                     <!--<p>{{ items[i] }} штук по {{ r.price / items[i] }} грн = {{ r.price }} грн</p>-->
-                    <p>{{ r.pieces }} штук по {{ r.price / r.pieces }} грн = {{ r.price }} грн</p>
+                    <p>{{ r.pieces }} x {{ r.price / r.pieces }} грн = {{ r.price }} грн</p>
                   </div>
                 </div>
               </div>
@@ -37,7 +58,7 @@
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Загальна ціна:</span>
-                  <p>{{total}} грн за {{pieces}} товарів.</p>
+                  <p>{{total}} грн</p>
                 </div>
               </div>
             </div>
@@ -49,10 +70,10 @@
               [formGroup]="myRestaurantForm">
 
           <!--input id must be honeypot or else it wont work-->
-          <label class="sr-only">Keep this field blank</label>
+          <!-- <label class="sr-only">Keep this field blank</label>
           <input id="honeypot" type="text"
                  name="honeypot" value=""
-                 formControlName='honeypot'/>
+                 formControlName='honeypot'/> -->
           <!--the rest of your form-->
 
           <div class="container">
@@ -110,6 +131,7 @@
               </div>
             </div>
           </div>
+
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
@@ -120,17 +142,18 @@
               </div>
             </div>
           </div>
+
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Ціна:</span>
-                  <p>{{ r.price }}</p>
+                  <p>{{total}} грн</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <mat-checkbox formControlName="checkbox" required>
@@ -139,7 +162,7 @@
                 </mat-checkbox>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="container">
             <div class="row">

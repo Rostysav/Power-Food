@@ -1,39 +1,52 @@
-<div class="dish-container">
+<div class="dish-container" *ngFor="let restaurant of restaurants">
   <div class="container">
     <div class="row">
 
       <div class="col-md-6">
         <div class="dish-img" [routerLink]='["kinoa-salad"]'>
-          <p>Салат з кіноа - 230г</p>
-          <img src="../../../../assets/img/restourant/salaty/kinoa-salat.jpg" alt="kinoa-salat.img">
+          <p>{{ restaurant.name }}</p>
+          <div class="dish-img-conteiner">
+            <img [src]="restaurant.imageUrl" alt="kinoa-salad.img">
+          </div>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="dish-name">
-          <p>Салат з кіноа - 230г</p>
-        </div>
-        <div class="dish-price">
-          78рн
-          <mat-form-field class="example-full-width">
-            <input matInput type="number" value="1">
-          </mat-form-field>
+          <p>{{ restaurant.name }}</p>
         </div>
         <div class="storage">
-          З печеної моркви, гарбуза та груші гриль з йогуртовим соусом
+          З печеної моркви,гарбуза та груші гриль з йогуртовим соусом
         </div>
         <div class="nutritional-value">
-          Харчова цінність страви (грам):
-          білки - <span>6,1</span>; 
-          жири - <span>15,2</span>;
-          вуглуводи - <span>24,8</span>;
-          ккал - <span>257</span>;
+          <p>Харчова цінність страви (грам):</p>
+          <p>білки - <span>6,1</span>; </p>
+          <p>жири - <span>15,2</span>;</p>
+          <p>вуглуводи - <span>24,8</span>;</p>
+          <p>ккал - <span>257</span>;</p>
         </div>
+        <div class="dish-price">
+          78грн
+          <mat-form-field class="example-full-width">
+            <input type="number" min="1" max="99" required matInput
+                    [(ngModel)]="item" value="1">
+          </mat-form-field>
+          <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 78 }} грн</span> </p>
+        </div>
+
         <div class="buy-link">
-          <a><i class="fa fa-shopping-bag"></i>Замовити</a>
+          <a *ngIf="!makeOrder" (click)="orderProduct()">
+            <i class="fa fa-shopping-bag"></i>{{ buttonText }}
+          </a>
+          <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
+            <i class="fa fa-shopping-bag"></i>{{ orderText }}
+          </a>
+          <a id="continue" *ngIf="makeOrder" (click)="continue()">
+            <i class="fa fa-shopping-bag"></i>{{ continueText }}
+          </a>
         </div>
       </div>
 
     </div>
   </div>
-  </div>
+</div>

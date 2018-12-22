@@ -13,17 +13,17 @@ export class Lower1000Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '500';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    { number: '2 дн', price: '400' },
-    { number: '6 дн', price: '1200' },
-    { number: '14 дн', price: '2800' },
-    { number: '24 дн', price: '4800' },
-    { number: '30 дн', price: '6000' }
+    { number: '2 дн', price: '500' },
+    { number: '4 дн', price: '980' },
+    { number: '6 дн', price: '1440' },
+    { number: '12 дн', price: '2760' },
+    { number: '24 дн', price: '5280' }
   ];
 
   onSelected(data) {}

@@ -92,6 +92,27 @@ import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.co
 import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
 import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { BrusketaWthisEggComponent } from './restaurant/breakfast/brusketa-wthis-egg/brusketa-wthis-egg.component';
+import { OmeletWithBasilicaComponent } from './restaurant/breakfast/omelet-with-basilica/omelet-with-basilica.component';
+import { SpringRollComponent } from './restaurant/spring-roll/spring-roll.component';
+import { SpringRollVegatableComponent } from './restaurant/spring-roll/spring-roll-vegatable/spring-roll-vegatable.component';
+import { SpringRollShrimpComponent } from './restaurant/spring-roll/spring-roll-shrimp/spring-roll-shrimp.component';
+import { SpringRollVealComponent } from './restaurant/spring-roll/spring-roll-veal/spring-roll-veal.component';
+import { SoupComponent } from './restaurant/soup/soup.component';
+import { PumpkinSoupComponent } from './restaurant/soup/pumpkin-soup/pumpkin-soup.component';
+import { CarrotSoupComponent } from './restaurant/soup/carrot-soup/carrot-soup.component';
+import { ShpinatSoupComponent } from './restaurant/soup/shpinat-soup/shpinat-soup.component';
+import { PeasSoupComponent } from './restaurant/soup/peas-soup/peas-soup.component';
+import { MainDishesComponent } from './restaurant/main-dishes/main-dishes.component';
+import { DoradoComponent } from './restaurant/main-dishes/dorado/dorado.component';
+import { ParoviKotletyComponent } from './restaurant/main-dishes/parovi-kotlety/parovi-kotlety.component';
+import { TelyachaVurizkaComponent } from './restaurant/main-dishes/telyacha-vurizka/telyacha-vurizka.component';
+import { TyrkeyFileComponent } from './restaurant/main-dishes/tyrkey-file/tyrkey-file.component';
+import { PastaComponent } from './restaurant/main-dishes/pasta/pasta.component';
+import { BulgurVegitablesComponent } from './restaurant/main-dishes/bulgur-vegitables/bulgur-vegitables.component';
+import { KinoaVegitablesComponent } from './restaurant/main-dishes/kinoa-vegitables/kinoa-vegitables.component';
+import { SochevysyaComponent } from './restaurant/main-dishes/sochevysya/sochevysya.component';
+import { RiceComponent } from './restaurant/main-dishes/rice/rice.component';
 
 @NgModule({
   declarations: [
@@ -160,7 +181,28 @@ import { ContactsComponent } from './contacts/contacts.component';
     BeetSalatComponent,
     KinoaSalatComponent,
     BylgyrSalatComponent,
-    ContactsComponent
+    ContactsComponent,
+    BrusketaWthisEggComponent,
+    OmeletWithBasilicaComponent,
+    SpringRollComponent,
+    SpringRollVegatableComponent,
+    SpringRollShrimpComponent,
+    SpringRollVealComponent,
+    SoupComponent,
+    PumpkinSoupComponent,
+    CarrotSoupComponent,
+    ShpinatSoupComponent,
+    PeasSoupComponent,
+    MainDishesComponent,
+    DoradoComponent,
+    ParoviKotletyComponent,
+    TelyachaVurizkaComponent,
+    TyrkeyFileComponent,
+    PastaComponent,
+    BulgurVegitablesComponent,
+    KinoaVegitablesComponent,
+    SochevysyaComponent,
+    RiceComponent
   ],
   imports: [
     BrowserModule,

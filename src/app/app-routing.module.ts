@@ -59,6 +59,8 @@ import { ThirdLanchComponent } from './restaurant/lanch/third-lanch/third-lanch.
 import { OmeletComponent } from './restaurant/breakfast/omelet/omelet.component';
 import { OatmealComponent } from './restaurant/breakfast/oatmeal/oatmeal.component';
 import { GranolaComponent } from './restaurant/breakfast/granola/granola.component';
+import { BrusketaWthisEggComponent } from './restaurant/breakfast/brusketa-wthis-egg/brusketa-wthis-egg.component';
+import { OmeletWithBasilicaComponent } from './restaurant/breakfast/omelet-with-basilica/omelet-with-basilica.component';
 
 
 // Bryskety
@@ -71,6 +73,32 @@ import { ShrimpSalatComponent } from './restaurant/salaty/shrimp-salat/shrimp-sa
 import { BeetSalatComponent } from './restaurant/salaty/beet-salat/beet-salat.component';
 import { KinoaSalatComponent } from './restaurant/salaty/kinoa-salat/kinoa-salat.component';
 import { BylgyrSalatComponent } from './restaurant/salaty/bylgyr-salat/bylgyr-salat.component';
+
+// Spring roll
+import { SpringRollVegatableComponent } from './restaurant/spring-roll/spring-roll-vegatable/spring-roll-vegatable.component';
+import { SpringRollShrimpComponent } from './restaurant/spring-roll/spring-roll-shrimp/spring-roll-shrimp.component';
+import { SpringRollVealComponent } from './restaurant/spring-roll/spring-roll-veal/spring-roll-veal.component';
+
+// Soup
+import { PumpkinSoupComponent } from './restaurant/soup/pumpkin-soup/pumpkin-soup.component';
+import { CarrotSoupComponent } from './restaurant/soup/carrot-soup/carrot-soup.component';
+import { ShpinatSoupComponent } from './restaurant/soup/shpinat-soup/shpinat-soup.component';
+import { PeasSoupComponent } from './restaurant/soup/peas-soup/peas-soup.component';
+
+// Main dishes
+import { DoradoComponent } from './restaurant/main-dishes/dorado/dorado.component';
+import { ParoviKotletyComponent } from './restaurant/main-dishes/parovi-kotlety/parovi-kotlety.component';
+import { TelyachaVurizkaComponent } from './restaurant/main-dishes/telyacha-vurizka/telyacha-vurizka.component';
+import { TyrkeyFileComponent } from './restaurant/main-dishes/tyrkey-file/tyrkey-file.component';
+import { PastaComponent } from './restaurant/main-dishes/pasta/pasta.component';
+import { BulgurVegitablesComponent } from './restaurant/main-dishes/bulgur-vegitables/bulgur-vegitables.component';
+import { KinoaVegitablesComponent } from './restaurant/main-dishes/kinoa-vegitables/kinoa-vegitables.component';
+import { SochevysyaComponent } from './restaurant/main-dishes/sochevysya/sochevysya.component';
+import { RiceComponent } from './restaurant/main-dishes/rice/rice.component';
+
+
+
+import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -103,7 +131,7 @@ const routes: Routes = [
 
   // smuzi
   {path: 'restaurant/classic-smuzi', component: ClassicSmuziComponent},
-  {path: 'restaurant/tropical-smui', component: TropicalSmuziComponent},
+  {path: 'restaurant/tropical-smuzi', component: TropicalSmuziComponent},
   {path: 'restaurant/green-smuzi' , component: GreenSmuziComponent},
   {path: 'restaurant/fresh-smuzi', component: FreshSmuziComponent},
   {path: 'restaurant/vatamin-smuzi', component: VataminSmuziComponent},
@@ -133,6 +161,8 @@ const routes: Routes = [
   {path: 'restaurant/omelet', component: OmeletComponent},
   {path: 'restaurant/oatmeal', component: OatmealComponent},
   {path: 'restaurant/granola', component: GranolaComponent},
+  {path: 'restaurant/brysketa-with-egg', component: BrusketaWthisEggComponent},
+  {path: 'restaurant/oemelet-with-basilica', component: OmeletWithBasilicaComponent},
 
   // bryskety
   {path: 'restaurant/brysketa-guakamole', component: GuakamoleComponent},
@@ -144,6 +174,30 @@ const routes: Routes = [
   {path: 'restaurant/beet-salad', component: BeetSalatComponent},
   {path: 'restaurant/kinoa-salad', component: KinoaSalatComponent},
   {path: 'restaurant/bylgyr-salad', component: BylgyrSalatComponent},
+
+  // Spring roll
+  {path: 'restaurant/vegitable-spring-roll', component: SpringRollVegatableComponent},
+  {path: 'restaurant/shrimp-spring-roll', component: SpringRollShrimpComponent},
+  {path: 'restaurant/veal-spring-roll', component: SpringRollVealComponent},
+
+  // Soups
+  {path: 'restaurant/pumpkin-soup', component: PumpkinSoupComponent},
+  {path: 'restaurant/carrot-soup', component: CarrotSoupComponent},
+  {path: 'restaurant/shpinat-soup', component: ShpinatSoupComponent},
+  {path: 'restaurant/peas-soup', component: PeasSoupComponent},
+
+  // Main dishes
+  {path: 'restaurant/dorado', component: DoradoComponent},
+  {path: 'restaurant/parovi-kotlety', component: ParoviKotletyComponent},
+  {path: 'restaurant/telyacha-vurizka', component: TelyachaVurizkaComponent},
+  {path: 'restaurant/turkey-file', component: TyrkeyFileComponent},
+  {path: 'restaurant/pasta', component: PastaComponent},
+  {path: 'restaurant/bulgur-vegitables', component: BulgurVegitablesComponent},
+  {path: 'restaurant/kinoa-vegitables', component: KinoaVegitablesComponent},
+  {path: 'restaurant/sochevysya', component: SochevysyaComponent},
+  {path: 'restaurant/rice', component: RiceComponent},
+
+
 
 ];
 

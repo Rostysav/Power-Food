@@ -13,17 +13,17 @@ export class Balance2000Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedValue = '400';
+    this.selectedValue = '700';
   }
 
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '400'},
-    {number: '6 дн', price: '1200'},
-    {number: '14 дн', price: '2800'},
-    {number: '24 дн', price: '4800'},
-    {number: '30 дн', price: '6000'}
+    {number: '2 дн', price: '700'},
+    {number: '4 дн', price: '1380'},
+    {number: '6 дн', price: '2040'},
+    {number: '14 дн', price: '3960'},
+    {number: '24 дн', price: '7680'}
   ];
 
   onSelected(data) {
@@ -43,7 +43,7 @@ export class Balance2000Component implements OnInit {
     {
       'id': 2000,
       'name': 'Баланс - 2000 ккал',
-      'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
+      'description': 'Програма для людей, які хочуть правильно харчуватись. У раціоні 5 прийомів їжі на день.',
       'price': 1200,
       'dayPrice': 200,
       'imageUrl': '../../../assets/img/balance-2000.jpg'

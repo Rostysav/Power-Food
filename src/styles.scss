@@ -35,6 +35,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff; 
+}
+
 a {
 	&:hover {
     text-decoration: none;
@@ -275,10 +290,10 @@ button {
 }
 
 @media (max-width: 480px) {
-  .mat-tab-label {
-    min-width: 100px;
-    max-width: 100px;
-  }
+  // .mat-tab-label {
+  //   min-width: 100px;
+  //   max-width: 100px;
+  // }
 }
 
 .buy-link {
@@ -311,11 +326,18 @@ button {
   .program-title {
     color: #0A0807;
     font-size: 30px;
-    margin-bottom: 30px;
-    display: block;
+    // margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    span {
+      font-size: 22px;
     }
   }
 
@@ -332,6 +354,7 @@ button {
     align-items: center;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 30px;
 
     .price {
       font-size: 35px;
@@ -393,6 +416,7 @@ button {
     color: #0A0807;
     line-height: 20px;
     margin-bottom: 50px;
+    text-align: left;
   }
 
   .calories {
@@ -540,7 +564,7 @@ button {
 
   .row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     // width: 100%;
   }
 
@@ -955,6 +979,7 @@ button {
         display: flex;
         justify-content: center;
         height: 50px;
+        text-align: center;
       }
     }
 
@@ -966,6 +991,7 @@ button {
       font-size: 20px;
       margin-top: 15px;
       margin-bottom: 15px;
+      margin-left: 0;
       text-align: center;
       justify-content: center;
     }
@@ -1000,7 +1026,23 @@ button {
   position: relative;
   min-height: calc(100vh - 80px);
   display: flex;
-  align-items: center;
+  // align-items: center;
+
+  .full-price {
+    // display: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+    margin-left: 50px;
+
+    span {
+      color: red;
+      font-size: 28px;
+    }
+  }
 
   .dish-name {
     display: flex;
@@ -1033,9 +1075,10 @@ button {
   .dish-price {
     color: #F0544F;
     font-size: 28px;
-    margin: 30px 0;
+    margin: 30px 0 30px 45px;
     display: flex;
     align-items: center;
+    height: 55px;
   }
 
   .storage {
@@ -1122,4 +1165,36 @@ button {
       width: 100%;
     }
   }
+}
+
+@media (max-width: 768px) {
+  .dish-container {
+    padding-bottom: 75px;
+
+    .dish-price {
+      margin: 30px 0;
+      justify-content: center;
+    }
+
+    .buy-link {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & + a {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+.toast-title {
+  display: none;
 }

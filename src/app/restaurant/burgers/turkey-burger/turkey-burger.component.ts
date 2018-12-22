@@ -26,7 +26,7 @@ export class TurkeyBurgerComponent implements OnInit {
   restaurants: IRestaurant[] = [
     {
       'id': 2,
-      'name': 'Бургер з індичкою - 340гр',
+      'name': 'Бургер з індичкою - 340г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 124,
       'imageUrl': '../../../../assets/img/restourant/burgers/turkey-burger.jpg'
@@ -36,7 +36,7 @@ export class TurkeyBurgerComponent implements OnInit {
   orderProduct() {
     let myArray =
       { id: 2,
-        name:"Бургер з індичкою - 340гр",
+        name:"Бургер з індичкою - 340г",
         price: this.item*124 || 124,
         pieces: (this.item*124 || 124)/124,
         imageUrl: "../../../../assets/img/restourant/burgers/turkey-burger.jpg"
