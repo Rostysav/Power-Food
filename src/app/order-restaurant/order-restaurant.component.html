@@ -39,6 +39,7 @@
                   <div class="item-name">
                     <img [src]="r.imageUrl">
                     <p>{{ r.name }}</p>
+                    <button class="remove-order" (click)="removeProduct(r.id)">Видалити</button>
                   </div>
 
                   <div class="price">
@@ -83,7 +84,7 @@
             </div>
           </div> -->
 
-        <form method="POST" #r="ngForm"
+          <form method="POST" #r="ngForm"
               class="order-form" novalidate
               (ngSubmit)="onSubmit(r)"
               [formGroup]="myRestaurantForm">
@@ -130,13 +131,34 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-md-6 offset-md-3 col-sm-12 sex">
+              <div class="col-md-4 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Адреса" formControlName="address" name="address">
-                  <mat-error *ngIf="myRestaurantForm.get('address').invalid
-                  && (myRestaurantForm.get('address').dirty
-                  || myRestaurantForm.get('address').touched)">
-                    Введіть вулицю і номер будинку
+                  <input matInput placeholder="Вулиця"
+                         formControlName="address" name="address"
+                         pattern="[\u0400-\u04ff][\u0400-\u04ff ]+">
+                  <mat-error *ngIf="myRestaurantForm.get('address').invalid &&
+                   (myRestaurantForm.get('address').dirty || myRestaurantForm.get('address').touched)">
+                    Введіть вулицю (не менше трьох літер)
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4 col-sm-12 sex">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Номер будинку"
+                         formControlName="house" name="house">
+                  <mat-error *ngIf="myRestaurantForm.get('house').invalid &&
+                   (myRestaurantForm.get('house').dirty || myRestaurantForm.get('house').touched)">
+                    Номер будинку (не менше однієї і не більше трьох цифр)
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4 col-sm-12 sex">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Номер квартири"
+                         formControlName="room" name="room">
+                  <mat-error *ngIf="myRestaurantForm.get('room').invalid &&
+                   (myRestaurantForm.get('room').dirty || myRestaurantForm.get('room').touched)">
+                    Номер квартири (не менше однієї і не більше трьох цифр)
                   </mat-error>
                 </mat-form-field>
               </div>
@@ -154,10 +176,26 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
-                <mat-radio-group>
-                  <mat-radio-button value="1" checked="true">Онлайн оплата</mat-radio-button>
-                  <mat-radio-button value="2">Готівка кур'єру</mat-radio-button>
-                </mat-radio-group>
+                <label>Оберіть інтервал доставки</label>
+                <mat-form-field>
+                  <mat-select placeholder="Мінімальний інтервал 2 години" formControlName="delivery">
+                    <mat-option *ngFor="let t of time" [value]="t.value">
+                      {{t.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <label>Оберіть дату доставки</label>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="datepicker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
               </div>
             </div>
           </div>
@@ -165,13 +203,24 @@
           <div class="container form-price">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
-                <div class="price">
-                  <span>Ціна:</span>
-                  <p>{{total}} грн</p>
-                </div>
+                <mat-radio-group formControlName="payment">
+                  <mat-radio-button value="Онлайн оплата" checked="true">Онлайн оплата</mat-radio-button>
+                  <mat-radio-button value="Готівка курєру">Готівка кур'єру</mat-radio-button>
+                </mat-radio-group>
               </div>
             </div>
           </div>
+
+          <!--<div class="container">-->
+            <!--<div class="row">-->
+              <!--<div class="col-md-6 offset-md-3 col-sm-12">-->
+                <!--<div class="price">-->
+                  <!--<span>Ціна:</span>-->
+                  <!--<p>{{total}} грн</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
           <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
@@ -198,6 +247,9 @@
           </div>
         </form>
 
+        </div>
+          <!-- </div>
+        </div> -->
       </div>
 
       <div class="empty-order">
@@ -207,7 +259,4 @@
         </p>
       </div>
 
-    <!-- </div>
-  </div> -->
-</div>
 </div>

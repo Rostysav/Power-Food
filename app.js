@@ -84,8 +84,13 @@ app.post('/send-restaurant', (req, res) => {
     <ul>
       <li>Імя клієнта: ${req.body.name_customer}</li>
       <li>Адреса доставки: ${req.body.address_customer}</li>
+      <li>Час доставки: ${req.body.delivery} година</li>
+      <li>Дата доставки: ${req.body.datepicker} година</li>
+      <li>будинок: ${req.body.house}</li>
+      <li>квартира: ${req.body.room}</li>
       <li>Телефон: +38 ${req.body.phone}</li>
       <li>Продукт: ${JSON.stringify(req.body.name_product)}</li>
+      <li>Вибір оплати: ${req.body.payment}</li>
       <li>Ціна: ${req.body.price} грн</li>
     </ul>
   `;

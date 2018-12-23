@@ -128,6 +128,23 @@
       max-width: 250px;
     }
 
+    .remove-order {
+      background: #F0544F;
+      font-size: 21px;
+      padding: 10px 25px;
+      border-radius: 90px;
+      color: #fff;
+      -webkit-transition: .3s;
+      transition: .3s;
+      border: none;
+      height: 50px;
+      box-sizing: border-box;
+      cursor: pointer;
+      //margin-bottom: 30px;
+      margin: 0 auto;
+      width: 50%;
+    }
+
   }
 
   .days {
@@ -152,6 +169,7 @@
     // justify-content: flex-end;
     margin: 15px 0;
     width: 100%;
+    border-bottom: 1px solid #8c8b8b;
 
     p {
       color: #F0544F;

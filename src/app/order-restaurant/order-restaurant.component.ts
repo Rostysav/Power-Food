@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IRestaurant } from "../restaurant/restaurant";
 import { ToastService } from "../service/toastr.service";
+import {Time} from "../order/order.component";
 
 @Component({
   selector: 'pf-order',
@@ -19,6 +20,14 @@ export class OrderRestaurantComponent implements OnInit {
   pieces;
   showPrice: boolean;
 
+  time: Time[] = [
+    {value: '6-8'},
+    {value: '7-9'},
+    {value: '8-10'},
+    {value: '9-11'},
+    {value: '10-12'}
+  ];
+
   myRestaurantForm: FormGroup;
 
   constructor(
@@ -31,8 +40,15 @@ export class OrderRestaurantComponent implements OnInit {
     this.myRestaurantForm = new FormGroup({
       'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-      'address': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(25),
-        Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z\u0400-\u04ff]+.*)|[A-Za-z\u0400-\u04ff]+.*([0-9]+.*))')]),
+      'address': new FormControl('', [Validators.required, Validators.minLength(3),
+        Validators.maxLength(25)]),
+      'house': new FormControl('', [Validators.required, Validators.minLength(1),
+        Validators.maxLength(3)]),
+      'room': new FormControl('', [Validators.required, Validators.minLength(1),
+        Validators.maxLength(3)]),
+      'delivery': new FormControl('', Validators.required),
+      'datepicker': new FormControl('', Validators.required),
+      'payment': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
     });
 
@@ -53,6 +69,10 @@ export class OrderRestaurantComponent implements OnInit {
     if (this.validateHuman(this.myRestaurantForm.get('honeypot').touched)) {  //if form is filled, form will not be submitted
       return false;
     }
+    this.toastService.showToast(
+      'success',
+      `Замовлення відправлено!`,
+      3000);
     console.log("Form Submitted!");
 
     // RESTAURANT
@@ -76,6 +96,11 @@ export class OrderRestaurantComponent implements OnInit {
         let array_new = {};
         array_new['phone'] = form.value.mobile;
         array_new['address_customer']= form.value.address;
+        array_new['house']= form.value.house;
+        array_new['room']= form.value.room;
+        array_new['delivery']= form.value.delivery;
+        array_new['datepicker']= form.value.datepicker;
+        array_new['payment']= form.value.payment;
         array_new['name_customer'] = form.value.name;
         array_new['price'] = summ;
         array_new['name_product'] = product;
@@ -130,6 +155,26 @@ export class OrderRestaurantComponent implements OnInit {
     setTimeout((x) => {
       this.router.navigate(['/home']);
     }, 1500);
+  }
+
+  removeProduct(id) {
+    let items = JSON.parse(localStorage.getItem('restaurant'));
+    let index = items.map(x => {
+      return x.id;
+    }).indexOf(id);
+
+    // this.items.id.style.display = 'none';
+
+    items.splice(index, 1);
+    localStorage.setItem('restaurant', JSON.stringify(items));
+    this.toastService.showToast(
+      'success',
+      `Продукт видалено!`,
+      5000);
+    // window.location.reload();
+    console.log(this.restaurant);
+    // this.restaurant['id'].style.display = 'none';
+    console.log('items: ', items);
   }
 
   // redirectToHomePage() {

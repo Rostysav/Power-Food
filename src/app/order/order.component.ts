@@ -54,19 +54,9 @@ export class OrderComponent implements OnInit {
       'delivery': new FormControl('', Validators.required),
       'datepicker': new FormControl('', Validators.required),
       'payment': new FormControl('', Validators.required),
-      'checkbox': new FormControl('', Validators.required),
+      // 'checkbox': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
     });
-
-    // this.myRestaurantForm = new FormGroup({
-    //   'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
-    //   'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-    //   'address': new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(25),
-    //     Validators.pattern('[^\w\d]*(([0-9]+.*[A-Za-z\u0400-\u04ff]+.*)|[A-Za-z\u0400-\u04ff]+.*([0-9]+.*))')]),
-    //   'delivery': new FormControl('', Validators.required),
-    //   'checkbox': new FormControl('', Validators.required),
-    //   'honeypot': new FormControl('')
-    // });
 
     this.orderFromLocalStorage();
   }
@@ -123,34 +113,6 @@ export class OrderComponent implements OnInit {
       setTimeout(this.router.navigate(['/thx-page']), 5000);
     }
 
-    // RESTAURANT
-    // if (localStorage.getItem('restaurant')) {
-    //   let order_rest = JSON.parse(localStorage.getItem('restaurant'))[0];
-    //   let array_new = {};
-    //   array_new['phone'] = form.value.mobile;
-    //   array_new['address_customer']= form.value.address;
-    //   array_new['delivery']= form.value.delivery;
-    //   array_new['name_customer'] = form.value.name;
-    //   array_new['price'] = order_rest.price;
-    //   array_new['name_product'] = order_rest.name;
-    //   console.log(array_new);
-    //   const headers = new HttpHeaders()
-    //     .set('Authorization', 'my-auth-token')
-    //     .set('Content-Type', 'application/json');
-    //
-    //   this.http.post('http://127.0.0.1:3000/send-restaurant', JSON.stringify(array_new), {
-    //     headers: headers
-    //   })
-    //     .subscribe(data => {
-    //       console.log('form data: ', data);
-    //     });
-    //
-    //   form.reset();
-    //   this.toastService.showToast('success', 'Замовлення прийнято!');
-    //   localStorage.clear();
-    //   setTimeout(this.router.navigate(['/home']), 5000);
-    // }
-
   }
 
   redirectToThxPage(): any {
@@ -170,8 +132,11 @@ export class OrderComponent implements OnInit {
   }
 
   removeFromLocalStorage() {
-      localStorage.clear();
+    localStorage.clear();
+    this.toastService.showToast('error', 'Корзину очищено!');
+    setTimeout((x) => {
       this.router.navigate(['/home']);
+    }, 1500);
   }
 
 
