@@ -48,8 +48,8 @@ app.post('/send', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'valdemarrr26@gmail.com', // generated ethereal user
-      pass: '102938qwerty!!!'  // generated ethereal password
+      user: '', // generated ethereal user
+      pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false // only for localhost, need to be removed in production
@@ -59,7 +59,7 @@ app.post('/send', (req, res) => {
 // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact"', // sender address
-    to: 'valdemarrr26@gmail.com', // list of receivers
+    to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
@@ -84,8 +84,13 @@ app.post('/send-restaurant', (req, res) => {
     <ul>
       <li>Імя клієнта: ${req.body.name_customer}</li>
       <li>Адреса доставки: ${req.body.address_customer}</li>
+      <li>Час доставки: ${req.body.delivery} година</li>
+      <li>Дата доставки: ${req.body.datepicker} година</li>
+      <li>будинок: ${req.body.house}</li>
+      <li>квартира: ${req.body.room}</li>
       <li>Телефон: +38 ${req.body.phone}</li>
       <li>Продукт: ${JSON.stringify(req.body.name_product)}</li>
+      <li>Вибір оплати: ${req.body.payment}</li>
       <li>Ціна: ${req.body.price} грн</li>
     </ul>
   `;
@@ -97,8 +102,8 @@ app.post('/send-restaurant', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'valdemarrr26@gmail.com', // generated ethereal user
-      pass: '102938qwerty!!!'  // generated ethereal password
+      user: '', // generated ethereal user
+      pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false // only for localhost, need to be removed in production
@@ -108,7 +113,7 @@ app.post('/send-restaurant', (req, res) => {
 // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact"', // sender address
-    to: 'valdemarrr26@gmail.com', // list of receivers
+    to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
