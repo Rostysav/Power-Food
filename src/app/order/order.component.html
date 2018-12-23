@@ -1,25 +1,46 @@
 <div class="oder section">
   <!-- <div class="container">
     <div class="row"> -->
-      <!-- <div class="col-md-12">
-        <div class="title">
-          <h3>оформлення замовлення</h3>
-          <p>Якщо ви вже купували -<a [routerLink]='["authorization"]'>авторизуйтесь</a></p>
+
+      <div class="order-title-wrap order-product-list">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 order-list-title">
+              <p>Товар</p>
+              <p>Тривалість</p>
+              <p>Ціна</p>
+            </div>
+          </div>
         </div>
-      </div> -->
+      </div>
+
       <div class="order-item">
         <div class="order-title" *ngFor="let p of product">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 offset-md-3 col-sm-12">
+              <div class="col-md-12 col-sm-12">
+
                 <div class="item-name">
                   <img [src]="p.imageUrl">
                   <p>{{ p.name }}</p>
                 </div>
+
+                <div class="days">
+                  <p>
+                    <!-- <span>{{ p.price/200 }}</span> днів -->
+                    <span>2</span> дні
+                  </p>
+                </div>
+
+                <div class="price">
+                  <!-- <span>Ціна:</span> -->
+                  <p>{{ p.price }} грн</p>
+                </div>
+
               </div>
             </div>
           </div>
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="days">
@@ -39,7 +60,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <form method="POST" #f="ngForm"
               *ngFor="let p of product"
@@ -87,7 +108,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-md-4 col-sm-12 sex">
+              <div class="col-md-6 offset-md-3 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Вулиця"
                          formControlName="address" name="address"
@@ -97,7 +118,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-4 col-sm-12 sex">
+              <div class="col-md-6 offset-md-3 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Номер будинку"
                          formControlName="house" name="house">
@@ -106,7 +127,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-4 col-sm-12 sex">
+              <div class="col-md-6 offset-md-3 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Номер квартири"
                          formControlName="room" name="room">
@@ -115,6 +136,27 @@
                   </mat-error>
                 </mat-form-field>
               </div>
+
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <label>Оберіть інтервал доставки</label>
+                <mat-form-field>
+                  <mat-select placeholder="Мінімальний інтервал 2 години" formControlName="delivery">
+                    <mat-option *ngFor="let t of time" [value]="t.value">
+                      {{t.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <label>Оберіть дату доставки</label>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="datepicker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              
             </div>
           </div>
 
@@ -135,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <label>Оберіть інтервал доставки</label>
@@ -148,8 +190,8 @@
                 </mat-form-field>
               </div>
             </div>
-          </div>
-          <div class="container">
+          </div> -->
+          <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <label>Оберіть дату доставки</label>
@@ -160,7 +202,7 @@
                 </mat-form-field>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="container">
             <div class="row">
@@ -172,7 +214,7 @@
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
                   <span>Ціна:</span>
-                  <p>{{ p.price }}</p>
+                  <p>{{ p.price }} грн</p>
                 </div>
               </div>
             </div>

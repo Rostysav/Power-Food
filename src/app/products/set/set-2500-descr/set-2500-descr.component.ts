@@ -20,10 +20,10 @@ export class Set2500DescrComponent implements OnInit {
 
   days = [
     {number: '2 дн', price: '800'},
-    {number: '4 дн', price: '1580'},
-    {number: '6 дн', price: '2340'},
-    {number: '14 дн', price: '4560'},
-    {number: '24 дн', price: '8880'}
+    // {number: '4 дн', price: '1580'},
+    // {number: '6 дн', price: '2340'},
+    // {number: '14 дн', price: '4560'},
+    // {number: '24 дн', price: '8880'}
   ];
 
   onSelected(data) {}

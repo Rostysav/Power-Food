@@ -1213,3 +1213,57 @@ button {
 //     align-items: center;
 //   }
 // }
+
+// .dish-container .mat-form-field .mat-form-field-infix:after {
+//   position: absolute;
+//   content: '1';
+//   text-align: center;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   top: 0;
+//   z-index: 0;
+// }
+
+// .mat-form-field-hide-placeholder .mat-input-element::-webkit-input-placeholder {
+//   color: #F0544F !important;
+//   -webkit-text-fill-color: #F0544F;
+// }
+// .mat-form-field.mat-focused .mat-form-field-ripple {
+//   background-color: #F0544F;
+// }
+// .mat-form-field-empty.mat-form-field-label {
+//   color: green;
+// }
+
+// .mat-form-field-hide-placeholder {
+//   .mat-input-element {
+//     &::-webkit-input-placeholder {
+//       color: #F0544F !important;
+//       -webkit-text-fill-color: #F0544F;
+//     }
+//   }
+// }
+
+// .dish-container {
+//   .mat-form-field-label-wrapper {
+//     display: none;
+//   }
+// }
+
+@media (max-width: 550px) {
+  .dish-container {
+    .dish-price {
+      height: auto;
+      flex-direction: column;
+    }
+    .mat-form-field {
+      margin-left: 0;
+      margin: 30px 
+    }
+    .full-price {
+      margin-left: 0;
+    }
+  }
+}
