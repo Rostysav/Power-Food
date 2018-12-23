@@ -21,10 +21,10 @@ export class Lower1000DescrComponent implements OnInit {
 
   days = [
     {number: '2 дн', price: '500'},
-    {number: '4 дн', price: '980'},
-    {number: '6 дн', price: '1440'},
-    {number: '12 дн', price: '2760'},
-    {number: '24 дн', price: '5280'}
+    // {number: '4 дн', price: '980'},
+    // {number: '6 дн', price: '1440'},
+    // {number: '12 дн', price: '2760'},
+    // {number: '24 дн', price: '5280'}
   ];
 
   onSelected(data) {

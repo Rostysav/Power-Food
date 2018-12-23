@@ -20,10 +20,10 @@ export class Set3500Component implements OnInit {
 
   days = [
     {number: '2 дн', price: '900'},
-    {number: '4 дн', price: '1780'},
-    {number: '6 дн', price: '2640'},
-    {number: '14 дн', price: '5160'},
-    {number: '24 дн', price: '10080'}
+    // {number: '4 дн', price: '1780'},
+    // {number: '6 дн', price: '2640'},
+    // {number: '14 дн', price: '5160'},
+    // {number: '24 дн', price: '10080'}
   ];
 
   onSelected(data) {}

@@ -19,11 +19,11 @@ export class Balance2000Component implements OnInit {
   daysControl = new FormControl('', [Validators.required]);
 
   days = [
-    {number: '2 дн', price: '700'},
-    {number: '4 дн', price: '1380'},
-    {number: '6 дн', price: '2040'},
-    {number: '14 дн', price: '3960'},
-    {number: '24 дн', price: '7680'}
+    {number: '2 дн', price: '700'}
+    // {number: '4 дн', price: '1380'},
+    // {number: '6 дн', price: '2040'},
+    // {number: '14 дн', price: '3960'},
+    // {number: '24 дн', price: '7680'}
   ];
 
   onSelected(data) {
