@@ -11,10 +11,12 @@
       <div class="order-title-wrap order-product-list">
         <div class="container">
           <div class="row">
-            <p>Товар</p>
-            <p>Ціна</p>
-            <p>Кількість</p>
-            <p>Загалом</p>
+            <div class="col-md-12 order-list-title">
+              <p>Товар</p>
+              <p>Ціна</p>
+              <p>Кількість</p>
+              <p>Загалом</p>
+            </div>
           </div>
         </div>
       </div>
@@ -33,27 +35,44 @@
           <div class="order-title" *ngFor="let r of restaurant; let i = index;">
             <div class="container">
               <div class="row">
-                <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="col-md-12 col-sm-12">
                   <div class="item-name">
                     <img [src]="r.imageUrl">
                     <p>{{ r.name }}</p>
                   </div>
+
+                  <div class="price">
+                    <!-- <span>Ціна:</span> -->
+                    <!--<p>{{ items[i] }} штук по {{ r.price / items[i] }} грн = {{ r.price }} грн</p>-->
+                    <!-- <p>{{ r.pieces }} x {{ r.price / r.pieces }} грн = {{ r.price }} грн</p> -->
+                    <p>{{ r.price / r.pieces }} грн</p>
+                  </div>
+
+                  <div class="total-products">
+                    <p>{{ r.pieces }}</p>
+                  </div>
+
+                  <div class="price">
+                    <!-- <span>Загальна ціна:</span> -->
+                    <!-- <p>{{total}} грн</p> -->
+                    <p>{{ (r.price / r.pieces) * r.pieces }}</p>
+                  </div>
+
                 </div>
               </div>
             </div>
-            <div class="container">
+            <!-- <div class="container">
               <div class="row">
                 <div class="col-md-6 offset-md-3 col-sm-12">
                   <div class="price">
                     <span>Ціна:</span>
-                    <!--<p>{{ items[i] }} штук по {{ r.price / items[i] }} грн = {{ r.price }} грн</p>-->
                     <p>{{ r.pieces }} x {{ r.price / r.pieces }} грн = {{ r.price }} грн</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
@@ -62,7 +81,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         <form method="POST" #r="ngForm"
               class="order-form" novalidate
@@ -143,7 +162,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container form-price">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price">
