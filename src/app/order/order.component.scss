@@ -85,6 +85,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    // flex-direction: column;
 
     img {
       width: 100%;
@@ -103,30 +104,39 @@
     margin: 15px 0;
     p {
       display: flex;
-      // justify-content: center;
+      justify-content: center;
       font-size: 18px;
       color: #F0544F;
+      margin-left: 0;
     }
     span {
-      color: #F0544F;
+      color: #000;
       font-size: 18px;
       margin: 0 5px;
       display: block;
       text-align: center;
+      display: none;
     }
   }
 
   .price {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     // justify-content: flex-end;
     margin: 15px 0;
     width: 100%;
+    margin-left: 0;
 
     p {
       color: #F0544F;
       width: auto;
       margin-left: 15px;
+    }
+
+    span {
+      display: none;
     }
   }
 
@@ -294,6 +304,7 @@
 
       p {
         margin-bottom: 0;
+        text-align: center;
 
         &:first-child {
           text-align: center;
@@ -301,12 +312,38 @@
       }
     }
   }
+
+  .sum-price {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    span {
+      display: block;
+      font-size: 24px;
+      margin-right: 5px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
   
 }
 
 @media(max-width: 992px) {
 	.oder {
-		margin-top: 85px;
+    margin-top: 85px;
+    
+    .order-title-wrap {
+      display: none;
+    }
+
+    .price, .days {
+      span {
+        display: block;
+      }
+    }
 	}
 }
 
@@ -321,8 +358,11 @@
       flex-direction: column;
       margin-bottom: 0;
 
-      .col-md-4 {
+      .col-md-12 {
         margin-bottom: 20px;
+        margin-bottom: 20px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name name' 'days price'
       }
     }
 
@@ -338,11 +378,20 @@
     .price {
       justify-content: center;
       margin-bottom: 30px;
+      grid-area: price;
     }
 
     .buy-link {
       justify-content: center;
       margin-top: 30px;
+    }
+
+    .item-name {
+      grid-area: name;
+    }
+
+    .days {
+      grid-area: days;
     }
   }
 }
