@@ -132,8 +132,9 @@ export class OrderComponent implements OnInit {
   }
 
   removeFromLocalStorage() {
+    event.preventDefault();
     localStorage.clear();
-    this.toastService.showToast('error', 'Корзину очищено!');
+    this.toastService.showToast('error', 'Корзину успішно очищено!');
     setTimeout((x) => {
       this.router.navigate(['/home']);
     }, 1500);

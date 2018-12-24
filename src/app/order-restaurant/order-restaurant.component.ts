@@ -167,13 +167,17 @@ export class OrderRestaurantComponent implements OnInit {
 
     items.splice(index, 1);
     localStorage.setItem('restaurant', JSON.stringify(items));
+    this.restaurant = JSON.parse(localStorage.getItem('restaurant'));
+    this.total = 0;
+    if (this.restaurant) {
+      for (let i = 0; i < this.restaurant.length; i++) {
+        this.total += this.restaurant[i].price;
+      }
+    }
     this.toastService.showToast(
       'success',
-      `Продукт видалено!`,
-      5000);
-    // window.location.reload();
-    console.log(this.restaurant);
-    // this.restaurant['id'].style.display = 'none';
+      `Продукт успішно видалено!`,
+      3000);
     console.log('items: ', items);
   }
 
