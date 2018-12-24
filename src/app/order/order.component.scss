@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: #fff;
 
     h2 {
       color: #000;
@@ -293,6 +294,7 @@
 
   .order-title-wrap {
     z-index: 1;
+    position: relative;
 
     .order-list-title {
       display: grid;
