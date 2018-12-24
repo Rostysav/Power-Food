@@ -1267,3 +1267,13 @@ button {
     }
   }
 }
+
+@media (max-width: 992px) {
+  .oder {
+    .item-name {
+      img {
+        max-width: 150px !important;
+      }
+    }
+  }
+}
