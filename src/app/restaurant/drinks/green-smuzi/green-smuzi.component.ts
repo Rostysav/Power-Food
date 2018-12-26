@@ -29,9 +29,9 @@ export class GreenSmuziComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Смузі зелений-300мл',
+      'name': 'Смузі зелений - 300 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 41,
+      'price': 44,
       'imageUrl': '../../../../assets/img/restourant/smuzi/green-smuzi.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class GreenSmuziComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Смузі зелений-300мл",
-        price: this.item*41 || 41,
-        pieces: (this.item*41 || 41)/41,
+        name:"Смузі зелений - 300 мл",
+        price: this.item*44 || 44,
+        pieces: (this.item*44 || 44)/44,
         imageUrl: "../../../../assets/img/restourant/smuzi/green-smuzi.jpg"
       };
     let get_item = [];

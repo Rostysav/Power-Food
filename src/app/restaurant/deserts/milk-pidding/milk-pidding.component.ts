@@ -29,7 +29,7 @@ export class MilkPiddingComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Молочний пудинг з чіа, гранолою та сезоними ягодами-260г',
+      'name': 'Молочний пудинг з чіа, гранолою та сезоними ягодами - 260 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 71,
       'imageUrl': '../../../../assets/img/restourant/desserts/milk-pudding.jpg'
@@ -39,7 +39,7 @@ export class MilkPiddingComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Молочний пудинг з чіа, гранолою та сезоними ягодами-260г",
+        name:"Молочний пудинг з чіа, гранолою та сезоними ягодами - 260 г",
         price: this.item*71 || 71,
         pieces: (this.item*71 || 71)/71,
         imageUrl: "../../../../assets/img/restourant/desserts/milk-pudding.jpg"

@@ -15,13 +15,16 @@
         <div class="dish-name">
           <p>{{ restaurant.name }}</p>
         </div>
+        <div class="storage">
+          Банан, гарбуз, апельсин, мед
+        </div>
         <div class="dish-price">
-          45грн
+          55 грн
           <mat-form-field class="example-full-width">
             <input type="number" min="1" max="99" required matInput
                     [(ngModel)]="item" value="1">
           </mat-form-field>
-          <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 45 }} грн</span> </p>
+          <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 55 }} грн</span> </p>
         </div>
 
         <div class="buy-link">
@@ -30,9 +33,6 @@
           </a>
           <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
             <i class="fa fa-shopping-bag"></i>{{ orderText }}
-          </a>
-          <a id="continue" *ngIf="makeOrder" (click)="continue()">
-            <i class="fa fa-shopping-bag"></i>{{ continueText }}
           </a>
         </div>
       </div>

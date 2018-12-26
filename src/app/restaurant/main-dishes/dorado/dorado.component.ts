@@ -29,7 +29,7 @@ export class DoradoComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Дорадо запечена на Vapo-грилі за 100г',
+      'name': 'Дорадо запечена на Vapo-грилі - за 100 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 81,
       'imageUrl': '../../../../assets/img/restourant/main/dorado.jpg'
@@ -39,7 +39,7 @@ export class DoradoComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Дорадо запечена на Vapo-грилі за 100г",
+        name:"Дорадо запечена на Vapo-грилі - за 100 г",
         price: this.item*81 || 81,
         pieces: (this.item*81 || 81)/81,
         imageUrl: "../../../../assets/img/restourant/main/dorado.jpg"

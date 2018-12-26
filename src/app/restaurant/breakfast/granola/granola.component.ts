@@ -29,7 +29,7 @@ export class GranolaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 9,
-      'name': 'Гранола з йогуртом та фруктовим кюлі - 260г',
+      'name': 'Гранола з йогуртом  та фруктовим кюлі - 260 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 64,
       'imageUrl': '../../../../assets/img/restourant/breakfast/granola.jpg'
@@ -39,7 +39,7 @@ export class GranolaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Гранола з йогуртом та фруктовим кюлі - 260г",
+        name:"Гранола з йогуртом  та фруктовим кюлі - 260 г",
         price: this.item*64 || 64,
         pieces: (this.item*64 || 64)/64,
         imageUrl: "../../../../assets/img/restourant/breakfast/granola.jpg"

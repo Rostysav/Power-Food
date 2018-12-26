@@ -29,7 +29,7 @@ export class PastaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Паста тальятелле з овочами-285г',
+      'name': 'Паста тальятелле з телятиною - 285 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 138,
       'imageUrl': '../../../../assets/img/restourant/main/telyatele-pasta.jpg'
@@ -39,7 +39,7 @@ export class PastaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Паста тальятелле з овочами-285г",
+        name:"Паста тальятелле з телятиною - 285 г",
         price: this.item*138 || 138,
         pieces: (this.item*138 || 138)/138,
         imageUrl: "../../../../assets/img/restourant/main/telyatele-pasta.jpg"

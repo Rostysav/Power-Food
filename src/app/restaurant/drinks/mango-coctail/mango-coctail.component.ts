@@ -29,9 +29,9 @@ export class MangoCoctailComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Амінокислотний коктейль зі смаком манго-300мл',
+      'name': 'Амінокислотний коктейль зі смаком манго - 300 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 34,
+      'price': 37,
       'imageUrl': '../../../../assets/img/restourant/coctails/mango-coctail.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class MangoCoctailComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Амінокислотний коктейль зі смаком манго-300мл",
-        price: this.item*34 || 34,
-        pieces: (this.item*34 || 34)/34,
+        name:"Амінокислотний коктейль зі смаком манго - 300 мл",
+        price: this.item*37 || 37,
+        pieces: (this.item*37 || 37)/37,
         imageUrl: "../../../../assets/img/restourant/coctails/mango-coctail.jpg"
       };
     let get_item = [];

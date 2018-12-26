@@ -8,7 +8,7 @@
 	}
 
 	.left-side {
-			padding: 50px 0;
+			padding: 50px 20px;
 			display: flex;
 			flex-direction: column;
 
@@ -29,6 +29,14 @@
 		iframe {
 			width: 100%;
 			min-height: 500px;
+		}
+	}
+}
+
+@media(max-width: 992px) {
+	.contacts {
+		.left-side {
+			padding: 0 15px 50px;
 		}
 	}
 }

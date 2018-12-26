@@ -29,9 +29,9 @@ export class ChocolateCoclailComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Протеїновий коктейль зі смаком шоколаду-360мл',
+      'name': 'Протеїновий коктейль зі смаком шоколаду - 360 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 54,
+      'price': 57,
       'imageUrl': '../../../../assets/img/restourant/coctails/chocolate-coclail.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class ChocolateCoclailComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Протеїновий коктейль зі смаком шоколаду-360мл",
-        price: this.item*54 || 54,
-        pieces: (this.item*54 || 54)/54,
+        name:"Протеїновий коктейль зі смаком шоколаду - 360 мл",
+        price: this.item*57 || 57,
+        pieces: (this.item*57 || 57)/57,
         imageUrl: "../../../../assets/img/restourant/coctails/chocolate-coclail.jpg"
       };
     let get_item = [];

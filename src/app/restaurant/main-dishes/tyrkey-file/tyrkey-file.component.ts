@@ -29,7 +29,7 @@ export class TyrkeyFileComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Філе індички, запечене на Vapo-грилі-220г',
+      'name': 'Філе індички запечене на Vapo-грилі - 220 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 118,
       'imageUrl': '../../../../assets/img/restourant/main/turkey-fillet.jpg'
@@ -39,7 +39,7 @@ export class TyrkeyFileComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Філе індички, запечене на Vapo-грилі-220г",
+        name:"Філе індички запечене на Vapo-грилі - 220 г",
         price: this.item*118 || 118,
         pieces: (this.item*118 || 118)/118,
         imageUrl: "../../../../assets/img/restourant/main/turkey-fillet.jpg"

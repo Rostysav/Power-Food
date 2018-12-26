@@ -37,8 +37,8 @@ export class Lower1000DescrComponent implements OnInit {
       'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
       ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
       ' Раціон - 1000 ккал.',
-      'price': 1200,
-      'dayPrice': 200,
+      'price': 500,
+      'dayPrice': 250,
       'imageUrl': '../../../assets/img/lover-1000.jpg',
       'daysNumber': 2
     }

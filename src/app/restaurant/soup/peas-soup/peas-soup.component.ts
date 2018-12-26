@@ -30,7 +30,7 @@ export class PeasSoupComponent implements OnInit
   restaurants: IRestaurant[] = [
     {
       'id': 12,
-      'name': 'Суп із зеленого горошку-320г',
+      'name': 'Суп із зеленого горошку - 320 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 59,
       'imageUrl': '../../../../assets/img/restourant/soup/peas-soup.jpg'
@@ -40,7 +40,7 @@ export class PeasSoupComponent implements OnInit
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Суп із зеленого горошку-320г",
+        name:"Суп із зеленого горошку - 320 г",
         price: this.item*59 || 59,
         pieces: (this.item*59 || 59)/59,
         imageUrl: "../../../../assets/img/restourant/soup/peas-soup.jpg"

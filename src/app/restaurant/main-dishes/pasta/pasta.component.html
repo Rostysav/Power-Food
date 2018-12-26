@@ -16,7 +16,7 @@
           <p>{{ restaurant.name }}</p>
         </div>
         <div class="storage">
-          З шматочками телятини з крем соусом із цукіні
+          Паста тальятелле, телятина, помідори чері, цукіні, пармезан та крем соус
         </div>
         <div class="nutritional-value">
           <p>Харчова цінність страви (грам):</p>
@@ -40,9 +40,6 @@
           </a>
           <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
             <i class="fa fa-shopping-bag"></i>{{ orderText }}
-          </a>
-          <a id="continue" *ngIf="makeOrder" (click)="continue()">
-            <i class="fa fa-shopping-bag"></i>{{ continueText }}
           </a>
         </div>
       </div>

@@ -29,7 +29,7 @@ export class GuakamoleComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Брускета з гуакамоле -180г',
+      'name': 'Брускета із слабосоленим лососем - 180 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 99,
       'imageUrl': '../../../../assets/img/restourant/bryskety/brysketa-guakamole.jpg'
@@ -39,7 +39,7 @@ export class GuakamoleComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Брускета з гуакамоле -180г",
+        name:"Брускета із слабосоленим лососем - 180 г",
         price: this.item*99 || 99,
         pieces: (this.item*99 || 99)/99,
         imageUrl: "../../../../assets/img/restourant/bryskety/brysketa-guakamole.jpg"

@@ -29,7 +29,7 @@ export class RiceComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Мікс дикого рису-150г',
+      'name': 'Суміш дикого рису - 150 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 48,
       'imageUrl': '../../../../assets/img/restourant/main/rice.jpg'
@@ -39,7 +39,7 @@ export class RiceComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Мікс дикого рису-150г",
+        name:"Суміш дикого рису - 150 г",
         price: this.item*48 || 48,
         pieces: (this.item*48 || 48)/48,
         imageUrl: "../../../../assets/img/restourant/main/rice.jpg"

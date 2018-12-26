@@ -29,7 +29,7 @@ export class TelyachaVurizkaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Теляча вирізка з булгуром -280г',
+      'name': 'Теляча вирізка з булгуром - 280 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 169,
       'imageUrl': '../../../../assets/img/restourant/main/calf-cut.jpg'
@@ -39,7 +39,7 @@ export class TelyachaVurizkaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Теляча вирізка з булгуром -280г",
+        name:"Теляча вирізка з булгуром - 280 г",
         price: this.item*169 || 169,
         pieces: (this.item*169 || 169)/169,
         imageUrl: "../../../../assets/img/restourant/main/calf-cut.jpg"

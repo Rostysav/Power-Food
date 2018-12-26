@@ -29,7 +29,7 @@ export class CheesecakeComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Сирна запіканка з яблуком та корицею-150г',
+      'name': 'Творожна запіканка з яблуком та корицею - 150 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 55,
       'imageUrl': '../../../../assets/img/restourant/desserts/cheesecake.jpg'
@@ -39,7 +39,7 @@ export class CheesecakeComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Сирна запіканка з яблуком та корицею-150г",
+        name:"Творожна запіканка з яблуком та корицею - 150 г",
         price: this.item*55 || 55,
         pieces: (this.item*55 || 55)/55,
         imageUrl: "../../../../assets/img/restourant/desserts/ccheesecake.jpg"

@@ -29,7 +29,7 @@ export class CheesePearComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Груша запечена з сирним мусом-120г',
+      'name': 'Груша запечена з творожним мусом - 120 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 63,
       'imageUrl': '../../../../assets/img/restourant/desserts/cheese-pear.jpg'
@@ -39,7 +39,7 @@ export class CheesePearComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Груша запечена з сирним мусом-120г",
+        name:"Груша запечена з творожним мусом - 120 г",
         price: this.item*63 || 63,
         pieces: (this.item*63 || 63)/63,
         imageUrl: "../../../../assets/img/restourant/desserts/cheese-pear.jpg"

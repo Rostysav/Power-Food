@@ -29,7 +29,7 @@ export class SpringRollVealComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Спрінг-рол з телятиною -160г',
+      'name': 'Спрінг-рол з телятиною - 160 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 78,
       'imageUrl': '../../../../assets/img/restourant/spring-roll/veal-spring-roll.jpg'
@@ -39,7 +39,7 @@ export class SpringRollVealComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Спрінг-рол з телятиною -160г",
+        name:"Спрінг-рол з телятиною - 160 г",
         price: this.item*78 || 78,
         pieces: (this.item*78 || 78)/78,
         imageUrl: "../../../../assets/img/restourant/spring-roll/veal-spring-roll.jpg"

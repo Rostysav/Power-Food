@@ -29,9 +29,9 @@ export class ClassicSmuziComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Смузі класичний-300мл',
+      'name': 'Смузі класичний - 300 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 43,
+      'price': 46,
       'imageUrl': '../../../../assets/img/restourant/smuzi/classic-smuzi.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class ClassicSmuziComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Смузі класичний-300мл",
-        price: this.item*43 || 43,
-        pieces: (this.item*43 || 43)/43,
+        name:"Смузі класичний - 300 мл",
+        price: this.item*46 || 46,
+        pieces: (this.item*46 || 46)/46,
         imageUrl: "../../../../assets/img/restourant/smuzi/classic-smuzi.jpg"
       };
     let get_item = [];

@@ -6,20 +6,17 @@
         <p>{{ c.description}}</p>
         <mat-tab-group>
           <mat-tab *ngFor="let s of state" label="{{ s.name }}">
-            <div class="catalod-desc" >
+            <!-- <div class="catalod-desc" >
               <div class="col-lg-6 col-md-12 text">
                 <div class="catalog-title">
                   <h4>{{ s.name }}</h4>
                 </div>
                 <p>{{ s.description }}</p>
-                <!-- <div class="order">
-                  <div class="catalog-price">Від {{ s.price }} грн/день</div>
-                </div> -->
               </div>
               <div class="col-lg-6 col-md-12 col-xs-12 img">
                 <img [src]="s.image" alt="{{ s.name }}">
               </div>
-            </div>
+            </div> -->
             <pf-lower-1000 *ngIf="s.name === 'Зниження'"></pf-lower-1000>
             <pf-lower-1500 *ngIf="s.name === 'Зниження'"></pf-lower-1500>
             <pf-balance-2000 *ngIf="s.name === 'Баланс'"></pf-balance-2000>

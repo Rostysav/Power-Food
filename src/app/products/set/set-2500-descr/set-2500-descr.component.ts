@@ -35,8 +35,8 @@ export class Set2500DescrComponent implements OnInit {
       'description': 'Високий вміст білків з підтриманням оптимального рівня жирів і повільних вуглеводів' +
       ' допоможе позбутися від зайвих кілограмів без втрати м\'язової маси.' +
       ' Раціон - 1000 ккал.',
-      'price': 1200,
-      'dayPrice': 200,
+      'price': 800,
+      'dayPrice': 400,
       'imageUrl': '../../../assets/img/set-2500.jpg'
     }
   ];

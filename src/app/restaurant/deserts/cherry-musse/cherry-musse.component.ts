@@ -29,7 +29,7 @@ export class CherryMusseComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Organic desert з вишнево-смородиновим мусом-за 100г',
+      'name': 'Organic desert з вишнево-смородиновим мусом - за 100 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 61,
       'imageUrl': '../../../../assets/img/restourant/desserts/cherry-musse.jpg'
@@ -39,7 +39,7 @@ export class CherryMusseComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Organic desert з вишнево-смородиновим мусом-за 100г",
+        name:"Organic desert з вишнево-смородиновим мусом - за 100 г",
         price: this.item*61 || 61,
         pieces: (this.item*61 || 61)/61,
         imageUrl: "../../../../assets/img/restourant/desserts/cherry-musse.jpg"
