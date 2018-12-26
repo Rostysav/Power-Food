@@ -29,7 +29,7 @@ export class OmeletWithBasilicaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Омлет з базиліком -200г',
+      'name': 'Омлет з бейбі моцарелою - 200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 68,
       'imageUrl': '../../../../assets/img/restourant/breakfast/omelet-with-basilica.jpg'
@@ -39,7 +39,7 @@ export class OmeletWithBasilicaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Омлет з базиліком -200г",
+        name:"Омлет з бейбі моцарелою - 200 г",
         price: this.item*68 || 68,
         pieces: (this.item*68 || 68)/68,
         imageUrl: "../../../../assets/img/restourant/breakfast/omelet-with-basilica.jpg"

@@ -167,13 +167,29 @@ button {
 }
 
 .table-wrap {
-	overflow-x: scroll;
-	-ms-overflow-style: none;
-	overflow: -moz-scrollbars-none;
+  overflow: scroll;
+  -ms-overflow-style: none;  // IE 10+
+  overflow: -moz-scrollbars-none;  // Firefox
 
-	&::-webkit-scrollbar {
-		width: 0;
-	}
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::-webkit-scrollbar { width: 0px; height: 0px;}
+    &::-webkit-scrollbar-button {  background-color: transparent; }
+    &::-webkit-scrollbar-track {  background-color: transparent;}
+    &::-webkit-scrollbar-track-piece { background-color: transparent;}
+    &::-webkit-scrollbar-thumb { height: 0px; background-color: transparent;}
+    &::-webkit-scrollbar-corner { background-color: transparent;}
+    &::-webkit-resizer { background-color: transparent;}
+  
+  .tg {
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 }
 
 #honeypot, #honeypot1 {
@@ -194,7 +210,11 @@ button {
 
 .mat-tab-label-active {
 	opacity: 1;
-	background: #F0544F;
+  background: #88AB31;
+  
+  .mat-tab-label-content {
+    color: #fff;
+  }
 }
 
 .mat-tab-label {
@@ -232,10 +252,10 @@ button {
 }
 
 .mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
-	background: #F0544F;
+	background: #88AB31;
 }
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-	background: red;
+	background: green;
 }
 
 .product {
@@ -298,16 +318,19 @@ button {
 
 .buy-link {
   a {
-    background: #F0544F;
+    background: #88AB31;
     font-size: 21px;
     padding: 10px 25px;
     border-radius: 90px;
     color: #fff;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       transition: .3s;
-      background: red;
+      background: green;
       border-bottom: none;
       text-decoration: none;
     }
@@ -387,7 +410,7 @@ button {
       }
       .fa {
         position: absolute;
-        color: #F0544F;
+        color: #88AB31;
         right: 15px;
         font-size: 18px;
         font-weight: bold;
@@ -440,7 +463,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: #F0544F;
+    color: #88AB31;
     margin-left: 15px;
     width: 60px;
     height: 85px;
@@ -457,7 +480,7 @@ button {
     .first {
       width: 70px;
       height: 70px;
-      border-color: #F0544F;
+      border-color: #88AB31;
       margin-top: 0;
     }
   }
@@ -516,7 +539,7 @@ button {
   .fa {
     font-size: 30px;
     margin-bottom: 5px;
-    color: #F0544F;
+    color: #88AB31;
   }
 }
 
@@ -525,7 +548,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: #F0544F;
+  color: #88AB31;
   margin-left: 15px;
   width: 60px;
   height: 85px;
@@ -542,7 +565,7 @@ button {
   .first {
     width: 70px;
     height: 70px;
-    border-color: #F0544F;
+    border-color: #88AB31;
     margin-top: 0;
   }
 }
@@ -650,7 +673,7 @@ button {
       }
 
       .fa {
-        color: #F0544F;
+        color: #88AB31;
         font-size: 25px;
         margin-right: 10px;
       }
@@ -844,15 +867,15 @@ button {
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: #F0544F;
+  border-color: #88AB31;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
-  background: #F0544F;
+  background: #88AB31;
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-  background: #F0544F;
+  background: #88AB31;
 }
 
 @media (max-width: 768px) {
@@ -886,7 +909,7 @@ button {
     padding-bottom: 0;
     height: auto;
     min-height: initial;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     &:hover {
       .dish-img-conteiner {
@@ -1039,7 +1062,7 @@ button {
     margin-left: 50px;
 
     span {
-      color: red;
+      color: #88AB31;
       font-size: 28px;
     }
   }
@@ -1073,7 +1096,7 @@ button {
   }
 
   .dish-price {
-    color: #F0544F;
+    color: #88AB31;
     font-size: 28px;
     margin: 30px 0 30px 45px;
     display: flex;
@@ -1131,7 +1154,7 @@ button {
     }
 
     span {
-      color: #F0544F;
+      color: #88AB31;
     }
   }
 
@@ -1141,7 +1164,7 @@ button {
     margin-top: 30px;
     a {
       color: #fff;
-      display: inline-block;
+      // display: inline-block;
 
       & + a {
         margin-left: 15px;
@@ -1252,6 +1275,40 @@ button {
 //   }
 // }
 
+@media(max-width: 1200px) {
+  .restaurant {
+    .dish-container {
+      .dish-img {
+        p {
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .oder {
+    .item-name {
+      img {
+        max-width: 150px !important;
+      }
+    }
+  }
+}
+
+// @media (min-width: 768px) and (max-width: 992px) {
+//   .restaurant {
+//     .dish-container {
+//       .dish-img {
+//         p {
+//           height: 100px;
+//         }
+//       }
+//     }
+//   }
+// }
+
 @media (max-width: 550px) {
   .dish-container {
     .dish-price {
@@ -1268,12 +1325,11 @@ button {
   }
 }
 
-@media (max-width: 992px) {
-  .oder {
-    .item-name {
-      img {
-        max-width: 150px !important;
-      }
-    }
-  }
-}
+// .toast-message {
+//   display: block !important;
+//   z-index: 99999;
+//   widows: 300px;
+//   height: 300px;
+//   overflow: visible;
+//   opacity: 1;
+// }

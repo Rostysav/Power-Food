@@ -29,7 +29,7 @@ export class SpringRollShrimpComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Спрінг-рол з креветками-140г',
+      'name': 'Спрінг-рол з креветками - 140 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 80,
       'imageUrl': '../../../../assets/img/restourant/spring-roll/spring-roll-shrimp.jpg'
@@ -39,7 +39,7 @@ export class SpringRollShrimpComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Спрінг-рол з креветками-140г",
+        name:"Спрінг-рол з креветками - 140 г",
         price: this.item*80 || 80,
         pieces: (this.item*80 || 80)/80,
         imageUrl: "../../../../assets/img/restourant/spring-roll/spring-roll-shrimp.jpg"

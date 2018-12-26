@@ -29,7 +29,7 @@ export class KinoaSalatComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Салат з кіноа - 230г',
+      'name': 'Салат з кіноа - 230 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 78,
       'imageUrl': '../../../../assets/img/restourant/salaty/kinoa-salat.jpg'
@@ -39,7 +39,7 @@ export class KinoaSalatComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Салат з кіноа - 230г",
+        name:"Салат з кіноа - 230 г",
         price: this.item*78 || 78,
         pieces: (this.item*78 || 78)/78,
         imageUrl: "../../../../assets/img/restourant/salaty/kinoa-salat.jpg"

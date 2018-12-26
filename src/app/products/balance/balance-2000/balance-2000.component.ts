@@ -44,8 +44,8 @@ export class Balance2000Component implements OnInit {
       'id': 2000,
       'name': 'Баланс - 2000 ккал',
       'description': 'Програма для людей, які хочуть правильно харчуватись. У раціоні 5 прийомів їжі на день.',
-      'price': 1200,
-      'dayPrice': 200,
+      'price': 700,
+      'dayPrice': 350,
       'imageUrl': '../../../assets/img/balance-2000.jpg'
     }
   ];

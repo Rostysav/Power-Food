@@ -27,7 +27,7 @@ export class VealBurgerComponent implements OnInit {
   restaurants: IRestaurant[] = [
     {
       'id': 3,
-      'name': 'Бургер з телятиною - 350г',
+      'name': 'Бургер з телятиною - 350 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 146,
       'imageUrl': '../../../../assets/img/restourant/burgers/veal-burger.jpg'
@@ -37,7 +37,7 @@ export class VealBurgerComponent implements OnInit {
   orderProduct() {
     let myArray =
       { id: 2,
-        name:"Бургер з індичкою - 340г",
+        name:"Бургер з телятиною - 350 г",
         price: this.item*146 || 146,
         pieces: (this.item*146 || 146)/146,
         imageUrl: "../../../../assets/img/restourant/burgers/veal-burger.jpg"

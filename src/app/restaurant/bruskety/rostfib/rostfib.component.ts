@@ -29,7 +29,7 @@ export class RostfibComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Брускета з ростбіфом-185г',
+      'name': 'Брускета з ростбіфом - 185 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 94,
       'imageUrl': '../../../../assets/img/restourant/bryskety/brysketa-rostbif.jpg'
@@ -39,7 +39,7 @@ export class RostfibComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Брускета з ростбіфом-185г",
+        name:"Брускета з ростбіфом - 185 г",
         price: this.item*94 || 94,
         pieces: (this.item*94 || 94)/94,
         imageUrl: "../../../../assets/img/restourant/bryskety/brysketa-rostbif.jpg"

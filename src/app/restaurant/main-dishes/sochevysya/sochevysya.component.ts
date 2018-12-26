@@ -29,7 +29,7 @@ export class SochevysyaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Сочевиця зелена -150г',
+      'name': 'Сочевиця зелена - 150 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 41,
       'imageUrl': '../../../../assets/img/restourant/main/lentil.jpg'
@@ -39,7 +39,7 @@ export class SochevysyaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Сочевиця зелена -150г",
+        name:"Сочевиця зелена - 150 г",
         price: this.item*41 || 41,
         pieces: (this.item*41 || 41)/41,
         imageUrl: "../../../../assets/img/restourant/main/dorlentilado.jpg"

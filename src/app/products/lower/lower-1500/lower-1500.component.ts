@@ -45,7 +45,7 @@ export class Lower1500Component implements OnInit {
         'name': 'Зниження - 1500 ккал',
         'description': "Програма для тих, хто хоче схуднути за допомогою правильного харчування і регулярних тренувань. Вона розрахована на 5 прийомів їжі на день.",
         'price': 1200,
-        'dayPrice': 200,
+        'dayPrice': 300,
         'imageUrl': '../../../assets/img/lover-1500.jpg'
       }
   ];

@@ -30,7 +30,7 @@ buttonText = 'Замовити';
   restaurants: IRestaurant[] = [
     {
       'id': 1,
-      'name': 'Ланч №1 - 132/200 г',
+      'name': 'Ланч №1 - 135/200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 138,
       'imageUrl': '../../../../assets/img/restourant/lanch/lanch-1.jpg'
@@ -40,7 +40,7 @@ buttonText = 'Замовити';
   orderProduct() {
     let myArray =
       { id: 3,
-        name:"Ланч №1 - 132/200 г",
+        name:"Ланч №1 - 135/200 г",
         price: this.item*138 || 138,
         pieces: (this.item*138 || 138)/138,
         imageUrl: "../../../../assets/img/restourant/lanch/lanch-1.jpg"

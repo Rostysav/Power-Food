@@ -15,6 +15,9 @@
         <div class="dish-name">
           <p>{{ restaurant.name }}</p>
         </div>
+        <div class="storage">
+          Вівсянка, вишня, смородина, мікс горіхів, фінік, родзинки, банан та кокосове масло
+        </div>
         <div class="nutritional-value">
           <p>Харчова цінність страви (грам):</p>
           <p>білки - <span>12,8</span>; </p>
@@ -23,7 +26,7 @@
           <p>ккал - <span>171</span>;</p>
         </div>
         <div class="dish-price">
-          61грн
+          61 грн/100 г
           <mat-form-field class="example-full-width">
             <input type="number" min="1" max="99" required matInput
                     [(ngModel)]="item" value="1">
@@ -37,9 +40,6 @@
           </a>
           <a *ngIf="makeOrder" [routerLink]="['/order-restaurant']">
             <i class="fa fa-shopping-bag"></i>{{ orderText }}
-          </a>
-          <a id="continue" *ngIf="makeOrder" (click)="continue()">
-            <i class="fa fa-shopping-bag"></i>{{ continueText }}
           </a>
         </div>
       </div>

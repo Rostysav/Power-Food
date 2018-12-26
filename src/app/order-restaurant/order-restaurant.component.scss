@@ -51,6 +51,7 @@
 
   .order-title-wrap {
     z-index: 1;
+    position: relative;
 
     .order-list-title {
       display: grid;
@@ -440,17 +441,29 @@
 }
 
 @media (max-width: 550px) {
-  .dish-container {
-    .dish-price {
-      height: auto;
-      flex-direction: column;
+  .oder {
+    .dish-container {
+      .dish-price {
+        height: auto;
+        flex-direction: column;
+      }
+      .mat-form-field {
+        margin-left: 0;
+        margin: 30px 
+      }
+      .full-price {
+        margin-left: 0;
+      }
     }
-    .mat-form-field {
-      margin-left: 0;
-      margin: 30px 
-    }
-    .full-price {
-      margin-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .oder {
+    .order-title {
+      .col-md-12 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name name' 'price total' 'total-price total-price';
+      }
     }
   }
 }

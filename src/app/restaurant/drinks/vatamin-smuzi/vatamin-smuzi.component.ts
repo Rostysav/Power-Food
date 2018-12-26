@@ -29,9 +29,9 @@ export class VataminSmuziComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Смузі вітамінний -300мл',
+      'name': 'Смузі Вітамінний - 300 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 45,
+      'price': 55,
       'imageUrl': '../../../../assets/img/restourant/smuzi/vitamin-smuzi.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class VataminSmuziComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Смузі вітамінний -300мл",
-        price: this.item*45 || 45,
-        pieces: (this.item*45 || 45)/45,
+        name:"Смузі Вітамінний - 300 мл",
+        price: this.item*55 || 55,
+        pieces: (this.item*55 || 55)/55,
         imageUrl: "../../../../assets/img/restourant/smuzi/vitamin-smuzi.jpg"
       };
     let get_item = [];

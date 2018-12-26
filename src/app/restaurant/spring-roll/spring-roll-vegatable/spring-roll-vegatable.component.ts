@@ -29,7 +29,7 @@ export class SpringRollVegatableComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Спрінг-рол овочевий-115г',
+      'name': 'Спрінг-рол овочевий - 115 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 52,
       'imageUrl': '../../../../assets/img/restourant/spring-roll/spring-roll-vegitable.jpg'
@@ -39,7 +39,7 @@ export class SpringRollVegatableComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Спрінг-рол овочевий-115г",
+        name:"Спрінг-рол овочевий - 115 г",
         price: this.item*52 || 52,
         pieces: (this.item*52 || 52)/52,
         imageUrl: "../../../../assets/img/restourant/spring-roll/spring-roll-vegitable.jpg"

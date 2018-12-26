@@ -29,7 +29,7 @@ export class ShrimpSalatComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Салат з креветками - 170г',
+      'name': 'Салат з креветками - 170 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 148,
       'imageUrl': '../../../../assets/img/restourant/salaty/shrimp-salat.jpg'
@@ -39,7 +39,7 @@ export class ShrimpSalatComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Салат з креветками - 170г",
+        name:"Салат з креветками - 170 г",
         price: this.item*148 || 148,
         pieces: (this.item*148 || 148)/148,
         imageUrl: "../../../../assets/img/restourant/salaty/shrimp-salat.jpg"

@@ -29,7 +29,7 @@ export class ParoviKotletyComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Парові котлети з індички та шпинату-285г',
+      'name': 'Парові котлетки з індички та шпинату - 285 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 104,
       'imageUrl': '../../../../assets/img/restourant/main/chops.jpg'
@@ -39,7 +39,7 @@ export class ParoviKotletyComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Парові котлети з індички та шпинату-285г",
+        name:"Парові котлетки з індички та шпинату - 285 г",
         price: this.item*104 || 104,
         pieces: (this.item*104 || 104)/104,
         imageUrl: "../../../../assets/img/restourant/main/chops.jpg"

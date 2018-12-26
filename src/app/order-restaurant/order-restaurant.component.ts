@@ -46,8 +46,6 @@ export class OrderRestaurantComponent implements OnInit {
         Validators.maxLength(3)]),
       'room': new FormControl('', [Validators.required, Validators.minLength(1),
         Validators.maxLength(3)]),
-      'delivery': new FormControl('', Validators.required),
-      'datepicker': new FormControl('', Validators.required),
       'payment': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
     });
@@ -98,8 +96,8 @@ export class OrderRestaurantComponent implements OnInit {
         array_new['address_customer']= form.value.address;
         array_new['house']= form.value.house;
         array_new['room']= form.value.room;
-        array_new['delivery']= form.value.delivery;
-        array_new['datepicker']= form.value.datepicker;
+        // array_new['delivery']= form.value.delivery;
+        // array_new['datepicker']= form.value.datepicker;
         array_new['payment']= form.value.payment;
         array_new['name_customer'] = form.value.name;
         array_new['price'] = summ;

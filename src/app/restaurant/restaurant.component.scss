@@ -51,6 +51,12 @@
 	.mat-tab-label-content {
 		color: #000;
   }
+
+  .mat-tab-label-active {
+	.mat-tab-label-content {
+		color: #fff;
+	}
+  }
   
   .buy-link {
     display: flex;
@@ -270,7 +276,7 @@
 	}
 }
 
-@media(max-width: 576px) {
+@media(max-width: 575px) {
 	.restaurant {
 		margin-top: 80px;
 

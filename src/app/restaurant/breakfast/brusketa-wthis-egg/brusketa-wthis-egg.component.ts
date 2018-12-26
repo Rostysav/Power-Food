@@ -29,7 +29,7 @@ export class BrusketaWthisEggComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Брускета з яйцем пашот-200г',
+      'name': 'Брускета з яйцем пашот - 200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 78,
       'imageUrl': '../../../../assets/img/restourant/breakfast/brusketa-whis-egg.jpg'
@@ -39,7 +39,7 @@ export class BrusketaWthisEggComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Брускета з яйцем пашот-200г",
+        name:"Брускета з яйцем пашот - 200 г",
         price: this.item*78 || 78,
         pieces: (this.item*78 || 78)/78,
         imageUrl: "../../../../assets/img/restourant/breakfast/brusketa-whis-egg.jpg"

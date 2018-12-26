@@ -29,7 +29,7 @@ export class PumpkinSoupComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Суп Гарбузовий-310г',
+      'name': 'Суп гарбузовий - 310 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 62,
       'imageUrl': '../../../../assets/img/restourant/soup/pumpkin-soup.jpg'
@@ -39,7 +39,7 @@ export class PumpkinSoupComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Суп Гарбузовий-310г",
+        name:"Суп гарбузовий - 310 г",
         price: this.item*62 || 62,
         pieces: (this.item*62 || 62)/62,
         imageUrl: "../../../../assets/img/restourant/soup/pumpkin-soup.jpg"

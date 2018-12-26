@@ -29,7 +29,7 @@ export class BeetSalatComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Салат з печеного буряка з ростбіфом - 230г',
+      'name': 'Салат з ростбіфом та печеним буряком - 230 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 102,
       'imageUrl': '../../../../assets/img/restourant/salaty/beet-salat.jpg'
@@ -39,7 +39,7 @@ export class BeetSalatComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Салат з печеного буряка з ростбіфом - 230г",
+        name:"Салат з ростбіфом та печеним буряком - 230 г",
         price: this.item*102 || 102,
         pieces: (this.item*102 || 102)/102,
         imageUrl: "../../../../assets/img/restourant/salaty/beet-salat.jpg"

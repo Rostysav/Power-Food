@@ -29,7 +29,7 @@ export class BylgyrSalatComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Салат з булгуру - 200г',
+      'name': 'Салат з індичкою та булгуру - 200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 88,
       'imageUrl': '../../../../assets/img/restourant/salaty/bylgyr-salat.jpg'
@@ -39,7 +39,7 @@ export class BylgyrSalatComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Салат з булгуру - 200г",
+        name:"Салат з індичкою та булгуру - 200 г",
         price: this.item*88 || 88,
         pieces: (this.item*88 || 88)/88,
         imageUrl: "../../../../assets/img/restourant/salaty/bylgyr-salat.jpg"

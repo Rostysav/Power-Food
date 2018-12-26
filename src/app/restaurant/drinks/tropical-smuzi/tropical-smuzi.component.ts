@@ -29,9 +29,9 @@ export class TropicalSmuziComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Смузі тропічний-300мл',
+      'name': 'Смузі тропічний - 300 мл',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
-      'price': 56,
+      'price': 59,
       'imageUrl': '../../../../assets/img/restourant/smuzi/tropical-smuzi.jpg'
     }
   ];
@@ -39,9 +39,9 @@ export class TropicalSmuziComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Смузі тропічний-300мл",
-        price: this.item*56 || 56,
-        pieces: (this.item*56 || 56)/56,
+        name:"Смузі тропічний - 300 мл",
+        price: this.item*59 || 59,
+        pieces: (this.item*59 || 59)/59,
         imageUrl: "../../../../assets/img/restourant/smuzi/tropical-smuzi.jpg"
       };
     let get_item = [];

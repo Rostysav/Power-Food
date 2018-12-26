@@ -29,7 +29,7 @@ export class PanaKotaComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Протеїнова пана-кота з полуничним кюлі -170г',
+      'name': 'Протеїнова пана-кота з фруктовим кюлі - 170 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 53,
       'imageUrl': '../../../../assets/img/restourant/desserts/pana-cota.jpg'
@@ -39,7 +39,7 @@ export class PanaKotaComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Протеїнова пана-кота з полуничним кюлі -170г",
+        name:"Протеїнова пана-кота з фруктовим кюлі - 170 г",
         price: this.item*53 || 53,
         pieces: (this.item*53 || 53)/53,
         imageUrl: "../../../../assets/img/restourant/desserts/pana-cota.jpg"

@@ -29,7 +29,7 @@ export class ThirdLanchComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 6,
-      'name': 'Ланч N3 132/200г з 12:00 - 15:00',
+      'name': 'Ланч №3 - 135/200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 138,
       'imageUrl': '../../../../assets/img/restourant/lanch/lanch-3.jpg'
@@ -39,7 +39,7 @@ export class ThirdLanchComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Ланч N3 132/200г з 12:00 - 15:00",
+        name:"Ланч №3 - 135/200 г",
         price: this.item*138 || 138,
         pieces: (this.item*138 || 138)/138,
         imageUrl: "../../../../assets/img/restourant/lanch/lanch-3.jpg"

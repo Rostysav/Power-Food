@@ -29,7 +29,7 @@ export class OmeletComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 7,
-      'name': 'Омлет шпинатний - 180г',
+      'name': 'Омлет шпинатний - 180 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 59,
       'imageUrl': '../../../../assets/img/restourant/breakfast/omelet.jpg'
@@ -39,7 +39,7 @@ export class OmeletComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Омлет шпинатний - 180г",
+        name:"Омлет шпинатний - 180 г",
         price: this.item*59 || 59,
         pieces: (this.item*59 || 59)/59,
         imageUrl: "../../../../assets/img/restourant/breakfast/omelet.jpg"

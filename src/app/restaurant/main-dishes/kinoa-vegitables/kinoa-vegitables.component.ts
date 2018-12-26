@@ -29,7 +29,7 @@ export class KinoaVegitablesComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Кіноа з овочами -200г',
+      'name': 'Кіноа з овочами - 200 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 73,
       'imageUrl': '../../../../assets/img/restourant/main/kinoa-vegitables.jpg'
@@ -39,7 +39,7 @@ export class KinoaVegitablesComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Кіноа з овочами -200г",
+        name:"Кіноа з овочами - 200 г",
         price: this.item*73 || 73,
         pieces: (this.item*73 || 73)/73,
         imageUrl: "../../../../assets/img/restourant/main/kinoa-vegitables.jpg"

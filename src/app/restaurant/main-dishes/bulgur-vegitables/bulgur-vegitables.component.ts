@@ -29,7 +29,7 @@ export class BulgurVegitablesComponent implements OnInit, OnChanges {
   restaurants: IRestaurant[] = [
     {
       'id': 15,
-      'name': 'Булгур з овочами-210г',
+      'name': 'Булгур з овочами - 210 г',
       'description': 'Рівномірне співвідношення білків і вуглеводів та оптимальна кількість жирів сприяють підтримці комфортної ваги. Продуманий раціон дозволяє отримати близько 2000 ккал на добу.',
       'price': 58,
       'imageUrl': '../../../../assets/img/restourant/main/bulgur-vegitables.jpg'
@@ -39,7 +39,7 @@ export class BulgurVegitablesComponent implements OnInit, OnChanges {
   orderProduct() {
     let myArray =
       { id: 1,
-        name:"Булгур з овочами-210г",
+        name:"Булгур з овочами - 210 г",
         price: this.item*58 || 58,
         pieces: (this.item*58 || 58)/58,
         imageUrl: "../../../../assets/img/restourant/main/bulgur-vegitables.jpg"
