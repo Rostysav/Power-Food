@@ -1,7 +1,7 @@
 <div class="catalog section">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" *ngFor="let c of catalog" class="catalog-wrap-title">
+      <div class="col-md-12 catalog-wrap-title" *ngFor="let c of catalog">
         <h3>{{ c.title | uppercase}}</h3>
         <p>{{ c.description}}</p>
         <mat-tab-group>
