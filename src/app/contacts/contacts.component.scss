@@ -40,3 +40,14 @@
 		}
 	}
 }
+
+@media (max-width: 480px) {
+	.contacts { 
+		margin-top: 50px;
+		.left-side {
+			a, p {
+				font-size: 16px;
+			}
+		}
+	}
+}

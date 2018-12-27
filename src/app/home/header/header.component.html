@@ -84,11 +84,11 @@
 			<div class="mobile-menu-open" [ngClass]="{'mobile-menu':mobileNav}">
 				
 				<div class="mobile-carts">
-					<div class="cart restourant-cart" [routerLink]='["order-restaurant"]'>
+					<div class="cart restourant-cart" [routerLink]='["order-restaurant"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
 						<img src="../../../assets/img/shopping-cart.png">
 						<p>Корзина ресторану</p>
 					</div>
-					<div class="cart ration-cart" [routerLink]='["order"]'>
+					<div class="cart ration-cart" [routerLink]='["order"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
 						<p>Корзина раціонів</p>
 						<img src="../../../assets/img/shopping-cart.png">
 					</div>
@@ -102,12 +102,12 @@
 					</li>
 					<li>
 						<a [routerLink]='["restaurant"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
-							Доставка з меню ресторану
+							Ресторан
 						</a>
 					</li>
 					<li>
 						<a [routerLink]='["ration"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
-							Доставка збалансованих раціонів
+							Раціони
 						</a>
 					</li>
 					<li>

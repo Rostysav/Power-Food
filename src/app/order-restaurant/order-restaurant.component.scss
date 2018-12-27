@@ -17,7 +17,7 @@
   }
 
   a {
-    color: #F0544F;
+    color: #88AB31;
     transition: .3s;
     position: relative;
     opacity: .7;
@@ -147,6 +147,11 @@
       svg {
         width: 20px;
         height: 20px;
+
+        path {
+          fill: #88AB31 !important;
+          stroke: #88AB31;
+        }
       }
     }
 
@@ -178,7 +183,7 @@
     // border-bottom: 1px solid #8c8b8b;
 
     p {
-      color: #F0544F;
+      color: #88AB31;
       width: auto;
       // margin-left: 15px;
     }
@@ -280,7 +285,7 @@
     width: 100%;
 
     .submit-btn {
-      background: #F0544F;
+      background: #88AB31;
       font-size: 21px;
       padding: 10px 25px;
       border-radius: 90px;
@@ -306,7 +311,7 @@
     }
 
     .remove-order, .continue-order {
-      background: #F0544F;
+      background: #88AB31;
       font-size: 21px;
       padding: 10px 25px;
       border-radius: 90px;
