@@ -50,7 +50,7 @@
 		}
 		
 		.title-wrap {
-			margin-bottom: -100px;
+			// margin-bottom: -100px;
 		}
 
     a {
@@ -80,16 +80,17 @@
 				width: 100%;
 				margin-top: 30px;
 				max-width: none;
-				// width: calc(100% + 60px);
-				-webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
-				transition: opacity 0.35s, transform 0.45s;
+
+				-webkit-filter: blur(0);
+				filter: blur(0);
 			}
 
 			&:hover {
 				color: #fff;
+				z-index: 3;
 
 				p {
-					background: transparent;
+					background: rgba(0,0,0, .6);
 					transition: .3s;
 					-o-transition: .3s;
 					-moz-transition: .3s;
@@ -97,10 +98,10 @@
 				}
 
 				img {
-					opacity: 0.6;
-					filter: alpha(opacity=60);
-					// -webkit-transform: translate3d(40px,0,0);
-					// transform: translate3d(40px,0,0);
+					-webkit-filter: blur(3px);
+					filter: blur(3px);
+					-webkit-transition: .3s ease-in-out;
+					transition: .3s ease-in-out;
 				}
 			}
 		}
@@ -112,19 +113,6 @@
 		}
 	}
 
-	.restourant {
-
-		img {
-			transform: rotate(30deg);
-		}
-	}
-
-	.ration {
-
-		img {
-			transform: rotate(-30deg);
-		}
-	}
 }
 
 @media(max-width: 992px) {
