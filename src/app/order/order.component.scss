@@ -16,7 +16,7 @@
   }
 
   a {
-    color: #F0544F;
+    color: #88AB31;
     transition: .3s;
     position: relative;
     opacity: .7;
@@ -107,7 +107,7 @@
       display: flex;
       justify-content: center;
       font-size: 18px;
-      color: #F0544F;
+      color: #88AB31;
       margin-left: 0;
     }
     span {
@@ -131,7 +131,7 @@
     margin-left: 0;
 
     p {
-      color: #F0544F;
+      color: #88AB31;
       width: auto;
       margin-left: 15px;
     }
@@ -243,7 +243,7 @@
     width: 100%;
 
     .submit-btn {
-      background: #F0544F;
+      background: #88AB31;
       font-size: 21px;
       padding: 10px 25px;
       border-radius: 90px;
@@ -352,9 +352,9 @@
 @media (max-width: 767px) {
   .oder {
 
-    .order-item {
-      padding: 50px 0;
-    }
+    // .order-item {
+    //   padding: 50px 0;
+    // }
 
     .order-title {
       flex-direction: column;
