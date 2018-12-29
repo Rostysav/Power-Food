@@ -90,7 +90,7 @@
     z-index: 3;
 
     p {
-      color: #0A0807;
+      color: #000;
       font-size: 18px;
       margin-bottom: 0;
       display: block;
@@ -103,7 +103,12 @@
     // display: flex;
     width: 100%;
     align-items: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+
+    .row {
+      border: 1px solid #ccc;
+      padding: 15px 5px;
+    }
 
     .col-md-12 {
       padding-left: 0;
@@ -112,6 +117,12 @@
       grid-template-columns: 48% 17% 15% 17%;
       grid-gap: 1%;
       align-items: center;
+    }
+
+    & + .order-title {
+      .row {
+        border-top: none;
+      }
     }
   }
 
@@ -142,16 +153,18 @@
     .remove-order {
       background: transparent;
       border: none;
-      margin-top: 15px;
+      cursor: pointer;
+      // margin-top: 25px;
+      // margin-top: 15px;
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
 
-        path {
-          fill: #88AB31 !important;
-          stroke: #88AB31;
-        }
+        // path {
+        //   fill: #88AB31 !important;
+        //   stroke: red;
+        // }
       }
     }
 
@@ -165,7 +178,7 @@
       font-size: 25px
     }
     span {
-      color: #0A0807;
+      color: #000;
       font-size: 25px;
       margin: 0 5px;
       display: block;
@@ -299,7 +312,7 @@
       position: relative;
 
       &:disabled {
-        background: #ccc;
+        background: #88AB31;
         cursor: not-allowed;
         opacity: .7;
 
@@ -311,7 +324,7 @@
     }
 
     .remove-order, .continue-order {
-      background: #88AB31;
+      background: #bfd880;
       font-size: 21px;
       padding: 10px 25px;
       border-radius: 90px;
@@ -322,7 +335,7 @@
       height: 50px;
       box-sizing: border-box;
       cursor: pointer;
-      margin-bottom: 30px;
+      margin-top: 30px;
     }
     .continue-order {
       background: #F89406;
@@ -362,6 +375,26 @@
       }
     }
   }
+
+  // .phone-input {
+  //   .mat-form-field {
+  //     .mat-form-field-infix {
+  //       left: -30px;
+  //     }
+  //     .mat-form-field-label {
+  //       margin-left: 30px;
+  //     }
+  //     .mat-input-element {
+  //       margin-left: 30px;
+  //     }
+  //   }
+  //   .mat-form-field.mat-focused {
+  //     .mat-form-field-label {
+  //       left: -22px;
+  //       z-index: 2;
+  //     }
+  //   } 
+  // }
 
 }
 

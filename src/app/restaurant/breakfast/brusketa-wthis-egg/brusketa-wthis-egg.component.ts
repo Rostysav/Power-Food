@@ -51,8 +51,8 @@ export class BrusketaWthisEggComponent implements OnInit, OnChanges {
       localStorage.setItem('restaurant', JSON.stringify([myArray]));
       this.toastService.showToast(
         'success',
-        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} одиниць додано!`,
-        3000);
+        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} шт. додано!`,
+        5000);
       this.makeOrder = true;
     }
     else {
@@ -63,8 +63,8 @@ export class BrusketaWthisEggComponent implements OnInit, OnChanges {
       localStorage.setItem('restaurant', JSON.stringify(get_item));
       this.toastService.showToast(
         'success',
-        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} одиниць додано!`,
-        3000);
+        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} шт. додано!`,
+        5000);
       this.makeOrder = true;
     }
   }

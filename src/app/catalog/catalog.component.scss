@@ -51,7 +51,7 @@
 
     a {
       font-size: 21px;
-      color: #F0544F;
+      color: #88AB31;
       -webkit-transition: .3s;
       transition: .3s;
       display: flex;
@@ -61,7 +61,7 @@
       &:hover {
         -webkit-transition: 3s;
         transition: 3s;
-        color: red;
+        color: green;
 
         &::after {
           width: 100%;

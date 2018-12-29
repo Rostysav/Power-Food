@@ -347,7 +347,7 @@ button {
   border: 1px solid rgba(0,0,0, .2);
 
   .program-title {
-    color: #0A0807;
+    color: #000;
     font-size: 30px;
     // margin-bottom: 30px;
     display: flex;
@@ -366,7 +366,7 @@ button {
 
 
   p {
-    color: #0A0807;
+    color: #000;
     display: block;
     margin-bottom: 10px;
   }
@@ -387,7 +387,8 @@ button {
     .days {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      // align-items: flex-start;
+      align-items: center;
       position: relative;
       p {
         margin-bottom: 0;
@@ -395,7 +396,7 @@ button {
       select {
         padding: 5px 45px 5px 15px;
         border-radius: 5px;
-        color: #0A0807;
+        color: #000;
         position: relative;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -417,7 +418,8 @@ button {
         z-index: 0;
       }
       .mat-form-field {
-        width: 90px;
+        // width: 90px;
+        display: none;
       }
       .mat-option-text {
         text-align: center;
@@ -436,7 +438,7 @@ button {
   }
 
   .program-anons {
-    color: #0A0807;
+    color: #000;
     line-height: 20px;
     margin-bottom: 50px;
     text-align: left;
@@ -471,7 +473,7 @@ button {
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #0A0807;;
+      border: 1px solid #000;
       border-radius: 90%;
       width: 50px;
       height: 50px;
@@ -556,7 +558,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #0A0807;;
+    border: 1px solid #000;
     border-radius: 90%;
     width: 50px;
     height: 50px;
@@ -1017,6 +1019,13 @@ button {
       margin-left: 0;
       text-align: center;
       justify-content: center;
+      flex-direction: column;
+      height: auto;
+
+      .mat-form-field {
+        margin-left: 0;
+        margin-top: 30px;
+      }
     }
 
     .full-price {
@@ -1353,3 +1362,4 @@ button {
 //   overflow: visible;
 //   opacity: 1;
 // }
+
