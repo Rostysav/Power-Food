@@ -52,7 +52,7 @@ export class PeasSoupComponent implements OnInit
       localStorage.setItem('restaurant', JSON.stringify([myArray]));
       this.toastService.showToast(
         'success',
-        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} одиниць додано!`,
+        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} шт. додано!`,
         3000);
       this.makeOrder = true;
     }
@@ -64,7 +64,7 @@ export class PeasSoupComponent implements OnInit
       localStorage.setItem('restaurant', JSON.stringify(get_item));
       this.toastService.showToast(
         'success',
-        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} одиниць додано!`,
+        `Замовлення на ${myArray.name} кількістю ${myArray.pieces} шт. додано!`,
         3000);
       this.makeOrder = true;
     }

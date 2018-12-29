@@ -49,6 +49,14 @@
 			font-weight: normal;
 		}
 
+		.title-wrap {
+			h2 {
+				& + h2 {
+					margin-top: 10px;
+				}
+			}
+		}
+
 
     a {
 			display: flex;
@@ -262,7 +270,7 @@
 
 .program {
 	position: relative;
-	background: #0A0807;
+	background: #000;
 
 	.row {
 		overflow: hidden;
@@ -286,7 +294,7 @@
 		background: #fff;
 
 		.program-title {
-			color: #0A0807;
+			color: #000;
 			font-size: 30px;
 			margin-bottom: 15px;
 			display: block;
@@ -297,7 +305,7 @@
 		}
 
 		p {
-			color: #0A0807;
+			color: #000;
 			display: block;
 			margin-bottom: 10px;
 		}
@@ -316,7 +324,7 @@
 
 			.buy-link {
 				a {
-					background: #F0544F;
+					background: #88AB31;
 					font-size: 21px;
 					padding: 10px 25px;
 					border-radius: 90px;
@@ -325,7 +333,7 @@
 
 					&:hover {
 						transition: 3s;
-						background: red;
+						background: green;
 						border-bottom: none;
 					}
 
@@ -342,7 +350,7 @@
 				select {
 					padding: 5px 45px 5px 15px;
 					border-radius: 5px;
-					color: #0A0807;
+					color: #000;
 					position: relative;
 					-webkit-appearance: none;
 					-moz-appearance: none;
@@ -355,7 +363,7 @@
 				}
 				.fa {
 					position: absolute;
-					color: #F0544F;
+					color: #88AB31;
 					right: 15px;
 					font-size: 18px;
 					font-weight: bold;
@@ -371,7 +379,7 @@
 		}
 
 		.program-anons {
-			color: #0A0807;
+			color: #000;
 			line-height: 20px;
 			margin-bottom: 50px;
 			text-align: left;

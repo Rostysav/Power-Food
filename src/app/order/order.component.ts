@@ -51,8 +51,8 @@ export class OrderComponent implements OnInit {
         Validators.maxLength(3)]),
       'room': new FormControl('', [Validators.required, Validators.minLength(1),
         Validators.maxLength(3)]),
-      'delivery': new FormControl('', Validators.required),
-      'datepicker': new FormControl('', Validators.required),
+      // 'delivery': new FormControl('', Validators.required),
+      // 'datepicker': new FormControl('', Validators.required),
       'payment': new FormControl('', Validators.required),
       // 'checkbox': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
@@ -139,6 +139,7 @@ export class OrderComponent implements OnInit {
       this.router.navigate(['/home']);
     }, 1500);
   }
+  
 
 
 }
