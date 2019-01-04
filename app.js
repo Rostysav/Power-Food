@@ -34,8 +34,6 @@ app.post('/send', (req, res) => {
       <li>квартира: ${req.body.room}</li>
       <li>Телефон: +38 ${req.body.phone}</li>
       <li>Продукт: ${req.body.name_product}</li>
-      <li>Час доставки: ${req.body.delivery} година</li>
-      <li>Дата доставки: ${req.body.datepicker} година</li>
       <li>Вибір оплати: ${req.body.payment}</li>
       <li>Ціна: ${req.body.price} грн</li>
     </ul>
@@ -79,13 +77,11 @@ app.post('/send', (req, res) => {
 app.post('/send-restaurant', (req, res) => {
   console.log('debug data ', JSON.stringify(req.body.name_product));
   const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
+    <p>У вас нове замовлення</p>
+    <h3>Деталі замовлення</h3>
     <ul>
       <li>Імя клієнта: ${req.body.name_customer}</li>
       <li>Адреса доставки: ${req.body.address_customer}</li>
-      <li>Час доставки: ${req.body.delivery} година</li>
-      <li>Дата доставки: ${req.body.datepicker} година</li>
       <li>будинок: ${req.body.house}</li>
       <li>квартира: ${req.body.room}</li>
       <li>Телефон: +38 ${req.body.phone}</li>
@@ -102,17 +98,17 @@ app.post('/send-restaurant', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: '', // generated ethereal user
+      user: 'powerfood.deliv.rest@gmail.com', // generated ethereal user
       pass: ''  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false // only for localhost, need to be removed in production
     }
+    // tls:{
+    //   rejectUnauthorized:false // only for localhost, need to be removed in production
+    // }
   });
 
 // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Nodemailer Contact"', // sender address
+    from: '"Nodemailer Contact" <powerfood.deliv.rest@gmail.com>', // sender address
     to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
@@ -124,8 +120,8 @@ app.post('/send-restaurant', (req, res) => {
     if (error) {
       return console.log(error);
     }
-    console.log('Message sent: %s', info.messageId);
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    // console.log('Message sent: %s', info.messageId);
+    // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
   });
 });
@@ -150,10 +146,10 @@ app.post('/callback', (req, res) => {
     auth: {
       user: '', // generated ethereal user
       pass: ''  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false // only for localhost, need to be removed in production
     }
+    // tls:{
+    //   rejectUnauthorized:false // only for localhost, need to be removed in production
+    // }
   });
 
 // setup email data with unicode symbols
@@ -177,4 +173,3 @@ app.post('/callback', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server started...'));
-

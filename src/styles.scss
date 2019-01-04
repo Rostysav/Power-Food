@@ -1363,3 +1363,59 @@ button {
 //   opacity: 1;
 // }
 
+// .mat-form-field-hide-placeholder .mat-input-element::-webkit-input-placeholder {
+//     color: transparent!important;
+//     -webkit-text-fill-color: transparent;
+//     transition: none;
+// }
+
+.dish-container {
+
+  .mat-form-field-hide-placeholder {
+    .mat-input-element {
+      &::-webkit-input-placeholder {
+        color: #88AB31 !important;
+        -webkit-text-fill-color: #88AB31;
+        transition: none;
+      }
+    }
+  }
+
+  .mat-form-field.mat-focused {
+    .mat-input-element {
+      &::-webkit-input-placeholder {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent;
+        transition: none;
+      }
+    }
+  }
+
+  .mat-form-field-can-float.mat-form-field-should-float {
+    .mat-form-field-label {
+      display: none;
+    }
+  }
+
+  .mat-form-field-invalid {
+    .mat-input-element{
+      caret-color: #88AB31;
+    }
+  }
+  .mat-warn {
+    .mat-input-element {
+      caret-color: #88AB31;
+    }
+  } 
+
+  .mat-form-field.mat-form-field-invalid {
+    .mat-form-field-ripple {
+      background-color: #88AB31;
+    }
+  }
+  .mat-form-field.mat-form-field-invalid {
+    .mat-form-field-ripple.mat-accent {
+      background-color: #88AB31;
+    }
+  }
+}

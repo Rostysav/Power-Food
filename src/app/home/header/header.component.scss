@@ -58,7 +58,13 @@ header {
 				  color: rgba(255,255,255, 1);
 			  transition: .3s;
 			  }
-		  }
+			}
+			
+			.ration-link {
+				pointer-events: none;
+				cursor: default;
+				opacity: .5;
+			}
 	  }
   
 	  .nav-left {
@@ -102,7 +108,7 @@ header {
 					  text-transform: uppercase;
 				  }
 		  }
-		  }
+			}
 		  
 		  .cart {
 			  cursor: pointer;
@@ -146,7 +152,13 @@ header {
 			  align-items: center;
 			  justify-content: center;
 			 }
-		  }
+			}
+			
+			.ration-cart {
+				pointer-events: none;
+				cursor: default;
+				opacity: .5;
+			}
 		  
 		  .cart {
 			  margin-left: 30px;
@@ -560,6 +572,12 @@ header {
 
 				a {
 					font-size: 40px;
+				}
+
+				.ration-cart {
+					pointer-events: none;
+					cursor: default;
+					opacity: .5;
 				}
 			}
 		}

@@ -29,7 +29,7 @@
           55 грн
           <mat-form-field class="example-full-width">
             <input type="number" min="1" max="99" required matInput
-                    [(ngModel)]="item" value="1">
+                    [(ngModel)]="item" value="1" placeholder="1">
           </mat-form-field>
           <p *ngIf="item" class="full-price">Загальна сума: <span>{{ item * 55 }} грн</span> </p>
         </div>
