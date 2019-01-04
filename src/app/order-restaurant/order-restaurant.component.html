@@ -174,32 +174,32 @@
               <div class="col-md-6 offset-md-3 col-sm-12 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Вулиця"
-                         formControlName="address" name="address"
+                         name="address"
                          pattern="[\u0400-\u04ff][\u0400-\u04ff ]+">
-                  <mat-error *ngIf="myRestaurantForm.get('address').invalid &&
+                  <!-- <mat-error *ngIf="myRestaurantForm.get('address').invalid &&
                    (myRestaurantForm.get('address').dirty || myRestaurantForm.get('address').touched)">
                     Введіть вулицю (не менше трьох літер, не використовуючи цифр)
-                  </mat-error>
+                  </mat-error> -->
                 </mat-form-field>
               </div>
               <div class="col-md-3 offset-md-3 col-sm-6 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Номер будинку"
-                         formControlName="house" name="house">
-                  <mat-error *ngIf="myRestaurantForm.get('house').invalid &&
+                         name="house">
+                  <!-- <mat-error *ngIf="myRestaurantForm.get('house').invalid &&
                    (myRestaurantForm.get('house').dirty || myRestaurantForm.get('house').touched)">
                     Номер будинку (не менше однієї і не більше трьох цифр)
-                  </mat-error>
+                  </mat-error> -->
                 </mat-form-field>
               </div>
               <div class="col-md-3 col-sm-6 sex">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Номер квартири"
-                         formControlName="room" name="room">
-                  <mat-error *ngIf="myRestaurantForm.get('room').invalid &&
+                         name="room">
+                  <!-- <mat-error *ngIf="myRestaurantForm.get('room').invalid &&
                    (myRestaurantForm.get('room').dirty || myRestaurantForm.get('room').touched)">
                     Номер квартири (не менше однієї і не більше трьох цифр)
-                  </mat-error>
+                  </mat-error> -->
                 </mat-form-field>
               </div>
             </div>
@@ -243,7 +243,7 @@
           <div class="container form-price">
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
-                <mat-radio-group formControlName="payment">
+                <mat-radio-group>
                   <!-- <mat-radio-button value="Онлайн оплата">Онлайн оплата</mat-radio-button> -->
                   <mat-radio-button value="Готівка курєру">Готівкою кур’єру</mat-radio-button>
                 </mat-radio-group>
@@ -255,7 +255,7 @@
             <div class="row">
               <div class="col-md-6 offset-md-3 col-sm-12">
                 <div class="price sum-price">
-                  <span>Загальна ціна:</span>
+                  <span>Загальна сума:</span>
                   <p>{{total}} грн</p>
                 </div>
               </div>

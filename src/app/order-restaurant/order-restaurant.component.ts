@@ -40,13 +40,6 @@ export class OrderRestaurantComponent implements OnInit {
     this.myRestaurantForm = new FormGroup({
       'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-      'address': new FormControl('', [Validators.required, Validators.minLength(3),
-        Validators.maxLength(25)]),
-      'house': new FormControl('', [Validators.required, Validators.minLength(1),
-        Validators.maxLength(3)]),
-      'room': new FormControl('', [Validators.required, Validators.minLength(1),
-        Validators.maxLength(3)]),
-      'payment': new FormControl('', Validators.required),
       'honeypot': new FormControl('')
     });
 
@@ -124,9 +117,9 @@ export class OrderRestaurantComponent implements OnInit {
     }
   }
 
-  redirectToThxPage(): any {
-    setTimeout(this.router.navigate(['/thx-page']), 5000);
-  }
+  // redirectToThxPage(): any {
+  //   setTimeout(this.router.navigate(['/thx-page']), 5000);
+  // }
 
   onlyNumberKey(event) {
     return (event.charCode == 8 || event.charCode == 0)

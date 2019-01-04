@@ -1,6 +1,8 @@
 footer {
 	background: #000;
 	padding: 30px 0;
+	position: relative;
+	z-index: 9;
 	// border-top: 1px solid #fff;
 
 	.row {
@@ -49,7 +51,7 @@ footer {
 		
 		.footer-soc {
 			display: flex;
-			margin-bottom: 15px;
+			// margin-bottom: 15px;
 
 			.fa {
 				width: 30px;
