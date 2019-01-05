@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IRestaurant } from "../restaurant/restaurant";
 import { ToastService } from "../service/toastr.service";
-import {Time} from "../order/order.component";
+import { Time } from "../order/order.component";
 
 @Component({
   selector: 'pf-order',
@@ -67,11 +67,6 @@ export class OrderRestaurantComponent implements OnInit {
     if (this.validateHuman(this.myRestaurantForm.get('honeypot').touched)) {  //if form is filled, form will not be submitted
       return false;
     }
-    this.toastService.showToast(
-      'success',
-      `Замовлення відправлено!`,
-      3000);
-    console.log("Form Submitted!");
 
     // RESTAURANT
     if (localStorage.getItem('restaurant')) {
@@ -79,54 +74,44 @@ export class OrderRestaurantComponent implements OnInit {
     }
 
     if (localStorage.getItem('restaurant')) {
-      // for (let i = 0; i < restItem; i++) {
-        let order_rest = JSON.parse(localStorage.getItem('restaurant'));
-        // console.log('json: ', order_rest);
-        let summ = 0;
-        let product = [];
-        order_rest.forEach(function(element) {
-          summ += element.price;
-          // product[element.name] = "count " + element.pieces + ' price ' + element.price;
-          product.push({name: element.name, piece : element.pieces, price: element.price});
-          console.log('suma ',summ);
-          console.log(product);
+      let order_rest = JSON.parse(localStorage.getItem('restaurant'));
+      let summ = 0;
+      let product = [];
+      order_rest.forEach(function(element) {
+        summ += element.price;
+        product.push({name: element.name, piece : element.pieces, price: element.price});
+      });
+      let array_new = {};
+      array_new['phone'] = form.value.mobile;
+      array_new['address_customer'] = form.value.address;
+      array_new['house'] = form.value.house;
+      array_new['room'] = form.value.room;
+      array_new['payment'] = form.value.payment;
+      array_new['name_customer'] = form.value.name;
+      array_new['price'] = summ;
+      array_new['name_product'] = product;
+      const headers = new HttpHeaders()
+        .set('Authorization', 'my-auth-token')
+        .set('Content-Type', 'application/json');
+
+      this.http.post('http://127.0.0.1:3000/send-restaurant', JSON.stringify(array_new), {
+        headers: headers
+      })
+        .subscribe(data => {
+          console.log('form data: ', data);
         });
-        let array_new = {};
-        array_new['phone'] = form.value.mobile;
-        array_new['address_customer']= form.value.address;
-        array_new['house']= form.value.house;
-        array_new['room']= form.value.room;
-        // array_new['delivery']= form.value.delivery;
-        // array_new['datepicker']= form.value.datepicker;
-        array_new['payment']= form.value.payment;
-        array_new['name_customer'] = form.value.name;
-        array_new['price'] = summ;
-        array_new['name_product'] = product;
-        // console.log(array_new);
-        const headers = new HttpHeaders()
-          .set('Authorization', 'my-auth-token')
-          .set('Content-Type', 'application/json');
+      console.log('array_new: ', array_new);
 
-        this.http.post('http://127.0.0.1:3000/send-restaurant', JSON.stringify(array_new), {
-          headers: headers
-        })
-          .subscribe(data => {
-            console.log('form data: ', data);
-          });
-        console.log('array_new: ', array_new);
-
-        form.reset();
-        this.toastService.showToast('success', 'Замовлення прийнято!');
-        // console.log(this.toastService.showToast('success', 'Замовлення прийнято!'));
-        localStorage.clear();
-        setTimeout(this.router.navigate(['/home']), 5000);
-      // }
+      form.reset();
+      this.toastService.showToast('success', 'Замовлення прийнято!');
+      localStorage.clear();
+      setTimeout(this.router.navigate(['/home']), 0);
     }
   }
 
-  redirectToThxPage(): any {
-    setTimeout(this.router.navigate(['/thx-page']), 5000);
-  }
+  // redirectToThxPage(): any {
+  //   setTimeout(this.router.navigate(['/thx-page']), 5000);
+  // }
 
   onlyNumberKey(event) {
     return (event.charCode == 8 || event.charCode == 0)
@@ -161,8 +146,6 @@ export class OrderRestaurantComponent implements OnInit {
       return x.id;
     }).indexOf(id);
 
-    // this.items.id.style.display = 'none';
-
     items.splice(index, 1);
     localStorage.setItem('restaurant', JSON.stringify(items));
     this.restaurant = JSON.parse(localStorage.getItem('restaurant'));
@@ -179,13 +162,4 @@ export class OrderRestaurantComponent implements OnInit {
     console.log('items: ', items);
   }
 
-  // redirectToHomePage() {
-  //   this.toastService.showToast(
-  //     'warning',
-  //     'Ви можете продовжити замовлення і повернутися до корзини в будь-який час!',
-  //     4000);
-  //   setTimeout((x) => {
-  //     this.router.navigate(['/home']);
-  //   }, 1500);
-  // }
 }

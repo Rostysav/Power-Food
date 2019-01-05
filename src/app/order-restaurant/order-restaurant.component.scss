@@ -103,7 +103,7 @@
     // display: flex;
     width: 100%;
     align-items: center;
-    // margin-bottom: 50px;
+
 
     .row {
       border: 1px solid #ccc;
@@ -124,6 +124,10 @@
         border-top: none;
       }
     }
+  }
+
+  .order-form {
+    margin-top: 50px;
   }
 
   .item-name {

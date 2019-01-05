@@ -20,11 +20,12 @@ export class MainComponent implements OnInit {
 
   checkIfWorkingHours() {
     let currentTime = new Date().getHours();
-    if (currentTime >= 22 || currentTime <= 10) {
+    let currentMinutes = new Date().getMinutes();
+    if ((currentTime >= 21 || (currentTime >= 21 && currentMinutes >= 45)) || currentTime <= 8) {
       this.toastService.showToast(
         'warning',
-        `Вибачте, зараз доставка не працює! Ви можете зробити Ваше замовлення, менеджер зв’яжеться з Вами у робочі години`,
-        500000000);
+        `Вибачте, зараз доставка не працює! Ви можете замовити продукти, менеджер зв'яжеться з вами в робочий час!`,
+        5000000);
     }
   }
 }

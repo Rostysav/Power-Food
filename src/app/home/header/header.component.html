@@ -22,7 +22,7 @@
 						</a>
 					</li>
 					<li>
-						<a [routerLink]='["ration"]'>
+						<a class="ration-link">
 							Раціони
 						</a>
 					</li>
@@ -48,7 +48,7 @@
 							<i class="fa fa-instagram"></i>
 						</a>
 					</div>
-					<div class="cart" [routerLink]='["order"]'>
+					<div class="cart ration-cart">
 						<p>Корзина раціонів</p>
 						<img src="../../../assets/img/shopping-cart.png">
 					</div>
@@ -106,7 +106,7 @@
 						</a>
 					</li>
 					<li>
-						<a [routerLink]='["ration"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+						<a class="ration-cart" [routerLink]='["ration"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
 							Раціони
 						</a>
 					</li>
