@@ -98,17 +98,17 @@ app.post('/send-restaurant', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: '', // generated ethereal user
-      pass: ''  // generated ethereal password
+      user: 'rostyslav4yk@gmail.com', // generated ethereal user
+      pass: 'RoSS_2407'  // generated ethereal password
+    },
+    tls:{
+      rejectUnauthorized:false // only for localhost, need to be removed in production
     }
-    // tls:{
-    //   rejectUnauthorized:false // only for localhost, need to be removed in production
-    // }
   });
 
 // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Nodemailer Contact" <powerfood.deliv.rest@gmail.com>', // sender address
+    from: '"Nodemailer Contact" <rostyslav4yk@gmail.com>', // sender address
     to: '', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
