@@ -100,16 +100,16 @@ app.post('/send-restaurant', (req, res) => {
     auth: {
       user: 'rostyslav4yk@gmail.com', // generated ethereal user
       pass: 'RoSS_2407'  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false // only for localhost, need to be removed in production
     }
+    // tls:{
+    //   rejectUnauthorized:false // only for localhost, need to be removed in production
+    // }
   });
 
 // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Nodemailer Contact" <rostyslav4yk@gmail.com>', // sender address
-    to: '', // list of receivers
+    from: '"Nodemailer Contact" <powerfood.deliv.rest@gmail.com>', // sender address
+    to: 'rostyslav4yk@gmail.com', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
@@ -119,12 +119,14 @@ app.post('/send-restaurant', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
+      
     }
     console.log('Message sent: %s', info.messageId);
     // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
   });
-  console.log('response: ', res);
+  // res.catch(err => console.log('ERROR RESPONSE: ', err));
+  res.send('<p>Thank you</p>');
 });
 
 // callback

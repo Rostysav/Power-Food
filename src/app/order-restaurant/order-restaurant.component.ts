@@ -40,7 +40,10 @@ export class OrderRestaurantComponent implements OnInit {
     this.myRestaurantForm = new FormGroup({
       'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-
+      'address': new FormControl(''),
+      'house': new FormControl(''),
+      'room': new FormControl(''),
+      'payment': new FormControl(''),
       'honeypot': new FormControl('')
     });
 
@@ -151,7 +154,7 @@ export class OrderRestaurantComponent implements OnInit {
     }
     this.toastService.showToast(
       'success',
-      `Продукт успішно видалено!`,
+      Продукт успішно видалено!,
       3000);
     console.log('items: ', items);
   }
