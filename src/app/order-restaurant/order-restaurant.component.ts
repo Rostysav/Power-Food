@@ -154,7 +154,7 @@ export class OrderRestaurantComponent implements OnInit {
     }
     this.toastService.showToast(
       'success',
-      Продукт успішно видалено!,
+      `Продукт успішно видалено!`,
       3000);
     console.log('items: ', items);
   }
