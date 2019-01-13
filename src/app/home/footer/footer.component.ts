@@ -57,7 +57,7 @@ export class FooterComponent implements OnInit {
 
     form.reset();
     alert('Менеджер зателефонує вам найближчим часом!');
-    setTimeout(this.router.navigate(['/home']), 5000);
+    setTimeout(this.router.navigate(['/']), 5000);
   }
 
   onlyNumberKey(event) {

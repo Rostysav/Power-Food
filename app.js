@@ -98,8 +98,8 @@ app.post('/send-restaurant', (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: '', // generated ethereal user
-      pass: ''  // generated ethereal password
+      user: 'valdemarrr26@gmail.com', // generated ethereal user
+      pass: '102938qwerty!!!'  // generated ethereal password
     }
     // tls:{
     //   rejectUnauthorized:false // only for localhost, need to be removed in production
@@ -109,7 +109,7 @@ app.post('/send-restaurant', (req, res) => {
 // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact" <powerfood.deliv.rest@gmail.com>', // sender address
-    to: '', // list of receivers
+    to: 'valdemarrr26@gmail.com', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
@@ -124,7 +124,8 @@ app.post('/send-restaurant', (req, res) => {
     // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
   });
-  console.log('response: ', res);
+  // res.catch(err => console.log('ERROR RESPONSE: ', err));
+  res.send('<p>Thank you</p>');
 });
 
 // callback
