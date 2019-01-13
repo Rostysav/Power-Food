@@ -110,7 +110,7 @@ app.post('/send-restaurant', (req, res) => {
   let mailOptions = {
     from: '"Nodemailer Contact" <powerfood.deliv.rest@gmail.com>', // sender address
     to: 'powerfood.deliv.rest@gmail.com', // list of receivers
-    subject: 'Node Contact Request', // Subject line
+    subject: 'У Вас нове замовлення', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
   };
