@@ -40,13 +40,10 @@ export class OrderRestaurantComponent implements OnInit {
     this.myRestaurantForm = new FormGroup({
       'name': new FormControl('', [Validators.required,  Validators.minLength(3)]),
       'mobile': new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-      'address': new FormControl('', [Validators.required, Validators.minLength(3),
-        Validators.maxLength(25)]),
-      'house': new FormControl('', [Validators.required, Validators.minLength(1),
-        Validators.maxLength(3)]),
-      'room': new FormControl('', [Validators.required, Validators.minLength(1),
-        Validators.maxLength(3)]),
-      'payment': new FormControl('', Validators.required),
+      'address': new FormControl(''),
+      'house': new FormControl(''),
+      'room': new FormControl(''),
+      'payment': new FormControl(''),
       'honeypot': new FormControl('')
     });
 
@@ -101,11 +98,13 @@ export class OrderRestaurantComponent implements OnInit {
           console.log('form data: ', data);
         });
       console.log('array_new: ', array_new);
-
+      localStorage.clear();
+      localStorage.removeItem('restaurant');
       form.reset();
       this.toastService.showToast('success', 'Замовлення прийнято!');
-      localStorage.clear();
-      setTimeout(this.router.navigate(['/home']), 0);
+
+      // this.router.navigate(['/home']);
+      setTimeout(this.router.navigate(['/']), 5000);
     }
   }
 
@@ -136,7 +135,7 @@ export class OrderRestaurantComponent implements OnInit {
     localStorage.clear();
     this.toastService.showToast('error', 'Корзину очищено!');
     setTimeout((x) => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }, 1500);
   }
 

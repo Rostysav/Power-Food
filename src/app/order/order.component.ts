@@ -136,10 +136,10 @@ export class OrderComponent implements OnInit {
     localStorage.clear();
     this.toastService.showToast('error', 'Корзину успішно очищено!');
     setTimeout((x) => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }, 1500);
   }
-  
+
 
 
 }
