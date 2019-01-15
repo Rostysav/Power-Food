@@ -19,7 +19,7 @@ function send_restaurant($data){
 	$settings = array (
 		'from_email'    =>  '',
 		'from_name'     =>  'Сайт POWER FOOD',
-		'to'            =>  'rostyslav4yk@gmail.com',
+		'to'            =>  'mail@yandex.ru',
 		'subject'       =>  'Замовлення з меню ресторану',
 		'headers'       =>  "Content-type: text/html; charset=utf-8 \r\n",
 	);
