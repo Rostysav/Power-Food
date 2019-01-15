@@ -101,6 +101,8 @@ import { RiceComponent } from './restaurant/main-dishes/rice/rice.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: MainComponent},
+  {path: '', component: MainComponent},
+  // {path: 'home', component: MainComponent},
   {path: 'order/deliveri', component: DeliveryComponent},
   // {path: 'about', component: AboutCompanyComponent},
   {path: 'ration', component: CatalogComponent},

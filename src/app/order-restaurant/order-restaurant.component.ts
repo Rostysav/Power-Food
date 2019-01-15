@@ -71,26 +71,35 @@ export class OrderRestaurantComponent implements OnInit {
     }
 
     if (localStorage.getItem('restaurant')) {
-      let order_rest = JSON.parse(localStorage.getItem('restaurant'));
-      let summ = 0;
-      let product = [];
-      order_rest.forEach(function(element) {
-        summ += element.price;
-        product.push({name: element.name, piece : element.pieces, price: element.price});
-      });
-      let array_new = {};
-      array_new['phone'] = form.value.mobile;
-      array_new['address_customer'] = form.value.address;
-      array_new['house'] = form.value.house;
-      array_new['room'] = form.value.room;
-      array_new['payment'] = form.value.payment;
-      array_new['name_customer'] = form.value.name;
-      array_new['price'] = summ;
-      array_new['name_product'] = product;
-      const headers = new HttpHeaders()
-        .set('Authorization', 'my-auth-token')
-        .set('Content-Type', 'application/json');
+        let order_rest = JSON.parse(localStorage.getItem('restaurant'));
+        let summ = 0;
+        let product = [];
+        order_rest.forEach(function (element) {
+            summ += element.price;
+            product.push({name: element.name, piece: element.pieces, price: element.price});
+        });
+        let array_new = {};
+        array_new['phone'] = form.value.mobile;
+        array_new['address_customer'] = form.value.address;
+        array_new['house'] = form.value.house;
+        array_new['room'] = form.value.room;
+        array_new['payment'] = form.value.payment;
+        array_new['name_customer'] = form.value.name;
+        array_new['price'] = summ;
+        array_new['name_product'] = product;
+        const headers = new HttpHeaders()
+            .set('Authorization', 'my-auth-token')
+            .set('Content-Type', 'application/json');
 
+
+        //todo: Змінити http.post на ajax-request, адреса: /send.php відправити data
+        // через вказання "'http://127.0.0.1:3000/" ця хрінь працювала при запущеному проекті на локалці
+        // запит оброблявся не сервером, а локальним проектом
+        // todo: Додавання action в ajax-data
+        // data: {
+        //          action: 'send-restaurant',
+        //          data: array_new,
+        //      }
       this.http.post('http://127.0.0.1:3000/send-restaurant', JSON.stringify(array_new), {
         headers: headers
       })
@@ -98,11 +107,13 @@ export class OrderRestaurantComponent implements OnInit {
           console.log('form data: ', data);
         });
       console.log('array_new: ', array_new);
-
+      localStorage.clear();
+      localStorage.removeItem('restaurant');
       form.reset();
       this.toastService.showToast('success', 'Замовлення прийнято!');
-      localStorage.clear();
-      setTimeout(this.router.navigate(['/home']), 0);
+
+      // this.router.navigate(['/home']);
+      setTimeout(this.router.navigate(['/']), 5000);
     }
   }
 
@@ -133,7 +144,7 @@ export class OrderRestaurantComponent implements OnInit {
     localStorage.clear();
     this.toastService.showToast('error', 'Корзину очищено!');
     setTimeout((x) => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }, 1500);
   }
 
