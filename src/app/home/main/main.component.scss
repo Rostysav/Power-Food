@@ -36,17 +36,19 @@
 			padding-bottom: 50px;
 		}
 
-    h1 {
+    .h1 {
 	    font-size: 50px;
 	    margin-bottom: 20px;
 			text-align: center;
 			font-weight: normal;
+			color: #fff;
     }
 
-    h2 {
+    h1 {
     	font-size: 26px;
 			text-align: center;
 			font-weight: normal;
+			margin-bottom: 5px;
 		}
 
 		.title-wrap {
@@ -144,12 +146,13 @@
 
 @media(max-width: 1024px) {
 	.main {
+		padding-top: 0;
 		.main-title {
 			margin-top: 0;
-			h1 {
+			.h1 {
 				font-size: 50px;
 			}
-			h2 {
+			h1 {
 				font-size: 26px;
 			}
 		}
@@ -170,10 +173,10 @@
 @media(max-height: 500px) {
 	.main {
 		.main-title {
-			h1 {
+			.h1 {
 				font-size: 30px;
 			}
-			h2 {
+			h1 {
 				font-size: 20px;
 			}
 			a {
@@ -194,11 +197,11 @@
 @media(max-width: 480px) {
 	.main {
 		.main-title {
-			h1 {
+			.h1 {
 				font-size: 40px;
 			}
-			h2 {
-				font-size: 30px;
+			h1 {
+				font-size: 22px;
 			}
 			a {
 				margin-top: 70px;

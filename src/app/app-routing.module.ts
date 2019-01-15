@@ -48,9 +48,9 @@ import { CherryMusseComponent } from './restaurant/deserts/cherry-musse/cherry-m
 import { CheesecakeComponent } from './restaurant/deserts/cheesecake/cheesecake.component';
 import { PanaKotaComponent } from './restaurant/deserts/pana-kota/pana-kota.component';
 import { CheesePearComponent } from './restaurant/deserts/cheese-pear/cheese-pear.component';
-import { OrderRestaurantComponent } from "./order-restaurant/order-restaurant.component";
+import { OrderRestaurantComponent } from './order-restaurant/order-restaurant.component';
 
-//Lanch
+// Lanch
 import { FirstLanchComponent } from './restaurant/lanch/first-lanch/first-lanch.component';
 import { SecondLanchComponent } from './restaurant/lanch/second-lanch/second-lanch.component';
 import { ThirdLanchComponent } from './restaurant/lanch/third-lanch/third-lanch.component';
@@ -98,12 +98,9 @@ import { RiceComponent } from './restaurant/main-dishes/rice/rice.component';
 
 
 
-import { from } from 'rxjs';
-
-
 const routes: Routes = [
-  // {path: '', redirectTo: 'home', pathMatch: 'full'},
-  // {path: 'home', component: MainComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: MainComponent},
   {path: '', component: MainComponent},
   // {path: 'home', component: MainComponent},
   {path: 'order/deliveri', component: DeliveryComponent},
